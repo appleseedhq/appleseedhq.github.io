@@ -5,7 +5,7 @@ body {
     color: #888888;
 }
 
-.header {
+#header {
     height: 220px;
     background-color: #282828;
     text-align: center;
