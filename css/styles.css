@@ -162,10 +162,12 @@ a:hover {
     width: 660px;
 }
 
+.footer {
+    color: #666666;
+}
+
 .footer h4 {
-    padding-bottom: 15px;
     text-transform: uppercase;
-    border-bottom: 2px dashed #888888;
 }
 
 .footer ul {
