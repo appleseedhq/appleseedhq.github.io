@@ -5,6 +5,10 @@ body {
     color: #888888;
 }
 
+p {
+    margin: 0px;
+}
+
 #header {
     height: 220px;
     background-color: #282828;
@@ -33,4 +37,84 @@ body {
 
 #navigation ul li a:hover {
     color: #bbbbbb;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#splash-wrapper {
+    width: 960px;
+
+    /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    /* W3C */
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+
+#splash {
+    width: 735px;
+    margin: 35px 0 35px;
+}
+
+#download-button {
+    float: left;
+    padding: 14px 0;
+    width: 217px;
+    text-align: center;
+    background-color: #ff6600;
+    color: #2f2f2f;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#download-cta {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+#splash-message {
+    float: left;
+    margin-left: 50px;
+    width: 468px;
+    font-weight: bold;
+}
+
+#video-carousel {
+    margin-bottom: 35px;
+}
+
+#latest-news {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#news-container {
+    width: 100%;
+}
+
+.news-title {
+    float: left;
+    width: 265px;
+    font-size: 1.1em;
+}
+
+.news-body {
+    float: left;
+    margin-left: 42px;
+    width: 653px;
 }

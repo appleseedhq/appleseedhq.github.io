@@ -1,3 +1,28 @@
 {% include header.html %}
-    <div>Hello!</div>
+    <div id="splash-wrapper">
+        <div id="splash">
+            <div id="download-button">
+                <div id="download-cta">Download</div>
+                <div id="download-platform">for MacOS 10.9 +</div>
+            </div>
+            <div id="splash-message">
+                appleseed is a modern, physically-based production renderer developed by visual effects professionals. It is released as open source under the MIT license.
+            </div>
+        </div>
+    </div>
+
+    <div id="video-carousel">
+        <iframe src="//player.vimeo.com/video/66799467" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <div id="news">
+        <div id="latest-news">Latest news</div>
+        <div id="news-container">
+            <div class="news-title">1.1.0 alpha-20 Released</div>
+            <div class="news-body">
+                <p>The major feature of this new release is a new lighting engine based on the Stochastic Progressive Photon Mapping (SPPM) algorithm. It works pretty well in itself and allows to efficiently render caustics-heavy scenes. It is also an important stepping stone toward the implementation of Vertex Connection and Merging (VCM), a modern, all-encompassing bidirectional light transport algorithm.</p>
+                <p>New features also include multipass rendering, a new spherical camera model to render latitude-longitude environment maps, fractional sample counts for direct and image-based lighting, etc.</p>
+            </div>
+        </div>
+    </div>
 {% include footer.html %}
