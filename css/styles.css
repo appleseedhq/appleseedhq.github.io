@@ -162,7 +162,8 @@ a:hover {
     width: 660px;
 }
 
-.footer {
+.footer,
+.footer a {
     color: #666666;
 }
 
