@@ -9,6 +9,16 @@ p {
     margin: 0px;
 }
 
+a {
+    color: #888888;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bbbbbb;
+    text-decoration: underline;
+}
+
 #header {
     height: 220px;
     background-color: #282828;
@@ -26,7 +36,9 @@ p {
     text-align: center;
 }
 
-#navigation ul li { display: inline; }
+#navigation ul li {
+    display: inline;
+}
 
 #navigation ul li a {
     font-weight: bold;
@@ -117,4 +129,75 @@ p {
     float: left;
     margin-left: 42px;
     width: 653px;
+}
+
+.clear {
+    clear: both;
+}
+
+#footer-container {
+    width:100%;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+
+    margin-top: 35px;
+    height: 195px;
+    background-color: #282828;
+}
+
+#footer-inner {
+    width: 660px;
+}
+
+.footer h4 {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px dashed #888888;
+}
+
+.footer ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+#contact {
+    float: left;
+    margin-right: 30px;
+    width: 200px;
+}
+
+#social ul > li {
+    margin-right: 10px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+#links {
+    float: left;
+    margin-right: 30px;
+    width: 200px;
+}
+
+#copyright {
+    float: left;
+    width: 200px;
 }
