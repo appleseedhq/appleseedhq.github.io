@@ -112,6 +112,7 @@ article {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 #download-cta {

@@ -1,10 +1,12 @@
 {% include header.html %}
     <div id="splash-wrapper">
         <div id="splash">
-            <div id="download-button">
-                <div id="download-cta">Download</div>
-                <div id="download-platform">for MacOS 10.9 +</div>
-            </div>
+            <a href="" id="download-link">
+                <div id="download-button">
+                    <div id="download-cta">Download</div>
+                    <div id="download-platform"></div>
+                </div>
+            </a>
             <div id="splash-message">
                 appleseed is a modern, physically-based production renderer developed by visual effects professionals. It is released as open source under the MIT license.
             </div>
@@ -25,4 +27,25 @@
             </div>
         </div>
     </div>
+    <script>
+        var link, target = '';
+        if (navigator.appVersion.indexOf("Win")!=-1)
+        {
+            link = 'https://drive.google.com/file/d/0B5JRj3LWTYIRcW5mTlF4QUZRMm8/edit';
+            target = 'for Win 32';
+        }
+        else if (navigator.appVersion.indexOf("Mac")!=-1)
+        {
+            link = 'https://drive.google.com/file/d/0B5JRj3LWTYIRTmlaaU5heXBLSjA/edit';
+            target = 'for MacOS 10.9 +';
+        }
+        else if (navigator.appVersion.indexOf("X11")!=-1 || navigator.appVersion.indexOf("Linux")!=-1)
+        {
+            link = 'https://drive.google.com/file/d/0B5JRj3LWTYIRZkJoRHh4NzlCbFE/edit';
+            target = 'for Linux';
+        }
+
+        document.getElementById('download-link').href = link;
+        document.getElementById('download-platform').innerHTML = target;
+    </script
 {% include footer.html %}
