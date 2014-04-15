@@ -6,17 +6,39 @@ body {
 }
 
 p {
-    margin: 0px;
+    margin: 0 0 15px;
 }
 
 a {
-    color: #888888;
+    color: #ff5a11;
     text-decoration: none;
 }
 
 a:hover {
     color: #bbbbbb;
     text-decoration: underline;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+article {
+    margin-bottom: 35px;
+}
+
+.post-date {
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #666666;
 }
 
 #header {
