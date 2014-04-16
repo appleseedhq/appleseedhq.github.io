@@ -27,6 +27,9 @@ Note that the preferred way to retrieve appleseed sources is to clone the [Git](
 If you're planning on building appleseed by yourself, make sure to check out the compilation guides and to report any error or inaccuracy you may encounter.
 
 
+---
+
+
 ## Previous Releases
 
 ### appleseed 1.1.0 alpha-19
