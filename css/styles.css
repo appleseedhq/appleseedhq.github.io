@@ -10,12 +10,12 @@ p {
 }
 
 a {
-    color: #ff5a11;
+    color: #bbbbbb;
     text-decoration: none;
 }
 
 a:hover {
-    color: #bbbbbb;
+    color: #ff5a11;
     text-decoration: underline;
 }
 
