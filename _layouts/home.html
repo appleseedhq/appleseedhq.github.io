@@ -30,20 +30,17 @@
             <div class="more-news"><a href="news.html">More News...</a></div>
         </div>
     </div>
+
     <script>
         var link, target = '';
-        if (navigator.appVersion.indexOf("Win")!=-1)
-        {
+
+        if (navigator.appVersion.indexOf("Win") != -1) {
             link = 'https://drive.google.com/file/d/0B5JRj3LWTYIRcW5mTlF4QUZRMm8/edit';
             target = 'for Windows';
-        }
-        else if (navigator.appVersion.indexOf("Mac")!=-1)
-        {
+        } else if (navigator.appVersion.indexOf("Mac") != -1) {
             link = 'https://drive.google.com/file/d/0B5JRj3LWTYIRTmlaaU5heXBLSjA/edit';
             target = 'for MacOS 10.9 +';
-        }
-        else if (navigator.appVersion.indexOf("X11")!=-1 || navigator.appVersion.indexOf("Linux")!=-1)
-        {
+        } else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {
             link = 'https://drive.google.com/file/d/0B5JRj3LWTYIRZkJoRHh4NzlCbFE/edit';
             target = 'for Linux';
         }
