@@ -20,11 +20,13 @@
     <div id="news">
         <div id="latest-news">Latest news</div>
         <div id="news-container">
-            <div class="news-title">1.1.0 alpha-20 Released</div>
+            {% for post in site.posts limit:1 %}
+            <h2 style="margin-top: 0px;">{{ post.title }}</h2>
             <div class="news-body">
-                <p>The major feature of this new release is a new lighting engine based on the Stochastic Progressive Photon Mapping (SPPM) algorithm. It works pretty well in itself and allows to efficiently render caustics-heavy scenes. It is also an important stepping stone toward the implementation of Vertex Connection and Merging (VCM), a modern, all-encompassing bidirectional light transport algorithm.</p>
-                <p>New features also include multipass rendering, a new spherical camera model to render latitude-longitude environment maps, fractional sample counts for direct and image-based lighting, etc.</p>
+                {{ post.content }}
             </div>
+            {% endfor %}
+            <div class="more-news"><a href="news.html">More news</a></div>
         </div>
     </div>
     <script>
