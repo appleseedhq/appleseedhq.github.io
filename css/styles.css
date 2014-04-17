@@ -223,6 +223,10 @@ iframe {
     color: #666666;
 }
 
+.footer a:hover {
+    color: #bbbbbb;
+}
+
 .footer h4 {
     margin-bottom: 11px;
     text-transform: uppercase;
