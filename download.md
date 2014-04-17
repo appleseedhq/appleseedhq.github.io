@@ -2,7 +2,6 @@
 layout: default
 title: appleseed download
 ---
-# appleseed downloads
 
 ## Latest Release: appleseed 1.1.0 alpha-20
 * 64-bit build for Windows
