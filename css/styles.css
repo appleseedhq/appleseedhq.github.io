@@ -129,10 +129,6 @@ hr {
     cursor: pointer;
 }
 
-#download-button:hover {
-    color: #bbbbbb;
-}
-
 #download-cta {
     text-transform: uppercase;
     font-weight: bold;
