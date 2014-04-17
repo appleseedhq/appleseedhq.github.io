@@ -2,7 +2,7 @@ body {
     margin: 0px;
     background-color: #2f2f2f;
     font-family:"Open Sans";
-    color: #888888;
+    color: #999999;
 }
 
 p {
@@ -37,7 +37,6 @@ article {
 
 hr {
     margin-bottom: 30px;
-    color: #888888;
     background-color: #444444;
     border: none;
     height: 1px;
