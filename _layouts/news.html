@@ -1,11 +1,10 @@
 {% include header.html %}
-    <h1>news</h1>
-        {% for post in site.posts %}
-        <article>
-            <h2>{{ post.title }}</h2>
-            <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-            {{ post.content }}
-        </article>
-        <hr>
-        {% endfor %}
+    {% for post in site.posts %}
+    <article>
+        <h2>{{ post.title }}</h2>
+        <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        {{ post.content }}
+    </article>
+    <hr>
+    {% endfor %}
 {% include footer.html %}
