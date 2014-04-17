@@ -75,7 +75,9 @@ title: appleseed features
 * Geometry: Alembic, OBJ
   - Plus our own proprietary high performance format
 * Textures: OpenEXR, PNG
-* mayaseed: fully featured
+* mayaseed: fully featured Maya exporter
+* mayaToAppleseed: full native integration of appleseed into Maya (work in progress)
+* Blenderseed: Blender exporter
 
 ### Performance
 
@@ -83,3 +85,18 @@ title: appleseed features
 * Memory-bounded texture cache
 * Multiple Importance Sampling (MIS)
 * Intersection filters
+
+### Hackability
+
+* Everything is open source under the MIT license
+* Cross platform: Windows, Linux and OS X, 32-bit and 64-bit
+* Fully featured C++ API
+* Fully featured Python API (Python 2 and Python 3)
+* More than 1200 built-in unit tests
+* Hundreds of built-in performance regression tests
+* Full functional test suite
+
+### Miscellaneous
+
+* Fully spectral rendering (400-700 nm range with 10 nm increment)
+* Dropbox-based render farm tools
