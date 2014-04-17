@@ -52,6 +52,13 @@ hr {
     height: 1px;
 }
 
+iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+}
+
 .post-date {
     margin-bottom: 15px;
     font-size: 13px;
