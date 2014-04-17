@@ -44,3 +44,21 @@ title: appleseed features
 * Preetham physically-based day sky
 * Hosek & Wilkie physically-based day sky
 * Physically based sun
+
+### Motion Blur
+
+* Camera motion blur
+* Transformation motion blur
+* Deformation motion blur
+* Arbitrarily many steps for all forms of motion blur
+
+### Rendering Modes
+
+* Multipass rendering
+* Progressive rendering
+* Interactive rendering
+* Live scene editing
+
+### Production Features
+
+
