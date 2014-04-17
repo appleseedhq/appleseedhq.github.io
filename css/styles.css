@@ -38,6 +38,10 @@ h3 {
     font-size: 17px;
 }
 
+h1, h2, h3 {
+    color: #bbbbbb;
+}
+
 article {
     margin-bottom: 35px;
 }
