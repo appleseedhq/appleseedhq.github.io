@@ -1,7 +1,5 @@
 ---
 layout: default
-title: appleseed about
+title: appleseed features
 ---
-# about
-
-Detailed description of appleseed.
+## Detailed description of appleseed.

@@ -83,6 +83,10 @@ hr {
     color: #bbbbbb;
 }
 
+#navigation ul li a.active {
+    color: #bbbbbb;
+}
+
 #wrapper {
     width: 960px;
     margin: 0 auto;
