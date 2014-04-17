@@ -22,6 +22,7 @@
         <div id="news-container">
             {% for post in site.posts limit:1 %}
             <h2 style="margin-top: 0px;">{{ post.title }}</h2>
+            <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
             <div class="news-body">
                 {{ post.content }}
             </div>
