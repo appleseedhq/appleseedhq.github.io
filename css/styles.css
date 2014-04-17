@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 body {
     margin: 0px;
     background-color: #2f2f2f;
@@ -20,14 +24,17 @@ a:hover {
 }
 
 h1 {
+    margin-top: 0px;
     font-size: 25px;
 }
 
 h2 {
+    margin-top: 0px;
     font-size: 21px;
 }
 
 h3 {
+    margin-top: 0px;
     font-size: 17px;
 }
 
