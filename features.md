@@ -36,7 +36,7 @@ title: appleseed features
 * Point light
 * Spot light
   - Support for gobos
-* Directional light (infinitely far away)
+* Directional/parallel light
 * Mesh light
   - Purely diffuse
   - Cone-shaped
@@ -61,4 +61,25 @@ title: appleseed features
 
 ### Production Features
 
+* Programmable shading via Open Shading Language (**experimental**)
+* Rule-based render layers
+* Hierarchical instancing
+* Automatic, on-the-fly color space transformations and gamma/ungamma
+* Ray bias
+* Light Near Start
+* Max Ray Intensity
+* Many diagnostic modes
 
+### Interoperability
+
+* Geometry: Alembic, OBJ
+  - Plus our own proprietary high performance format
+* Textures: OpenEXR, PNG
+* mayaseed: fully featured
+
+### Performance
+
+* Fully multithreaded, highly scalable
+* Memory-bounded texture cache
+* Multiple Importance Sampling (MIS)
+* Intersection filters

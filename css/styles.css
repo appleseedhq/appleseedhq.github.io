@@ -6,7 +6,7 @@ body {
     margin: 0px;
     background-color: #2f2f2f;
     font-family:"Open Sans";
-    color: #888888;
+    color: #999999;
 }
 
 p {
@@ -38,13 +38,16 @@ h3 {
     font-size: 17px;
 }
 
+h1, h2, h3 {
+    color: #aaaaaa;
+}
+
 article {
     margin-bottom: 35px;
 }
 
 hr {
     margin-bottom: 30px;
-    color: #888888;
     background-color: #444444;
     border: none;
     height: 1px;
