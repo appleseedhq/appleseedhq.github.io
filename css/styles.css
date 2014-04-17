@@ -23,21 +23,20 @@ a:hover {
 }
 
 h1 {
-    margin-top: 0px;
     font-size: 25px;
 }
 
 h2 {
-    margin-top: 0px;
+    margin-bottom: 10px;
     font-size: 21px;
 }
 
 h3 {
-    margin-top: 0px;
     font-size: 17px;
 }
 
 h1, h2, h3 {
+    margin-top: 0px;
     color: #aaaaaa;
 }
 
@@ -50,6 +49,13 @@ hr {
     background-color: #444444;
     border: none;
     height: 1px;
+}
+
+iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
 }
 
 .post-date {
