@@ -88,6 +88,7 @@ hr {
 #wrapper {
     width: 960px;
     margin: 0 auto;
+    padding-top: 30px;
 }
 
 #splash-wrapper {
@@ -111,7 +112,7 @@ hr {
 
 #splash {
     width: 735px;
-    margin: 35px 0 35px;
+    margin: 0 0 35px;
 }
 
 #download-button {
