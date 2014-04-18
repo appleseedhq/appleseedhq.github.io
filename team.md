@@ -41,3 +41,9 @@ François is a self-taught CG artist with 15 years of experience as a modeler, a
 
 Blog: [http://loiseaunoir.blogspot.fr/](http://loiseaunoir.blogspot.fr/)<br>
 Fetch: [http://www.fetchaveryshortfilm.com/](http://www.fetchaveryshortfilm.com/)<br>
+
+![Hans Hoogenboom]({{ site.url }}/img/hans_hoogenboom.jpg)
+
+Hans Hoogenboom
+
+Hans is an architect with a strong interest in CG and VFX. In 2014 he started working on the integration of appleseed and Houdini as well as adding Open Shading Language support to Houdini. Hans lives in Delft, The Netherlands.
