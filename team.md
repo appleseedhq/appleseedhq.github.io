@@ -37,4 +37,7 @@ LinkedIn: [http://www.linkedin.com/in/dorianfevrier](http://www.linkedin.com/in/
 
 François Gilliot.
 
-François also lives in Annecy, France.
+François is a self-taught CG artist with 15 years of experience as a modeler, animator and illustrator. He works in a small french video game company as an art director and team manager. Recently, he directed "Fetch, a very short film" rendered with appleseed. François also lives in Annecy, France.
+
+Blog: [http://loiseaunoir.blogspot.fr/](http://loiseaunoir.blogspot.fr/)<br>
+Fetch: [http://www.fetchaveryshortfilm.com/](http://www.fetchaveryshortfilm.com/)<br>
