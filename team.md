@@ -9,6 +9,14 @@ François Beaune
 
 François lives in Annecy, France.
 
+![Esteban Tovagliari]({{ site.url }}/img/esteban_tovagliari.jpg)
+
+Esteban Tovagliari.
+
+Esteban is a software engineer and VFX artist with more than 15 years of experience. He was the main developer of the Ramen compositor 
+first released in 2009. He started working on appleseed in 2012, doing general maintenance, linux specific maintenance, python bindings 
+and lately, adding support for Open Shading Language shaders.
+
 ![Jonathan Topf]({{ site.url }}/img/jonathan_topf.jpg)
 
 Jonathan Topf
