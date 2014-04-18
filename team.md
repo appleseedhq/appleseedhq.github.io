@@ -7,7 +7,7 @@ title: appleseed team
 
 François Beaune
 
-François lives in Annecy, France.
+François is a software engineer specialized in production rendering and high-end visualization software. He worked at various rendering software companies, including mental images in 2004 where he designed and implemented the next generation of CPU raytracing technology of mental ray and RealityServer. Since 2008 he is writing custom VFX software for production houses. In 2009 he started developing appleseed, a modern open source physically-based renderer designed for production rendering. He is also the author of toxic, an early open source global illumination renderer released in 2003. François lives in Annecy, France.
 
 ![Esteban Tovagliari]({{ site.url }}/img/esteban_tovagliari.jpg)
 
