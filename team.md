@@ -29,9 +29,9 @@ Dorian Fevrier
 
 Dorian is a rendering lover since the first days of the CGI. He provides bug reports, testing, use cases, and technical feedback to have a production vision about how things could be done/used. Lighter by training, his job involves technical lighting, pipeline and support for different full feature film projects. Dorian lives in Montréal, Canada.
 
-Blog: http://www.fevrierdorian.com/blog/
-Twitter: http://twitter.com/NarannCG
-LinkedIn: http://www.linkedin.com/in/dorianfevrier
+Blog: [http://www.fevrierdorian.com/blog/](http://www.fevrierdorian.com/blog/)<br>
+Twitter: [http://twitter.com/NarannCG](http://twitter.com/NarannCG)<br>
+LinkedIn: [http://www.linkedin.com/in/dorianfevrier](http://www.linkedin.com/in/dorianfevrier)<br>
 
 ![Francois Gilliot]({{ site.url }}/img/francois_gilliot.jpg)
 
