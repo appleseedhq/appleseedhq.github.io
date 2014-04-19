@@ -20,6 +20,7 @@ a {
 
 a:hover {
     color: #ff5a11;
+    transition: color .10s linear;
 }
 
 h1 {
@@ -135,7 +136,7 @@ iframe {
     padding: 14px 0;
     width: 217px;
     text-align: center;
-    background-color: #ff6600;
+    background-color: #ff5a11;
     color: #2f2f2f;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -144,7 +145,8 @@ iframe {
 }
 
 #download-button:hover {
-    color: #ffffff;
+    background-color: #ff7611;
+    transition: color .15s linear;
 }
 
 #download-cta {
