@@ -34,7 +34,10 @@
         <script type="text/javascript" src="js/slick.min.js"></script>
         <script>
         $(document).ready(function(){
-            $('.carousel').slick();
+            $('.carousel').slick({
+                dots: true,
+                touchMove: true
+            });
         });
         </script>
     </body>
