@@ -183,6 +183,31 @@ iframe {
     margin-top: 25px;
 }
 
+.team-member {
+    margin-bottom: 60px;
+    overflow: auto;
+    width: 100%;
+}
+
+.team-member img {
+    float: left;
+    margin-right: 60px;
+}
+
+.team-member .info {
+    overflow: hidden;
+}
+
+.team-member .info h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.team-member .info ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
 .clear {
     clear: both;
 }

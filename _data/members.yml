@@ -1,0 +1,60 @@
+- name: François Beaune
+  picture: francois_beaune.jpg
+  bio: >
+    François is a software engineer specialized in production rendering and high-end visualization software.
+    He joined mental images in 2004 where he designed and implemented the next generation of CPU raytracing
+    technology of mental ray and RealityServer. Since 2008 he is writing custom VFX software for production
+    houses. François started writing appleseed in 2009 and is the project leader. He is also the author of
+    toxic, an early open source global illumination renderer released in 2003. François lives in Annecy, France.
+  links:
+    - { label: LinkedIn, url: "http://www.linkedin.com/in/fbeaune" }
+
+
+- name: Esteban Tovagliari
+  picture: esteban_tovagliari.jpg
+  bio: >
+    Esteban is a software engineer and VFX artist with more than 15 years of experience. He was the main
+    developer of the Ramen compositor first released in 2009. He started working on appleseed in 2012, doing
+    general maintenance, linux specific maintenance, python bindings and lately, adding support for Open Shading
+    Language shaders.
+
+
+- name: Jonathan Topf
+  picture: jonathan_topf.jpg
+  bio: >
+    Jon lives in London, UK.
+  links:
+    - { label: Blog, url: "http://jonathantopf.com/" }
+
+
+- name: Dorian Fevrier
+  picture: dorian_fevrier.jpg
+  bio: >
+    Dorian is a rendering lover since the first days of the CGI. He provides bug reports, testing, use cases,
+    and technical feedback to have a production vision about how things could be done/used. Lighter by training,
+    his job involves technical lighting, pipeline and support for different full feature film projects. Dorian
+    lives in Montréal, Canada.
+  links:
+    - { label: Blog, url: "http://www.fevrierdorian.com/blog/" }
+    - { label: Twitter, url: "http://twitter.com/NarannCG" }
+    - { label: LinkedIn, url: "http://www.linkedin.com/in/dorianfevrier" }
+
+
+- name: François Gilliot
+  picture: francois_gilliot.jpg
+  bio: >
+    François is a self-taught CG artist with 15 years of experience as a modeler, animator and illustrator.
+    He works in a small french video game company as an art director and team manager. Recently, he directed
+    "Fetch, a very short film" rendered with appleseed. François also lives in Annecy, France.
+  links:
+    - { label: Blog, url: "http://loiseaunoir.blogspot.fr/" }
+    - { label: Fetch, url: "http://www.fetchaveryshortfilm.com/" }
+
+
+- name: Hans Hoogenboom
+  picture: hans_hoogenboom.jpg
+  bio: >
+    Hans is an architect with a strong interest in CG and VFX. In 2014 he started working on the integration
+    of appleseed and Houdini as well as adding Open Shading Language support to Houdini. Hans lives in Delft,
+    The Netherlands.
+
