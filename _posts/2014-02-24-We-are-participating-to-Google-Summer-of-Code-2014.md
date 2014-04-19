@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: We are participating to Google Summer of Code 2014!
 ---
 We are proud to announce that we have been selected as a mentoring organization for [Google Summer of Code 2014](http://www.google-melange.com/gsoc/homepage/google/gsoc2014)! If you are interested in being paid to write high performance rendering code, this is your chance.

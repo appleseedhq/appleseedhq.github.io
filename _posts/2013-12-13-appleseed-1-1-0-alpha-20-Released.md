@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: appleseed 1.1.0 alpha-20 Released
 ---
 We just released **appleseed 1.1.0 alpha-20**.
