@@ -21,6 +21,7 @@ a {
 a:hover {
     color: #ff5a11;
     transition: color .10s linear;
+    -webkit-transition: color .10s linear;
 }
 
 h1 {
@@ -147,6 +148,7 @@ iframe {
 #download-button:hover {
     background-color: #ff7611;
     transition: color .15s linear;
+    -webkit-transition: color .15s linear;
 }
 
 #download-cta {
