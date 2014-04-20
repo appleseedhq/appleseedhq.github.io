@@ -22,9 +22,12 @@
 - name: Jonathan Topf
   picture: jonathan_topf.jpg
   bio: >
-    Jon lives in London, UK.
+    Jonathan is an animation director from London who also works in visual effects and technical direction.
+    He is also the creator of mayaseed, an exporter from Maya to appleseed, which he has been using in production
+    for the past two years. Jon lives in London, UK.
   links:
     - { label: Blog, url: "http://jonathantopf.com/" }
+    - { label: mayaseed, url: "http://mayaseed.net/" }
 
 
 - name: Dorian Fevrier

@@ -146,7 +146,7 @@ iframe {
 }
 
 #download-button:hover {
-    background-color: #ff7611;
+    background-color: #ff4e00;
     transition: color .15s linear;
     -webkit-transition: color .15s linear;
 }
