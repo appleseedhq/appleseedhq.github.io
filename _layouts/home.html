@@ -22,7 +22,7 @@
         <div id="latest-news">Latest news</div>
         <div id="news-container">
             {% for post in site.posts limit:1 %}
-            <h2 style="margin-top: 0px;">{{ post.title }}</h2>
+            <h2 style="margin-top: 0px;"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
             <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
             <div class="news-body">
                 {{ post.content }}

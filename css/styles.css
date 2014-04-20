@@ -20,6 +20,8 @@ a {
 
 a:hover {
     color: #ff5a11;
+    transition: color .10s linear;
+    -webkit-transition: color .10s linear;
 }
 
 h1 {
@@ -37,7 +39,7 @@ h3 {
 
 h1, h2, h3 {
     margin-top: 0px;
-    color: #aaaaaa;
+    color: #bbbbbb;
 }
 
 article {
@@ -135,7 +137,7 @@ iframe {
     padding: 14px 0;
     width: 217px;
     text-align: center;
-    background-color: #ff4e00;
+    background-color: #ff5a11;
     color: #2f2f2f;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -144,7 +146,9 @@ iframe {
 }
 
 #download-button:hover {
-    color: #ffffff;
+    background-color: #ff7611;
+    transition: color .15s linear;
+    -webkit-transition: color .15s linear;
 }
 
 #download-cta {
@@ -181,6 +185,31 @@ iframe {
 
 .more-news {
     margin-top: 25px;
+}
+
+.team-member {
+    margin-bottom: 60px;
+    overflow: auto;
+    width: 100%;
+}
+
+.team-member img {
+    float: left;
+    margin-right: 60px;
+}
+
+.team-member .info {
+    overflow: hidden;
+}
+
+.team-member .info h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.team-member .info ul {
+    list-style-type: none;
+    padding-left: 0px;
 }
 
 .clear {
