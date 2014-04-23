@@ -196,6 +196,7 @@ iframe {
 .team-member img {
     float: left;
     margin-right: 60px;
+    margin-bottom: 30px;
 }
 
 .team-member .info {
@@ -207,9 +208,10 @@ iframe {
     margin-bottom: 10px;
 }
 
-.team-member .info ul {
+.team-member .info ul.links {
     list-style-type: none;
     padding-left: 0px;
+    margin-bottom: 0px;
 }
 
 .clear {
