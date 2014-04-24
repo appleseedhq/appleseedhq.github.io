@@ -16,7 +16,7 @@
     Esteban is a software engineer and VFX artist with more than 15 years of experience. He was the main
     developer of the Ramen compositor first released in 2009. He started working on appleseed in 2012, doing
     general maintenance, linux specific maintenance, python bindings and lately, adding support for Open Shading
-    Language shaders.
+    Language shaders. Esteban lives in Kuala Lumpur, Malaysia.
 
 
 - name: Jonathan Topf
@@ -54,12 +54,25 @@
     - { label: Fetch, url: "http://www.fetchaveryshortfilm.com/" }
 
 
+- name: Haggi Krey
+  picture: haggi_krey.jpg
+  bio: >
+    Haggi is a freelance VFX supervisor. He worked on music videos such as Sven Väth's "The beauty and the beast"
+    and on animated movies such as "Back to Gaya", "Impy's Island", "Impy's Wonderland", "Animals United" or
+    "Tarzan". Haggi is the author of mayaToAppleseed, a native integration of appleseed into Maya. 
+    Haggi has studied graphics design in Hannover, Germany where he still lives.
+  links:
+    - { label: mayaToAppleseed, url: "http://www.openmaya.net/openmaya/mayatoappleseed/" }
+
+
 - name: Hans Hoogenboom
   picture: hans_hoogenboom.jpg
   bio: >
     Hans is an architect with a strong interest in CG and VFX. In 2014 he started working on the integration
     of appleseed and Houdini as well as adding Open Shading Language support to Houdini. Hans lives in Delft,
     The Netherlands.
+  links:
+    - { label: LinkedIn, url: "https://www.linkedin.com/pub/hans-hoogenboom/2/b21/45b" }
 
 
 - name: Luis Barrancos
