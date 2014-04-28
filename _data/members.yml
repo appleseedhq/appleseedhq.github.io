@@ -17,6 +17,8 @@
     developer of the Ramen compositor first released in 2009. He started working on appleseed in 2012, doing
     general maintenance, linux specific maintenance, python bindings and lately, adding support for Open Shading
     Language shaders. Esteban lives in Kuala Lumpur, Malaysia.
+  links:
+    - { label: Blog, url: "http://inappropiateresponse.blogspot.fr/" }
 
 
 - name: Jonathan Topf
