@@ -86,7 +86,10 @@
 - name: Thomas Arthus
   picture: thomas_arthus.jpg
   bio: >
-    Thomas is a cool guy! He lives in Annecy, France.
+    Thomas is a web programmer by day and an electronic music composer and DJ by night. He has also been playing
+    cello for 25 years. Thomas is in charge of the appleseed web site. He lives in Annecy, France.
+  links:
+    - { label: "SoundCloud", url: "https://soundcloud.com/phonosheet" }
 
 
 - name: Srinath Ravichandran
