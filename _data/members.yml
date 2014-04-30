@@ -88,3 +88,22 @@
   bio: >
     Thomas is a cool guy! He lives in Annecy, France.
 
+
+- name: Srinath Ravichandran
+  picture: srinath_ravichandran.jpg
+  bio: >
+    Srinath is a M.S. by Research student at IIIT Hyderabad, India. He is very passionate about computer graphics
+    and hopes one day he'll work in the VFX/entertainment industry. He is currently working on research problems
+    that involve light transport algorithms, ray tracing and GPUs. Srinath is a Google Summer of Code 2014 student:
+    he will be bringing curve rendering (for hair, fur, etc.) to appleseed.
+  links:
+    - { label: Web Site, url: "http://researchweb.iiit.ac.in/~srinath.ravichandran/" }
+
+
+- name: Marius Avram
+  picture: marius_avram.jpg
+  bio: >
+    Marius is a student from Romania at the Faculty of Automatic Control and Computers, Bucharest. He is new to
+    the open source community and always willing to learn new stuff. Marius is a Google Summer of Code 2014 student:
+    he will work on a material editor for appleseed.studio.
+
