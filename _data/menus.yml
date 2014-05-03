@@ -1,0 +1,14 @@
+- label: features
+  url: "features.html"
+
+- label: download
+  url: "download.html"
+
+- label: news
+  url: "news.html"
+
+- label: team
+  url: "team.html"
+
+- label: github
+  url: "https://github.com/appleseedhq"

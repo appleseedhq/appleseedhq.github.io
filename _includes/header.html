@@ -17,12 +17,12 @@
             </div>
             <div id="navigation">
                 <ul>
-                    {% assign current = page.url | downcase | split: '/' %}
-                    <li><a href="/features.html" {% if current[1] == 'features.html' %}class="active"{% endif %}>features</a></li>
-                    <li><a href="/download.html" {% if current[1] == 'download.html' %}class="active"{% endif %}>download</a></li>
-                    <li><a href="/news.html" {% if current[1] == 'news.html' %}class="active"{% endif %}>news</a></li>
-                    <li><a href="/team.html" {% if current[1] == 'team.html' %}class="active"{% endif %}>team</a></li>
-                    <li><a href="https://github.com/appleseedhq">github</a></li>
+                    {% assign current = page.url | remove_first: site.baseurl %}
+                    {% for item in site.data.menus %}
+                    <li>
+                        <a href="{{ item.url }}" {% if current == item.url %}class="active"{% endif %}>{{ item.label }}</a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
