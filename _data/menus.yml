@@ -10,5 +10,8 @@
 - label: Team
   url: "team.html"
 
+- label: Wiki
+  url: "https://github.com/appleseedhq/appleseed/wiki"
+
 - label: GitHub
   url: "https://github.com/appleseedhq"
