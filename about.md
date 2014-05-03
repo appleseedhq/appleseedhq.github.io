@@ -1,7 +1,9 @@
 ---
 layout: default
-title: appleseed features
+title: About
 ---
+
+## Features
 
 ### Light Transport
 
