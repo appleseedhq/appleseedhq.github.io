@@ -7,18 +7,23 @@ body {
     background-color: #2f2f2f;
     font-family: "Open Sans";
     font-size: 15px;
-    color: #999999;
+    color: #999;
 }
 
 p {
     margin: 0 0 15px;
 }
 
-a {
+a,
+a#download-link:hover {
     text-decoration: none;
-    color: #bbbbbb;
+    color: #bbb;
     transition: color .10s linear;
     -webkit-transition: color .10s linear;
+}
+
+article p a {
+    border-bottom: 1px dashed #999;
 }
 
 a:hover,
@@ -43,7 +48,7 @@ h3 {
 
 h1, h2, h3 {
     margin-top: 0px;
-    color: #bbbbbb;
+    color: #bbb;
 }
 
 article {
@@ -52,7 +57,7 @@ article {
 
 hr {
     margin-bottom: 30px;
-    background-color: #444444;
+    background-color: #444;
     border: none;
     height: 1px;
 }
@@ -71,7 +76,7 @@ article .date {
 }
 
 #header {
-    height: 220px;
+    height: 230px;
     background-color: #282828;
     text-align: center;
 }
@@ -95,15 +100,15 @@ article .date {
     font-weight: bold;
     text-decoration: none;
     padding: .2em 1.2em;
-    color: #777777;
+    color: #777;
 }
 
 #navigation ul li a:hover {
-    color: #bbbbbb;
+    color: #bbb;
 }
 
 #navigation ul li a.active {
-    color: #bbbbbb;
+    color: #bbb;
 }
 
 #wrapper {
@@ -152,15 +157,14 @@ article .date {
     -moz-border-radius: 10px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.10s linear, color .10s linear;
-    -webkit-transition: background-color 0.10s linear, color .10s linear;
+    transition: background-color 0.10s linear;
+    -webkit-transition: background-color 0.10s linear;
 }
 
 #download-button:hover {
-    background-color: #ff5a11;
-    color: #111111;
-    transition: background-color 0.10s linear, color .10s linear;
-    -webkit-transition: background-color 0.10s linear, color .10s linear;
+    background-color: #4C4C4C;
+    transition: background-color 0.10s linear;
+    -webkit-transition: background-color 0.10s linear;
 }
 
 #download-cta {
@@ -277,11 +281,11 @@ article .date {
 
 .footer,
 .footer a {
-    color: #666666;
+    color: #666;
 }
 
 .footer a:hover {
-    color: #bbbbbb;
+    color: #bbb;
 }
 
 .footer h4 {
