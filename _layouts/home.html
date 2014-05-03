@@ -14,17 +14,18 @@
     </div>
 
     <div class="carousel">
-      <div>
-        <a href="https://cloud.githubusercontent.com/assets/321290/2713456/16f83e26-c4e7-11e3-8f3d-d136cad3379e.png">
-          <img src="https://cloud.githubusercontent.com/assets/321290/2713456/16f83e26-c4e7-11e3-8f3d-d136cad3379e.png" width="960" height="540" />
-        </a>
-      </div>
-      <div>
-        <iframe src="//player.vimeo.com/video/66799467" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-      <div>
-        <iframe src="//player.vimeo.com/video/81199785" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
+        {% for item in site.data.carousel %}
+        <div>
+            {% case item.type %}
+                {% when 'image' %}
+                    <a href="{{ item.url }}">
+                        <img src="{{ item.url }}" width="960" height="540" />
+                    </a>
+                {% when 'vimeo' %}
+                    <iframe src="{{ item.url }}" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endcase %}
+        </div>
+        {% endfor %}
     </div>
 
     <div id="news">
