@@ -1,14 +1,14 @@
-- label: features
+- label: Features
   url: "features.html"
 
-- label: download
+- label: Download
   url: "download.html"
 
-- label: news
+- label: News
   url: "news.html"
 
-- label: team
+- label: Team
   url: "team.html"
 
-- label: github
+- label: GitHub
   url: "https://github.com/appleseedhq"
