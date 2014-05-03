@@ -1,6 +1,6 @@
 ---
 layout: default
-title: appleseed download
+title: Download
 ---
 
 ## Latest Release: appleseed 1.1.0 alpha-21

@@ -1,4 +1,4 @@
 ---
 layout: team
-title: appleseed team
+title: Team
 ---

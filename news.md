@@ -1,4 +1,4 @@
 ---
 layout: news
-title: appleseed news
+title: News
 ---
