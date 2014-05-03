@@ -1,14 +1,14 @@
 - label: About
-  url: "about.html"
+  url: "/about.html"
 
 - label: Download
-  url: "download.html"
+  url: "/download.html"
 
 - label: News
-  url: "news.html"
+  url: "/news.html"
 
 - label: Team
-  url: "team.html"
+  url: "/team.html"
 
 - label: Wiki
   url: "https://github.com/appleseedhq/appleseed/wiki"

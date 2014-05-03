@@ -17,7 +17,7 @@
             </div>
             <div id="navigation">
                 <ul>
-                    {% assign current = page.url | remove_first: site.baseurl %}
+                    {% assign current = page.url | remove_first: site.baseurl | prepend: '/' %}
                     {% for item in site.data.menus %}
                     <li>
                         <a href="{{ item.url }}" {% if current == item.url %}class="active"{% endif %}>{{ item.label }}</a>
