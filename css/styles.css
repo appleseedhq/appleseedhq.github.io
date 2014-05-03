@@ -15,11 +15,14 @@ p {
 }
 
 a {
-    color: #bbbbbb;
     text-decoration: none;
+    color: #bbbbbb;
+    transition: color .10s linear;
+    -webkit-transition: color .10s linear;
 }
 
-a:hover {
+a:hover,
+#download-version a:hover {
     color: #ff5a11;
     transition: color .10s linear;
     -webkit-transition: color .10s linear;
@@ -64,7 +67,7 @@ iframe {
 .post-date {
     margin-bottom: 15px;
     font-size: 13px;
-    color: #666666;
+    color: #666;
 }
 
 #header {
@@ -133,29 +136,46 @@ iframe {
     margin: 0 0 35px;
 }
 
-#download-button {
+#download-button-wrapper {
     float: left;
-    padding: 14px 0;
-    width: 217px;
+}
+
+#download-button {
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 4px;
+    padding-bottom: 8px;
     text-align: center;
-    background-color: #ff5a11;
-    color: #2f2f2f;
+    background-color: #444;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.10s linear, color .10s linear;
+    -webkit-transition: background-color 0.10s linear, color .10s linear;
 }
 
 #download-button:hover {
-    background-color: #ff4e00;
-    transition: color .15s linear;
-    -webkit-transition: color .15s linear;
+    background-color: #ff5a11;
+    color: #111111;
+    transition: background-color 0.10s linear, color .10s linear;
+    -webkit-transition: background-color 0.10s linear, color .10s linear;
 }
 
 #download-cta {
-    text-transform: uppercase;
     font-weight: bold;
-    font-size: 27px;
+    font-size: 24px;
+}
+
+#download-version {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+#download-version a {
+    color: #666;
 }
 
 #splash-message {
@@ -229,22 +249,22 @@ iframe {
 }
 
 #footer-container {
-    width:100%;
+    width: 100%;
 
     /* Firefox */
-    display:-moz-box;
-    -moz-box-pack:center;
-    -moz-box-align:center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
 
     /* Safari and Chrome */
-    display:-webkit-box;
-    -webkit-box-pack:center;
-    -webkit-box-align:center;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
 
     /* W3C */
-    display:box;
-    box-pack:center;
-    box-align:center;
+    display: box;
+    box-pack: center;
+    box-align: center;
 
     margin-top: 35px;
     height: 195px;
@@ -265,7 +285,8 @@ iframe {
 }
 
 .footer h4 {
-    margin-bottom: 11px;
+    margin-top: 0px;
+    margin-bottom: 12px;
     text-transform: uppercase;
 }
 

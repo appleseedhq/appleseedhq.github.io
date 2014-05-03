@@ -1,14 +1,20 @@
 {% include header.html %}
     <div id="splash-wrapper">
         <div id="splash">
-            <a href="" id="download-link">
-                <div id="download-button">
-                    <div id="download-cta">Download</div>
-                    <div id="download-platform"></div>
+            <div id="download-button-wrapper">
+                <a id="download-link" href="#">
+                    <div id="download-button">
+                        <div id="download-cta">Download</div>
+                        <div id="download-platform"></div>
+                    </div>
+                </a>
+                <div id="download-version">
+                    <a href="https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-21">Current Version: 1.1.0 alpha-21</a>
                 </div>
-            </a>
+            </div>
             <div id="splash-message">
                 appleseed is a modern, physically-based renderer designed for production rendering. It is released as open source under the MIT&nbsp;license.
+                <a href="features.html">More&hellip;</a>
             </div>
         </div>
     </div>
@@ -38,7 +44,7 @@
                 {{ post.content }}
             </div>
             {% endfor %}
-            <div class="more-news"><a href="news.html">More News...</a></div>
+            <div class="more-news"><a href="news.html">More News&hellip;</a></div>
         </div>
     </div>
 
