@@ -64,7 +64,7 @@ iframe {
     overflow: hidden;
 }
 
-.post-date {
+article .date {
     margin-bottom: 15px;
     font-size: 13px;
     color: #666;
@@ -207,10 +207,6 @@ iframe {
     float: left;
     margin-left: 42px;
     width: 653px;
-}
-
-.news-title {
-    font-size: 1.1em;
 }
 
 .more-news {

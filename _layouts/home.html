@@ -38,11 +38,11 @@
         <div id="latest-news">Latest news</div>
         <div id="news-container">
             {% for post in site.posts limit:1 %}
-            <h2 style="margin-top: 0px;"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-            <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-            <div class="news-body">
-                {{ post.content }}
-            </div>
+            <article>
+                <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+                <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
+                <div class="body">{{ post.content }}</div>
+            </article>
             {% endfor %}
             <div class="more-news"><a href="news.html">More News&hellip;</a></div>
         </div>
