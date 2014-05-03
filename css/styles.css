@@ -5,7 +5,8 @@ html {
 body {
     margin: 0px;
     background-color: #2f2f2f;
-    font-family:"Open Sans";
+    font-family: "Open Sans";
+    font-size: 15px;
     color: #999999;
 }
 
