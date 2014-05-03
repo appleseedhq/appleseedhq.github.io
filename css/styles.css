@@ -166,6 +166,15 @@ iframe {
     line-height: 1.8em;
 }
 
+.slick-slider {
+    margin-bottom: 55px;
+}
+
+.slick-dots li button:before {
+    color: #ff6600;
+    font-size: 10px;
+}
+
 #latest-news {
     float: left;
     width: 265px;
