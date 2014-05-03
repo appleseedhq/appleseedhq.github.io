@@ -186,6 +186,10 @@ article .date {
     line-height: 1.8em;
 }
 
+.slick-loading .slick-list {
+    background-image: url(/img/ajax-loader.gif)
+}
+
 .slick-slider {
     margin-bottom: 55px;
 }
