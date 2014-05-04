@@ -11,7 +11,7 @@ body {
 }
 
 p {
-    margin: 0 0 15px;
+    margin: 0px 0px 15px;
 }
 
 a,
@@ -20,10 +20,6 @@ a#download-link:hover {
     color: #bbb;
     transition: color .10s linear;
     -webkit-transition: color .10s linear;
-}
-
-article p a {
-    border-bottom: 1px dashed #999;
 }
 
 a:hover,
@@ -51,10 +47,6 @@ h1, h2, h3 {
     color: #bbb;
 }
 
-article {
-    margin-bottom: 35px;
-}
-
 hr {
     margin-bottom: 30px;
     background-color: #444;
@@ -69,14 +61,8 @@ iframe {
     overflow: hidden;
 }
 
-article .date {
-    margin-bottom: 15px;
-    font-size: 13px;
-    color: #666;
-}
-
 #header {
-    height: 230px;
+    height: 225px;
     background-color: #282828;
     text-align: center;
 }
@@ -86,8 +72,8 @@ article .date {
 }
 
 #navigation ul {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     list-style-type: none;
     text-align: center;
 }
@@ -221,6 +207,28 @@ article .date {
     margin-top: 25px;
 }
 
+article {
+    margin-bottom: 35px;
+}
+
+article .date {
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #666;
+}
+
+article p a {
+    border-bottom: 1px dashed #666;
+    transition: color .10s linear, border-bottom-color .10s linear;
+    -webkit-transition: color .10s linear, border-bottom-color .10s linear;
+}
+
+article p a:hover {
+    border-bottom-color: #ff5a11;
+    transition: color .10s linear, border-bottom-color .10s linear;
+    -webkit-transition: color .10s linear, border-bottom-color .10s linear;
+}
+
 .team-member {
     margin-bottom: 60px;
     overflow: auto;
@@ -295,8 +303,8 @@ article .date {
 }
 
 .footer ul {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     list-style-type: none;
 }
 
