@@ -10,6 +10,9 @@
 - label: Team
   url: "/team.html"
 
+- label: Forum
+  url: "http://forum.appleseedhq.net/"
+
 - label: Wiki
   url: "https://github.com/appleseedhq/appleseed/wiki"
 
