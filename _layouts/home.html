@@ -25,7 +25,7 @@
             {% case item.type %}
                 {% when 'image' %}
                     <a href="{{ item.url }}">
-                        <img src="{{ item.url }}" width="960" height="540" />
+                        <img src="{{ item.url }}" alt="{{ item.alt }}" width="960" height="540" />
                     </a>
                 {% when 'vimeo' %}
                     <iframe src="{{ item.url }}" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
