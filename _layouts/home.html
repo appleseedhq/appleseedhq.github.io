@@ -1,6 +1,6 @@
 {% include header.html %}
-    <div id="splash-wrapper">
-        <div id="splash">
+    <div id="splash-container">
+        <div id="splash-inner">
             <div id="download-button-wrapper">
                 <a id="download-link" href="#">
                     <div id="download-button">
@@ -18,7 +18,6 @@
             </div>
         </div>
     </div>
-
     <div class="carousel">
         {% for item in site.data.carousel %}
         <div>
@@ -33,7 +32,6 @@
         </div>
         {% endfor %}
     </div>
-
     <div id="news">
         <div id="latest-news">Latest news</div>
         <div id="news-container">
@@ -47,7 +45,6 @@
             <div class="more-news"><a href="/news.html">More News&hellip;</a></div>
         </div>
     </div>
-
     <script>
         var link, target = '';
 
