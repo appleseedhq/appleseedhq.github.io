@@ -29,6 +29,10 @@ a:hover,
     -webkit-transition: color .10s linear;
 }
 
+a, img {
+    border: none;
+}
+
 h1 {
     font-size: 25px;
 }
@@ -70,6 +74,7 @@ iframe {
 #logo {
     padding: 30px;
 }
+
 
 #navigation ul {
     margin: 0px;
