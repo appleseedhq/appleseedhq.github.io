@@ -260,78 +260,77 @@ article p a:hover {
 }
 
 #footer-container {
-    width: 100%;
-
-    /* Firefox */
-    display: -moz-box;
-    -moz-box-pack: center;
-    -moz-box-align: center;
-
-    /* Safari and Chrome */
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-
-    /* W3C */
-    display: box;
-    box-pack: center;
-    box-align: center;
-
     margin-top: 35px;
-    height: 195px;
     background-color: #282828;
+    text-align: center;
 }
 
 #footer-inner {
-    width: 660px;
+    display: inline-block;
 }
 
-.footer,
-.footer a {
+.footer-block {
+    float: left;
+    margin: 30px 15px 15px 15px;
+    text-align: left;
+}
+
+.footer-block,
+.footer-block a {
     color: #666;
 }
 
-.footer a:hover {
+.footer-block a:hover {
     color: #bbb;
 }
 
-.footer h4 {
+.footer-block h4 {
     margin-top: 0px;
     margin-bottom: 12px;
     text-transform: uppercase;
 }
 
-.footer ul {
+.footer-block ul {
     padding: 0px;
     margin: 0px;
     list-style-type: none;
 }
 
-.footer ul li {
+.footer-block ul li {
     margin-bottom: 5px;
 }
 
 #contact {
-    float: left;
-    margin-right: 30px;
+    width: 200px;
+}
+
+#github {
+    width: 140px;
+}
+
+#external-projects {
     width: 200px;
 }
 
 #social ul > li {
+    display: inline-block;
+    *display: inline;
     margin-top: 5px;
     margin-right: 10px;
-    display: inline-block;
     zoom: 1;
-    *display: inline;
-}
-
-#links {
-    float: left;
-    margin-right: 30px;
-    width: 200px;
 }
 
 #copyright {
-    float: left;
-    width: 200px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#copyright,
+#copyright a {
+    color: #444;
+}
+
+#copyright a:hover {
+    color: #bbb;
 }
