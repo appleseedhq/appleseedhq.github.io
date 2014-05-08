@@ -315,8 +315,9 @@ article p a:hover {
 
 #copyright {
     width: 100%;
-    text-align: center;
     padding-bottom: 30px;
+    text-align: center;
+    font-size: 14px;
 }
 
 #copyright,
