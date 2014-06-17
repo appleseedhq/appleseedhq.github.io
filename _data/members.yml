@@ -77,6 +77,15 @@
     - { label: LinkedIn, url: "https://www.linkedin.com/pub/hans-hoogenboom/2/b21/45b" }
 
 
+- name: Joel Daniels
+  picture: joel_daniels.jpg
+  bio: >
+    Joel is a freelance CG artist hailing from Austin, Texas, with a background in music, art, and multimedia.
+    He contributes to blenderseed, a Blender-to-appleseed exporter.  He currently lives in Cincinnati, Ohio.
+  links:
+    - { label: blenderseed, url: "https://github.com/appleseedhq/blenderseed" }
+
+
 - name: Luis Barrancos
   picture: luis_barrancos.jpg
   bio: >
@@ -89,7 +98,7 @@
     Thomas is a web programmer by day and an electronic music composer and DJ by night. He has also been playing
     cello for 25 years. Thomas is in charge of the appleseed web site. He lives in Annecy, France.
   links:
-    - { label: "SoundCloud", url: "https://soundcloud.com/phonosheet" }
+    - { label: SoundCloud, url: "https://soundcloud.com/phonosheet" }
 
 
 - name: Srinath Ravichandran
@@ -98,7 +107,7 @@
     Srinath is a M.S. by Research student at IIIT Hyderabad, India. He is very passionate about computer graphics
     and hopes one day he'll work in the VFX/entertainment industry. He is currently working on research problems
     that involve light transport algorithms, ray tracing and GPUs. Srinath is a Google Summer of Code 2014 student:
-    he will be bringing curve rendering (for hair, fur, etc.) to appleseed.
+    he is bringing curve rendering (for hair, fur, etc.) to appleseed.
   links:
     - { label: Web Site, url: "http://researchweb.iiit.ac.in/~srinath.ravichandran/" }
 
@@ -108,5 +117,5 @@
   bio: >
     Marius is a student from Romania at the Faculty of Automatic Control and Computers, Bucharest. He is new to
     the open source community and always willing to learn new stuff. Marius is a Google Summer of Code 2014 student:
-    he will work on a material editor for appleseed.studio.
+    he is working on an advanced material editor for appleseed.studio.
 
