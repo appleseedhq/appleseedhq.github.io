@@ -5,7 +5,7 @@ title: Download
 
 ## Latest Release: appleseed 1.1.0 alpha-21
 * [64-bit build for Windows](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-21/appleseed-1.1.0-alpha-21-0-g5c5df0b-win64-vs110.zip)
-* [64-bit build for Mac OS X 10.9+](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-21/appleseed-1.1.0-alpha-21-0-g5c5df0b-mac64-llvm.zip)
+* [64-bit build for Mac OS X 10.9+](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-21/appleseed-1.1.0-alpha-21-0-g5c5df0b-mac64-llvm-fixed.zip)
 * [64-bit build for Linux](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-21/appleseed-1.1.0-alpha-21-0-g5c5df0b-linux64-gcc4.zip)
 * [Release Notes](https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-21)
 
