@@ -7,7 +7,7 @@
     houses. François started writing appleseed in 2009 and is the project leader. He is also the author of
     toxic, an early open source global illumination renderer released in 2003. François lives in Annecy, France.
   links:
-    - { label: LinkedIn, url: "http://www.linkedin.com/in/fbeaune" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/fbeaune" }
 
 
 - name: Esteban Tovagliari
@@ -41,8 +41,8 @@
     lives in Montréal, Canada.
   links:
     - { label: Blog, url: "http://www.fevrierdorian.com/blog/" }
-    - { label: Twitter, url: "http://twitter.com/NarannCG" }
-    - { label: LinkedIn, url: "http://www.linkedin.com/in/dorianfevrier" }
+    - { label: Twitter, url: "https://twitter.com/NarannCG" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/dorianfevrier" }
 
 
 - name: François Gilliot
@@ -89,7 +89,13 @@
 - name: Luis Barrancos
   picture: luis_barrancos.jpg
   bio: >
-    Luis is a cool guy! He lives in Kuala Lumpur, Malaysia.
+    Luis is a freelance CG artist and shader writer with a background in fine arts and photography. Besides
+    cooperating in Dangerdeep as lead 2D and 3D artist, he also was a developer of Shrimp, a RSL node-based
+    shader authoring system. C, C++ aficcionado, he has a kink for physically based rendering, RSL, OSL and
+    VEX shader writing, and beer freezing techniques. He has been working recently in extending BxDFs in
+    appleseed. He is currently living in Kuala Lumpur, Malaysia.
+  links:
+    - { label: LinkedIn, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }
 
 
 - name: Thomas Arthus
