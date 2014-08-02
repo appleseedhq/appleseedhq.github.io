@@ -7,3 +7,7 @@
 
 - type: vimeo
   url: "https://player.vimeo.com/video/81199785"
+
+- type: image
+  url: "/img/fluffycornellbox.jpg"
+  alt: "Fluffy Cornell Box"
