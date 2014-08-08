@@ -21,7 +21,7 @@
                     {% assign current = page.url | remove_first: site.baseurl | prepend: '/' %}
                     {% for item in site.data.menus %}
                     <li>
-                        <a href="{{ item.url }}" debug="{{ current }} | {{ item.url }}" {% if current == item.url %}class="active"{% endif %}>{{ item.label }}</a>
+                        <a href="{{ item.url }}" debug="{{ site.baseurl }} | {{ current }} | {{ item.url }}" {% if current == item.url %}class="active"{% endif %}>{{ item.label }}</a>
                     </li>
                     {% endfor %}
                 </ul>
