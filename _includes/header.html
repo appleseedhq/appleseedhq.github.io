@@ -20,7 +20,7 @@
                 <ul>
                     {% for item in site.data.menus %}
                     <li>
-                        <a href="{{ item.url }}" debug="page.url={{page.url}} site.baseurl={{ site.baseurl }} item.url={{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.label }}</a>
+                        <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.label }}</a>
                     </li>
                     {% endfor %}
                 </ul>
