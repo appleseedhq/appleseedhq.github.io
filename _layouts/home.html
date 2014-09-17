@@ -33,7 +33,7 @@
         {% endfor %}
     </div>
     <div id="news">
-        <div id="latest-news">Latest news</div>
+        <h2 class="home-title allcaps" id="latest-news">Latest news</h2>
         <div id="news-container">
             {% for post in site.posts limit:1 %}
             <article>
@@ -43,6 +43,19 @@
             </article>
             {% endfor %}
             <div class="more-news"><a href="/news.html">More News&hellip;</a></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="commits">
+        <h2 class="home-title allcaps">Development activity</h2></div>
+        <div>
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <div class="highlight">
+                <code id="repo_list" class="language-bash">
+                    <script src="js/development-activity.js"></script>
+                </code>
+                <a href="https://github.com/appleseedhq/appleseed/commits/master">More...</a>
+            </div>
         </div>
     </div>
     <script>

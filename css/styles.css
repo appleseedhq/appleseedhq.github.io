@@ -188,9 +188,21 @@ iframe {
 #latest-news {
     float: left;
     width: 265px;
+}
+
+.home-title {
+    color: #999;
+    font-family: "Open Sans";
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 265px;
+
+}
+
+.allcaps {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.3em;
 }
 
 #news-container {
@@ -225,6 +237,10 @@ article p a:hover {
     -webkit-transition: color .10s linear, border-bottom-color .10s linear;
 }
 
+#commits {
+    margin-top: 35px;
+}
+
 .team-member {
     margin-bottom: 60px;
     overflow: auto;
@@ -250,6 +266,30 @@ article p a:hover {
     list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
+}
+
+.highlight {
+    width: 100%;
+    padding: 13px;
+    margin-top: 19px;
+    background-color: #282828;
+    font-size: 12px;
+    color: #999;
+}
+
+.highlight li {
+    line-height: 1.9em;
+}
+
+.highlight .commit-author {
+     color: #eee;
+     font-size: 13px;
+     font-weight: bold;
+}
+
+.highlight .commit-date {
+    color: #eee;
+    font-size: 13px;
 }
 
 #footer-container {
