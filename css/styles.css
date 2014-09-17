@@ -307,10 +307,9 @@ article p a:hover {
 
 #social ul > li {
     display: inline-block;
-    *display: inline;
+    display: inline;
     margin-top: 5px;
     margin-right: 10px;
-    zoom: 1;
 }
 
 #copyright {
