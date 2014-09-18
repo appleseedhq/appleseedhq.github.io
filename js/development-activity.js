@@ -3,14 +3,13 @@ function fillWithOneLeadingZero(i) {
 }
 
 $().ready(function() {
-    console.log('ready');
     $.ajax({
         type: "GET",
         url: "https://api.github.com/repos/appleseedhq/appleseed/commits",
         dataType: "json",
 
         success: function(result) {
-            for(i = 0; i < 5; i++ ) {
+            for (var i = 0; i < 5; i++ ) {
                 var tempDate        = new Date(result[i].commit.author.date);
                 var commitDate      = tempDate.getFullYear() + "/"
                                       + fillWithOneLeadingZero(tempDate.getMonth()) + "/"
@@ -19,10 +18,10 @@ $().ready(function() {
                 var commitMessage   = result[i].commit.message;
                 var commitUrl       = result[i].html_url;
 
-                $("#repo_list").append(
+                $("#latest-commits").append(
                     "<li style='list-style-type: none;'>" +
-                        "<a href='" + commitUrl + "'><span class='commit-date'>" + commitDate + "</span> " +
-                        "<span class='commit-author'>" + commitAuthor + "</span> " +
+                        "<a href='" + commitUrl + "'><span class='commit'>" + commitDate + "</span> " +
+                        "<span class='commit commit-author'>" + commitAuthor + "</span> " +
                         commitMessage +
                         "</a></li>"
                 );

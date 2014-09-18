@@ -192,17 +192,10 @@ iframe {
 
 .home-title {
     color: #999;
-    font-family: "Open Sans";
     font-size: 19px;
     font-weight: 700;
     text-transform: uppercase;
     width: 265px;
-
-}
-
-.allcaps {
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 #news-container {
@@ -281,15 +274,13 @@ article p a:hover {
     line-height: 1.9em;
 }
 
-.highlight .commit-author {
-     color: #eee;
-     font-size: 13px;
-     font-weight: bold;
-}
-
-.highlight .commit-date {
+.highlight .commit {
     color: #eee;
     font-size: 13px;
+}
+
+.commit-author {
+    font-weight: bold;
 }
 
 #footer-container {
