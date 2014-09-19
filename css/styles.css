@@ -261,7 +261,7 @@ article p a:hover {
     margin-bottom: 0px;
 }
 
-.highlight {
+.commits-container {
     width: 100%;
     padding: 13px;
     margin-top: 19px;
@@ -270,16 +270,11 @@ article p a:hover {
     color: #999;
 }
 
-.highlight li {
+.commits-container li {
     line-height: 1.9em;
 }
 
-.highlight .commit {
-    color: #eee;
-    font-size: 13px;
-}
-
-.commit-author {
+.commits-container .commit-author {
     font-weight: bold;
 }
 
