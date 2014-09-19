@@ -11,8 +11,8 @@ $().ready(function() {
             for (var i = 0; i < 5; ++i) {
                 var tempDate        = new Date(result[i].commit.author.date);
                 var commitDate      = tempDate.getFullYear()
-                                          + "/" + leftPadWithZero(tempDate.getMonth())
-                                          + "/" + leftPadWithZero(tempDate.getDate());
+                                          + "-" + leftPadWithZero(tempDate.getMonth())
+                                          + "-" + leftPadWithZero(tempDate.getDate());
                 var commitAuthor    = result[i].commit.author.name;
                 var commitMessage   = result[i].commit.message;
                 var commitUrl       = result[i].html_url;
