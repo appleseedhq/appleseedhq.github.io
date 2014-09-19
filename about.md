@@ -16,7 +16,8 @@ title: About
 
 * Pinhole camera
 * Thin lens camera (for depth of field)
-  - Support for polygonal diaphragms
+  - Support for polygonal diaphragm shapes
+  - Support for arbitrary diaphragm shapes based on grayscale images
 * Spherical camera (to make environment maps)
 
 ### Reflection Models
@@ -29,8 +30,10 @@ title: About
   - Ward
   - Blinn
   - GGX
+* Microfacet BTDF (rough glass)
 * Ashikhmin BRDF (anisotropic)
 * Kelemen BRDF
+* Disney's Principled BRDF
 * Arbitrary mixtures of BRDFs
 
 ### Light Source Models
@@ -40,8 +43,8 @@ title: About
   - Support for gobos
 * Directional/parallel light
 * Mesh light
-  - Purely diffuse
-  - Cone-shaped
+  - Purely diffuse emission
+  - Cone-shaped emission
 * Image-based lighting
 * Preetham physically-based day sky
 * Hosek & Wilkie physically-based day sky
@@ -63,7 +66,7 @@ title: About
 
 ### Production Features
 
-* Programmable shading via Open Shading Language (**experimental**)
+* Programmable shading via Open Shading Language
 * Rule-based render layers
 * Hierarchical instancing
 * Automatic, on-the-fly color space transformations and gamma/ungamma
