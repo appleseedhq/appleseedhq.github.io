@@ -188,9 +188,14 @@ iframe {
 #latest-news {
     float: left;
     width: 265px;
+}
+
+.home-title {
+    color: #999;
+    font-size: 19px;
+    font-weight: 700;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.3em;
+    width: 265px;
 }
 
 #news-container {
@@ -225,6 +230,10 @@ article p a:hover {
     -webkit-transition: color .10s linear, border-bottom-color .10s linear;
 }
 
+#commits {
+    margin-top: 35px;
+}
+
 .team-member {
     margin-bottom: 60px;
     overflow: auto;
@@ -250,6 +259,28 @@ article p a:hover {
     list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
+}
+
+.highlight {
+    width: 100%;
+    padding: 13px;
+    margin-top: 19px;
+    background-color: #282828;
+    font-size: 12px;
+    color: #999;
+}
+
+.highlight li {
+    line-height: 1.9em;
+}
+
+.highlight .commit {
+    color: #eee;
+    font-size: 13px;
+}
+
+.commit-author {
+    font-weight: bold;
 }
 
 #footer-container {
@@ -307,10 +338,9 @@ article p a:hover {
 
 #social ul > li {
     display: inline-block;
-    *display: inline;
+    display: inline;
     margin-top: 5px;
     margin-right: 10px;
-    zoom: 1;
 }
 
 #copyright {
