@@ -1,4 +1,4 @@
-function fillWithOneLeadingZero(i) {
+function leftPadWithZero(i) {
     return (i < 10 ? '0' : '') + i
 }
 
@@ -7,13 +7,12 @@ $().ready(function() {
         type: "GET",
         url: "https://api.github.com/repos/appleseedhq/appleseed/commits",
         dataType: "json",
-
         success: function(result) {
-            for (var i = 0; i < 5; i++ ) {
+            for (var i = 0; i < 5; ++i) {
                 var tempDate        = new Date(result[i].commit.author.date);
-                var commitDate      = tempDate.getFullYear() + "/"
-                                      + fillWithOneLeadingZero(tempDate.getMonth()) + "/"
-                                      + fillWithOneLeadingZero(tempDate.getDate());
+                var commitDate      = tempDate.getFullYear()
+                                          + "/" + leftPadWithZero(tempDate.getMonth())
+                                          + "/" + leftPadWithZero(tempDate.getDate());
                 var commitAuthor    = result[i].commit.author.name;
                 var commitMessage   = result[i].commit.message;
                 var commitUrl       = result[i].html_url;
@@ -25,10 +24,9 @@ $().ready(function() {
                         commitMessage +
                         "</a></li>"
                 );
+                
+                $("#commits").show();
             }
         }
     })
-    .fail(function() {
-        $('#commits').remove();
-    });
 });
