@@ -58,6 +58,13 @@ hr {
     height: 1px;
 }
 
+code {
+    font-family: monospace;
+    font-size: 13px;
+    background-color: #3A3A3A;
+    padding: 2px 4px;
+}
+
 iframe {
     background-color: transparent;
     border: 0px none transparent;
