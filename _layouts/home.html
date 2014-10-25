@@ -57,16 +57,16 @@
         </div>
     </div>
     <script>
-        var link, target = '';
+        var link, target;
 
         if (navigator.appVersion.indexOf("Win") != -1) {
-            link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-win64-vs110.zip';
+            link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-win64-vs110.zip';
             target = 'for 64-bit Windows';
         } else if (navigator.appVersion.indexOf("Mac") != -1) {
             link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-mac64-clang5.zip';
-            target = 'for 64-bit MacOS 10.9+';
+            target = 'for 64-bit OS X (10.9+)';
         } else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {
-            link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-linux64-gcc48.tgz';
+            link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-linux64-gcc48.zip';
             target = 'for 64-bit Linux';
         }
 

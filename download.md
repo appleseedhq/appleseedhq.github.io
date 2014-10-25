@@ -3,12 +3,14 @@ layout: default
 title: Download
 ---
 
-## Latest Release: appleseed 1.1.0 alpha-22
+## Latest Release: appleseed 1.1.0 alpha-23
 
-* [64-bit build for Windows](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-win64-vs110.zip)
-* [64-bit build for Mac OS X 10.9+](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-mac64-clang5.zip)
-* [64-bit build for Linux](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-linux64-gcc48.tgz)
-* [Release Notes](https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-22)
+* [64-bit build for Windows](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-win64-vs110.zip)
+<!--* [64-bit build for OS X (10.9+)](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-mac64-clang5.zip)-->
+* [64-bit build for Linux](https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-linux64-gcc48.zip)
+* [Release Notes](https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-23)
+
+The OS X build will be available shortly.
 
 
 ## Source Code
