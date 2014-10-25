@@ -24,7 +24,7 @@ $().ready(function () {
                         commitMessage +
                         "</a></li>"
                 );
-                
+
                 $("#commits").show();
             }
         }
