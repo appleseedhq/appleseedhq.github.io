@@ -18,11 +18,9 @@ $().ready(function () {
                 var commitUrl       = result[i].html_url;
 
                 $("#latest-commits").append(
-                    "<li style='list-style-type: none;'>" +
-                        "<a href='" + commitUrl + "'><span class='commit'>" + commitDate + "</span> " +
+                    "<li><a href='" + commitUrl + "'><span class='commit'>" + commitDate + "</span> " +
                         "<span class='commit commit-author'>" + commitAuthor + "</span> " +
-                        commitMessage +
-                        "</a></li>"
+                        commitMessage + "</a></li>"
                 );
 
                 $("#commits").show();

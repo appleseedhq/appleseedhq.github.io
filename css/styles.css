@@ -237,10 +237,6 @@ article p a:hover {
     -webkit-transition: color .10s linear, border-bottom-color .10s linear;
 }
 
-#commits {
-    margin-top: 35px;
-}
-
 .team-member {
     margin-bottom: 60px;
     overflow: auto;
@@ -268,20 +264,31 @@ article p a:hover {
     margin-bottom: 0px;
 }
 
-.commits-container {
+#commits {
+    margin-top: 35px;
+}
+
+#commit-container {
     width: 100%;
     padding: 13px;
     margin-top: 19px;
     background-color: #282828;
-    font-size: 12px;
     color: #999;
-}
-
-.commits-container li {
+    font-family: monospace;
+    font-size: 12px;
     line-height: 1.9em;
 }
 
-.commits-container .commit-author {
+#commit-container ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#commit-container li {
+    list-style-type: none;
+}
+
+#commit-container .commit-author {
     font-weight: bold;
 }
 
