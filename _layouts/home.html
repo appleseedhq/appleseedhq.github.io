@@ -1,76 +1,56 @@
 {% include header.html %}
-    <div id="splash-container">
-        <div id="splash-inner">
-            <div id="download-button-wrapper">
-                <a id="download-link" href="#">
-                    <div id="download-button">
-                        <div id="download-cta">Download</div>
-                        <div id="download-platform"></div>
+
+    <!------------------------
+      Intro section.
+      ----------------------->
+
+    <div class="section light intro">
+        <div class="content">
+            {% for p in site.data.intro %}
+                {{ p.text | markdownify }}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!------------------------
+      Quick section.
+      ----------------------->
+
+    <div class="section light quick">
+        <div class="content">
+            <div class="buttons-wrapper">
+                <div class="buttons">
+                    <div class="download">
+                        <a class="button" href="#">Download</a>
+                        <a class="version" href="https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-24">Current Version: 1.1.0 alpha-24</a>
                     </div>
-                </a>
-                <div id="download-version">
-                    <a href="https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-23">Current Version: 1.1.0 alpha-23</a>
+                    <a class="button get-started" href="#">Get Started</a>
                 </div>
             </div>
-            <div id="splash-message">
-                appleseed is a modern, physically-based renderer designed for production rendering. It is released as open source under the MIT&nbsp;license.
-                <a href="/about.html">More&hellip;</a>
+        </div>
+    </div>
+
+    <!------------------------
+      Showcase section.
+      ----------------------->
+
+    <div class="section dark showcase">
+        <div class="content">
+            <div class="wrapper">
+                <p>Fetch is a short film produced by the development team and fully rendered with appleseed.</p>
+                <iframe src="//player.vimeo.com/video/92172277?title=0&amp;byline=0&amp;portrait=0&amp;color=ff6600" width="768" height="432" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </div>
     </div>
-    <div class="carousel">
-        {% for item in site.data.carousel %}
-        <div>
-            {% case item.type %}
-                {% when 'image' %}
-                    <a href="{{ item.url }}">
-                        <img src="{{ item.url }}" alt="{{ item.alt }}" width="960" height="540" />
-                    </a>
-                {% when 'vimeo' %}
-                    <iframe src="{{ item.url }}" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            {% endcase %}
-        </div>
-        {% endfor %}
-    </div>
-    <div id="news">
-        <h2 class="home-title" id="latest-news">Latest news</h2>
-        <div id="news-container">
-            {% for post in site.posts limit:1 %}
-            <article>
-                <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-                <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
-                <div class="body">{{ post.content }}</div>
-            </article>
-            {% endfor %}
-            <div class="more-news"><a href="/news.html">More News&hellip;</a></div>
-        </div>
-        <div class="clear">
-        </div>
-    </div>
-    <div id="commits" style="display: none">
-        <h2 class="home-title">Development Activity</h2>
-        <div id="commit-container">
-            <ul id="latest-commits">
-                <script src="js/development-activity.js"></script>
-            </ul>
-            <a href="https://github.com/appleseedhq/appleseed/commits/master">More...</a>
-        </div>
-    </div>
-    <script>
-        var link, target;
 
-        if (navigator.appVersion.indexOf("Win") != -1) {
-            link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-win64-vs110.zip';
-            target = 'for 64-bit Windows';
-        } else if (navigator.appVersion.indexOf("Mac") != -1) {
-            link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-22/appleseed-1.1.0-alpha-22-0-gcdbec94-mac64-clang5.zip';
-            target = 'for 64-bit OS X (10.9+)';
-        } else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {
-            link = 'https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-linux64-gcc48.zip';
-            target = 'for 64-bit Linux';
-        }
+    <!------------------------
+      News section.
+      ----------------------->
 
-        document.getElementById('download-link').href = link;
-        document.getElementById('download-platform').innerHTML = target;
-    </script>
+    <div class="section light news">
+        <div class="content">
+            <div style="width:100%; height:100px;">Some Text</div>
+        </div>
+    </div>
+
 {% include footer.html %}

@@ -1,5 +1,5 @@
 ---
 layout: home
-title: appleseed website
+title: appleseed
 home: true
 ---

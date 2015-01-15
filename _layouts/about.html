@@ -1,0 +1,19 @@
+{% include header.html %}
+    {% for member in site.data.team %}
+        <div class="team-member">
+            <img src="img/team/{{ member.picture }}" alt="{{ member.name }}">
+            <div class="info">
+                <h3>{{ member.name }}</h3>
+                <div class="bio">{{ member.bio }}</div>
+                <ul class="links">
+                    {% for link in member.links %}
+                    <li class="link">
+                        <span class="label">{{ link.label }}</span>:&nbsp;
+                        <a href="{{ link.url }}">{{ link.url }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+{% include footer.html %}

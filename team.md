@@ -1,4 +1,0 @@
----
-layout: team
-title: Team
----

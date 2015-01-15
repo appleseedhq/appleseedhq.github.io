@@ -1,370 +1,367 @@
-html {
-    overflow-y: scroll;
+/* ----------------------
+   Resets.
+   --------------------- */
+
+body
+{
+    margin: 0px;
 }
 
-body {
+ul
+{
     margin: 0px;
-    background-color: #2f2f2f;
+    padding: 0px;
+}
+
+p
+{
+    margin: 0px;
+}
+
+h1, h2, h3
+{
+    margin: 0px;
+}
+
+iframe
+{
+    display: block;
+}
+
+/* ----------------------
+   Common styles.
+   --------------------- */
+
+body
+{
     font-family: "Open Sans";
     font-size: 15px;
-    color: #999;
 }
 
-p {
-    margin: 0px 0px 15px;
+p
+{
+    line-height: 25px;
 }
 
-a,
-a#download-link:hover {
+a
+{
     text-decoration: none;
-    color: #bbb;
+    color: #da854c;
     transition: color .10s linear;
-    -webkit-transition: color .10s linear;
 }
 
-a:hover,
-#download-version a:hover {
-    color: #ff5a11;
+a:hover
+{
+    color: #ff6600;
     transition: color .10s linear;
-    -webkit-transition: color .10s linear;
 }
 
-a, img {
-    border: none;
-}
-
-h1 {
-    font-size: 25px;
-}
-
-h2 {
-    margin-bottom: 10px;
-    font-size: 21px;
-}
-
-h3 {
-    font-size: 17px;
-}
-
-h1, h2, h3 {
-    margin-top: 0px;
-    color: #bbb;
-}
-
-hr {
-    margin-bottom: 30px;
-    background-color: #444;
-    border: none;
-    height: 1px;
-}
-
-code {
-    font-family: monospace;
-    font-size: 13px;
-    background-color: #3A3A3A;
-    padding: 2px 4px;
-}
-
-iframe {
-    background-color: transparent;
-    border: 0px none transparent;
-    padding: 0px;
-    overflow: hidden;
-}
-
-.clear {
-    clear: both;
-}
-
-#header {
+.button
+{
+    display: inline-block;
+    width: 200px;
+    margin: 15px;
+    line-height: 50px;
     text-align: center;
+    font-size: 20px;
+    color: #111;
+    background-color: #666;
+    transition: background-color 0.10s linear;
+}
+
+.button:hover
+{
+    color: #111;
+    background-color: #888;
+    transition: background-color 0.10s linear;
+}
+
+/* ----------------------
+   Sections.
+   --------------------- */
+
+.section
+{
+}
+
+.section.light
+{
+    background-color: #2f2f2f;
+}
+
+.section.dark
+{
     background-color: #282828;
 }
 
-#logo {
-    padding: 30px;
+.section .content
+{
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ccc;
 }
 
-#navigation {
-    padding-bottom: 15px;
-}
+/* ----------------------
+   Header section.
+   --------------------- */
 
-#navigation ul {
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
+.section.header .logo-wrapper
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
 }
 
-#navigation ul li {
-    display: inline;
-}
-
-#navigation ul li a {
-    text-decoration: none;
-    padding: .2em 1.2em;
-    color: #777;
-}
-
-#navigation ul li a:hover {
-    color: #bbb;
-}
-
-#navigation ul li a.active {
-    color: #bbb;
-}
-
-#wrapper {
-    width: 960px;
-    margin: 0px auto;
-    padding-top: 30px;
-}
-
-#splash-container {
-    clear: both;
-    text-align: center;
-}
-
-#splash-inner {
+.section.header .logo-wrapper img.logo
+{
     display: inline-block;
-    margin: 0 0 35px;
 }
 
-#download-button-wrapper {
-    float: left;
+.section.header .navigation-wrapper
+{
 }
 
-#download-button {
-    width: 200px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding-top: 4px;
-    padding-bottom: 8px;
-    text-align: center;
-    background-color: #444;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.10s linear;
-    -webkit-transition: background-color 0.10s linear;
-}
-
-#download-button:hover {
-    background-color: #4C4C4C;
-    transition: background-color 0.10s linear;
-    -webkit-transition: background-color 0.10s linear;
-}
-
-#download-cta {
-    font-weight: bold;
-    font-size: 24px;
-}
-
-#download-version {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-}
-
-#download-version a {
-    color: #666;
-}
-
-#splash-message {
-    width: 468px;
-    float: left;
-    margin-left: 50px;
-    text-align: left;
-    line-height: 1.8em;
-}
-
-.slick-loading .slick-list {
-    background-image: url(/img/ajax-loader.gif)
-}
-
-.slick-slider {
-    margin-bottom: 55px;
-}
-
-.slick-dots li button:before {
-    color: #ff6600;
-    font-size: 10px;
-}
-
-#latest-news {
-    float: left;
-    width: 265px;
-}
-
-.home-title {
-    color: #999;
-    font-size: 19px;
-    font-weight: 700;
-    text-transform: uppercase;
-    width: 265px;
-}
-
-#news-container {
-    float: left;
-    margin-left: 42px;
-    width: 653px;
-}
-
-.more-news {
-    margin-top: 25px;
-}
-
-article {
-    margin-bottom: 35px;
-}
-
-article .date {
-    margin-bottom: 15px;
-    font-size: 13px;
-    color: #666;
-}
-
-article p a {
-    border-bottom: 1px dashed #666;
-    transition: color .10s linear, border-bottom-color .10s linear;
-    -webkit-transition: color .10s linear, border-bottom-color .10s linear;
-}
-
-article p a:hover {
-    border-bottom-color: #ff5a11;
-    transition: color .10s linear, border-bottom-color .10s linear;
-    -webkit-transition: color .10s linear, border-bottom-color .10s linear;
-}
-
-.team-member {
-    margin-bottom: 60px;
-    overflow: auto;
-    width: 100%;
-}
-
-.team-member img {
-    float: left;
-    margin-right: 60px;
-    margin-bottom: 30px;
-}
-
-.team-member .info {
-    overflow: hidden;
-}
-
-.team-member .info h4 {
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
-
-.team-member .info ul.links {
+.section.header ul.navigation
+{
+    display: block;
     list-style-type: none;
-    padding-left: 0px;
+    text-align: center;
+}
+
+.section.header ul.navigation li
+{
+    display: inline-block;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.section.header ul.navigation li a
+{
+    color: inherit;
+}
+
+.section.header ul.navigation li a:hover,
+.section.header ul.navigation li.active span
+{
+    color: #ff6600;
+}
+
+/* ----------------------
+   Footer section.
+   --------------------- */
+
+.section.footer .columns-wrapper
+{
+    text-align: center;
+}
+
+.section.footer .columns
+{
+    display: inline-block;
+}
+
+.section.footer ul.column
+{
+    margin: 40px;
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+}
+
+.section.footer ul.column#social
+{
+    width: 110px;
+}
+
+.section.footer ul.column .header
+{
+    text-transform: uppercase;
+    color: inherit;
+    margin-bottom: 20px;
+}
+
+.section.footer ul.column li
+{
+    margin: 10px;
+}
+
+.section.footer ul.column li a
+{
+    color: #888;
+}
+
+.section.footer ul.column li a:hover
+{
+    color: #ff6600;
+}
+
+.section.footer .copyright p
+{
+    padding-bottom: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+}
+
+.section.footer .copyright p a
+{
+    color: #555;
+}
+
+.section.footer .copyright p a:hover
+{
+    color: #ff6600;
+}
+
+/* ----------------------
+   Intro section.
+   --------------------- */
+
+.section.intro p
+{
+    padding-top: 50px;
+    padding-bottom: 40px;
+    line-height: 35px;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* ----------------------
+   Quick section.
+   --------------------- */
+
+.section.quick .buttons-wrapper
+{
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.section.quick .buttons
+{
+    display: inline-block;
+}
+
+.section.quick .download
+{
+    display: inline-block;
+}
+
+.section.quick .download .button
+{
+    display: block;
+    background-color: #ff6600;
+}
+
+.section.quick .download .button:hover
+{
+    background-color: #da854c;
+}
+
+.section.quick .download .version
+{
+    font-size: 13px;
+    color: #888;
+}
+
+.section.quick .download .version:hover
+{
+    color: #ff6600;
+}
+
+.section.quick .button.get-started
+{
+    vertical-align: top;
+}
+
+/* ----------------------
+   Showcase section.
+   --------------------- */
+
+.section.showcase .wrapper
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section.showcase .wrapper p
+{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* ----------------------
+   Features section.
+   --------------------- */
+
+.section.features .wrapper
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section.features .group
+{
+    margin-bottom: 50px;
+}
+
+.section.features .group:last-child
+{
     margin-bottom: 0px;
 }
 
-#commits {
-    margin-top: 35px;
+.section.features .group img
+{
+    margin-bottom: 40px;
 }
 
-#commit-container {
-    width: 100%;
-    padding: 13px;
-    margin-top: 19px;
-    background-color: #282828;
-    color: #999;
-    font-family: monospace;
-    font-size: 12px;
-    line-height: 1.9em;
+.section.features .columns
+{
+    display: block;
+    padding-left: 60px;
 }
 
-#commit-container ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-#commit-container li {
-    list-style-type: none;
-}
-
-#commit-container .commit-author {
-    font-weight: bold;
-}
-
-#footer-container {
-    margin-top: 35px;
-    background-color: #282828;
-    text-align: center;
-}
-
-#footer-inner {
+.section.features .column
+{
     display: inline-block;
-}
-
-.footer-block {
-    float: left;
-    margin: 30px 15px 15px 15px;
+    vertical-align: top;
+    list-style-type: none;
     text-align: left;
 }
 
-.footer-block,
-.footer-block a {
-    color: #666;
+.section.features .column.left
+{
+    width: 370px;
 }
 
-.footer-block a:hover {
-    color: #bbb;
+.section.features .column.right
+{
+    width: 330px;
 }
 
-.footer-block h4 {
-    margin-top: 0px;
-    margin-bottom: 12px;
+.section.features .block
+{
+    padding-bottom: 30px;
+}
+
+.section.features .block:last-child
+{
+    padding-bottom: 0px;
+}
+
+.section.features .block h3
+{
     text-transform: uppercase;
+    color: inherit;
+    margin-bottom: 20px;
 }
 
-.footer-block ul {
-    padding: 0px;
-    margin: 0px;
+.section.features .block ul
+{
     list-style-type: none;
 }
 
-.footer-block ul li {
-    margin-bottom: 5px;
-}
-
-#contact {
-    width: 200px;
-}
-
-#github {
-    width: 140px;
-}
-
-#external-projects {
-    width: 200px;
-}
-
-#social ul > li {
-    display: inline-block;
-    *display: inline;
-    margin-top: 5px;
-    margin-right: 10px;
-    zoom: 1;
-}
-
-#copyright {
-    width: 100%;
-    padding-bottom: 30px;
-    text-align: center;
-    font-size: 14px;
-}
-
-#copyright,
-#copyright a {
-    color: #444;
-}
-
-#copyright a:hover {
-    color: #bbb;
+.section.features .block li
+{
+    margin-bottom: 10px;
 }

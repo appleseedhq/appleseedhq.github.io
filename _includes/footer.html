@@ -1,55 +1,37 @@
-        </div>
-        <p class="clear"></p>
-        <div id="footer-container">
-            <div id="footer-inner">
-                <div class="footer-block" id="contact">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:hello@appleseedhq.net">hello@appleseedhq.net</a></li>
-                        <li><a href="https://groups.google.com/forum/#!forum/appleseed-dev">development mailing list</a></li>
-                    </ul>
-                    <div id="social">
-                        <ul>
-                            <li><a href="https://github.com/appleseedhq"><i class="fa fa-github fa-lg"></i></a></li>
-                            <li><a href="https://vimeo.com/appleseedhq"><i class="fa fa-vimeo-square fa-lg"></i></a></li>
-                            <li><a href="https://twitter.com/appleseedhq"><i class="fa fa-twitter-square fa-lg"></i></a></li>
+        <!------------------------
+          Footer section.
+          ----------------------->
+
+        <div class="section dark footer">
+            <div class="content">
+                <div class="columns-wrapper">
+                    <div class="columns">
+                        <ul class="column" id="contact">
+                            <li class="header">Contact</li>
+                            <li><a href="mailto:hello@appleseedhq.net">hello@appleseedhq.net</a></li>
+                            <li><a href="https://forum.appleseedhq.net/">user forum</a></li>
+                            <li><a href="https://groups.google.com/forum/#!forum/appleseed-dev">development mailing list</a></li>
+                        </ul>
+                        <ul class="column" id="social">
+                            <li class="header">Social</li>
+                            <li><a href="https://twitter.com/appleseedhq">twitter</a></li>
+                            <li><a href="https://vimeo.com/appleseedhq">vimeo</a></li>
+                            <li><a href="https://www.openhub.net/p/appleseedhq">open hub</a></li>
+                        </ul>
+                        <ul class="column" id="github">
+                            <li class="header">GitHub</li>
+                            <li><a href="https://github.com/appleseedhq/appleseed">source code</a></li>
+                            <li><a href="https://github.com/appleseedhq/appleseed/issues">issue tracker</a></li>
+                            <li><a href="https://github.com/appleseedhq/appleseedhq.github.io">this site</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer-block" id="github">
-                    <h4>GitHub</h4>
-                    <ul>
-                        <li><a href="https://github.com/appleseedhq/appleseed">source code</a></li>
-                        <li><a href="https://github.com/appleseedhq/appleseed/issues">issue tracker</a></li>
-                        <li><a href="https://github.com/appleseedhq/appleseedhq.github.io">this site</a></li>
-                    </ul>
+                <div class="copyright">
+                    <p>appleseed and this site are &copy; 2010-2015 The appleseedhq Organization and are released under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT license</a></p>
                 </div>
-                <div class="footer-block" id="external-projects">
-                    <h4>External Projects</h4>
-                    <ul>
-                        <li><a href="http://www.mayaseed.net/">mayaseed.net</a></li>
-                        <li><a href="http://www.fetchaveryshortfilm.com/">fetchaveryshortfilm.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="copyright">
-                appleseed and this site are &copy; 2014 The appleseedhq Organization and are available under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT&nbsp;license</a>.
             </div>
         </div>
-        {% if page.home %}
-            <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-            <script src="js/slick.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('.carousel').slick({
-                        arrows: false,
-                        autoplay: false,
-                        autoplaySpeed: 6000,
-                        dots: true
-                    });
-                });
-            </script>
-        {% endif %}
+
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

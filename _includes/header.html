@@ -6,25 +6,34 @@
         <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-        <link rel="stylesheet" href="/css/slick.css"/>
         <link rel="stylesheet" href="/css/styles.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="/">
-                    <img src="/img/appleseed-website-logo.png" alt="appleseed logo" />
-                </a>
-            </div>
-            <div id="navigation">
-                <ul>
-                    {% for item in site.data.menus %}
-                    <li>
-                        <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.label }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
+        <!------------------------
+          Header section.
+          ----------------------->
+
+        <div class="section dark header">
+            <div class="content">
+                <div class="logo-wrapper">
+                    <a href="/">
+                        <img class="logo" src="/img/appleseed-website-logo.png" alt="appleseed logo">
+                    </a>
+                </div>
+                <div class="navigation-wrapper">
+                    <ul class="navigation">
+                        {% for item in site.data.navigation %}
+                            {% if page.url == item.url %}
+                                <li class="active">
+                                    <span>{{ item.label }}</span>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ item.url }}">{{ item.label }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
-        <div id="wrapper">
