@@ -43,6 +43,19 @@ p
     line-height: 25px;
 }
 
+h2
+{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+h3
+{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
 a
 {
     text-decoration: none;
@@ -288,6 +301,7 @@ a:hover
 {
     padding-bottom: 20px;
     text-align: center;
+    font-style: italic;
 }
 
 /* ----------------------
@@ -349,13 +363,6 @@ a:hover
     padding-bottom: 0px;
 }
 
-.section.features .block h3
-{
-    text-transform: uppercase;
-    color: inherit;
-    margin-bottom: 20px;
-}
-
 .section.features .block ul
 {
     list-style-type: none;
@@ -364,4 +371,16 @@ a:hover
 .section.features .block li
 {
     margin-bottom: 10px;
+}
+
+.section.features .screenshots .title
+{
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.section.features .screenshots img
+{
+    width: 768px;
+    margin-bottom: 60px;
 }
