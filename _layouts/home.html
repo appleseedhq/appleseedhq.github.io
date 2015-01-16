@@ -37,7 +37,7 @@
     <div class="section dark showcase">
         <div class="content">
             <div class="wrapper">
-                <p><a href="http://www.fetchaveryshortfilm.com/">Fetch</a> is a short film produced by the development team and rendered with appleseed:</p>
+                <p class="legend"><a href="http://www.fetchaveryshortfilm.com/">Fetch</a> is a short film produced by the development team and rendered with appleseed:</p>
                 <iframe src="//player.vimeo.com/video/92172277?title=0&amp;byline=0&amp;portrait=0&amp;color=ff6600" width="768" height="432" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </div>
@@ -49,7 +49,15 @@
 
     <div class="section light news">
         <div class="content">
-            <div style="width:100%; height:100px;">Some Text</div>
+            <div class="wrapper">
+                {% for post in site.posts limit:1 %}
+                    <article>
+                        <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
+                        <h3>{{ post.title }}</h3>
+                        <div class="body">{{ post.content }}</div>
+                    </article>
+                {% endfor %}
+            </div>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -20,20 +20,18 @@
                         <img class="logo" src="/img/appleseed-website-logo.png" alt="appleseed logo">
                     </a>
                 </div>
-                <div class="navigation-wrapper">
-                    <ul class="navigation">
-                        {% for item in site.data.navigation %}
-                            {% if page.url == item.url %}
-                                <li class="active">
-                                    <span>{{ item.label }}</span>
-                                </li>
-                            {% else %}
-                                <li>
-                                    <a href="{{ item.url }}">{{ item.label }}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
+                <ul class="navigation">
+                    {% for item in site.data.navigation %}
+                        {% if page.url == item.url %}
+                            <li class="active">
+                                <span>{{ item.label }}</span>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.label }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
             </div>
         </div>
