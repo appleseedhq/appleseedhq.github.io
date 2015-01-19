@@ -1,5 +1,5 @@
 ---
 layout: home
-title: appleseed
+title: A modern, open source production rendering engine
 home: true
 ---

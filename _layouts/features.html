@@ -110,7 +110,7 @@
                                     <li>Ray bias</li>
                                     <li>Light Near Start</li>
                                     <li>Max Ray Intensity</li>
-                                    <li>Many diagnostic modes</li>
+                                    <li>Dozens of diagnostic modes</li>
                                 </ul>
                             </div>
                         </div>
@@ -174,17 +174,14 @@
                 <h2>Screenshots</h2>
 
                 <div class="screenshots">
-                    <p class="legend">appleseed.studio, featuring our material tester scene:</p>
-                    <img src="img/screenshots/appleseed.studio.jpg">
-
-                    <p class="legend">appleseed.studio, editing a scene from <a href="http://www.fetchaveryshortfilm.com/">Fetch</a>:</p>
-                    <img src="img/screenshots/appleseed.studio-fetch.jpg">
-
-                    <p class="legend">appleseed inside ImageEngine's Gaffer lookdev application, here running on Linux:</p>
-                    <img src="img/screenshots/gafferseed.jpg">
-
-                    <p class="legend">appleseed.cli, our command line renderer, here running on Windows 7:</p>
-                    <img src="img/screenshots/appleseed.cli.png">
+                    {% for item in site.data.screenshots %}
+                        <div class="screenshot">
+                            <a href="{{ item.url }}">
+                                <img src="{{ item.url }}">
+                            </a>
+                            <div class="legend">{{ item.legend | markdownify }}</div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

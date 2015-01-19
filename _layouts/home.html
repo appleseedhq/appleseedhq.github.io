@@ -6,9 +6,11 @@
 
     <div class="section light intro">
         <div class="content">
-            {% for p in site.data.intro %}
-                {{ p.text | markdownify }}
-            {% endfor %}
+            <div class="wrapper">
+                {% for p in site.data.intro %}
+                    {{ p.text | markdownify }}
+                {% endfor %}
+            </div>
         </div>
     </div>
 
@@ -37,8 +39,8 @@
     <div class="section dark showcase">
         <div class="content">
             <div class="wrapper">
-                <p class="legend"><a href="http://www.fetchaveryshortfilm.com/">Fetch</a> is a short film produced by the development team and rendered with appleseed:</p>
                 <iframe src="//player.vimeo.com/video/92172277?title=0&amp;byline=0&amp;portrait=0&amp;color=ff6600" width="768" height="432" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p class="legend"><a href="http://www.fetchaveryshortfilm.com/">Fetch</a> is a short film produced by the development team and entirely rendered with appleseed</p>
             </div>
         </div>
     </div>
@@ -54,7 +56,7 @@
                     <article>
                         <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
                         <h3>{{ post.title }}</h3>
-                        <div class="body">{{ post.content }}</div>
+                        {{ post.content }}
                     </article>
                 {% endfor %}
             </div>

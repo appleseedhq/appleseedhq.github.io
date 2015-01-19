@@ -18,7 +18,7 @@ p
     margin: 0px;
 }
 
-h1, h2, h3
+h1, h2, h3, h4
 {
     margin: 0px;
 }
@@ -40,18 +40,14 @@ body
 
 p
 {
-    line-height: 19px;
-}
-
-p.legend
-{
-    margin-bottom: 30px;
+    line-height: 21px;
 }
 
 h2
 {
     margin-bottom: 40px;
     text-transform: uppercase;
+    font-size: 25px;
     font-weight: normal;
 }
 
@@ -61,6 +57,11 @@ h3
     text-transform: uppercase;
     font-size: 18px;
     font-weight: normal;
+}
+
+h4
+{
+    margin-bottom: 20px;
 }
 
 a
@@ -99,6 +100,13 @@ code
     background-color: #888;
 }
 
+.legend
+{
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+}
+
 /* ----------------------
    Posts.
    --------------------- */
@@ -109,12 +117,12 @@ article .date
     color: #888;
 }
 
-article .body p
+article p
 {
     padding-bottom: 15px;
 }
 
-article .body ul
+article ul
 {
     padding-left: 35px;
     padding-bottom: 20px;
@@ -149,8 +157,8 @@ article .body ul
 
 .section .content .wrapper
 {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 /* ----------------------
@@ -245,10 +253,15 @@ article .body ul
 
 .section.footer .copyright p
 {
-    padding-bottom: 30px;
+    padding-bottom: 5px;
     font-size: 14px;
     text-align: center;
     color: #555;
+}
+
+.section.footer .copyright p:last-child
+{
+    padding-bottom: 30px;
 }
 
 .section.footer .copyright p a
@@ -265,13 +278,32 @@ article .body ul
    Intro section.
    --------------------- */
 
+.section.intro .wrapper
+{
+    padding-bottom: 15px;
+}
+
 .section.intro p
 {
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
     line-height: 35px;
     font-size: 17px;
     text-align: center;
+}
+
+.section.intro img
+{
+    padding-right: 5px;
+}
+
+.section.intro p:last-child a
+{
+    color: inherit;
+}
+
+.section.intro p:last-child a:hover
+{
+    color: #ff6600;
 }
 
 /* ----------------------
@@ -280,7 +312,7 @@ article .body ul
 
 .section.quick .buttons-wrapper
 {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     text-align: center;
 }
 
@@ -307,7 +339,6 @@ article .body ul
 
 .section.quick .download .version
 {
-    font-size: 13px;
     color: #888;
 }
 
@@ -363,7 +394,6 @@ article .body ul
 .section.features .columns
 {
     display: block;
-    padding-left: 60px;
 }
 
 .section.features .column
@@ -404,8 +434,76 @@ article .body ul
     margin-bottom: 10px;
 }
 
+.section.features .screenshot
+{
+    margin-bottom: 100px;
+}
+
+.section.features .screenshot:last-child
+{
+    margin-bottom: 0px;
+}
+
 .section.features .screenshots img
 {
     width: 768px;
+}
+
+.section.features .screenshots img:hover
+{
+    box-shadow: 0px 0px 20px 5px #2b2b2b;
+}
+
+/* ----------------------
+   Team section.
+   --------------------- */
+
+.section.team .group
+{
+    margin-bottom: 100px;
+}
+
+.section.team .group:last-child
+{
+    margin-bottom: 0px;
+}
+
+.section.team .member
+{
     margin-bottom: 60px;
+}
+
+.section.team .member:last-child
+{
+    margin-bottom: 0px;
+}
+
+.section.team .member .column
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.section.team .member .column.left
+{
+    width: 290px;
+}
+
+.section.team .member .column.right
+{
+    width: 470px;
+    margin-top: 2px;
+}
+
+.section.team .member .profile
+{
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+    margin-left: 70px;
+}
+
+.section.team .member .profile .role
+{
+    padding-bottom: 20px;
 }

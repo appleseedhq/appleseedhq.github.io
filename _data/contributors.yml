@@ -1,0 +1,37 @@
+- name: Luis Barrancos
+  picture: luis_barrancos.jpg
+  role: Developer
+  bio: >
+    Luis is a freelance CG artist and shader writer with a background in fine arts and photography. He was
+    a developer of Shrimp, a RSL node-based shader authoring system. He has a kink for physically based
+    rendering, RSL, OSL and VEX shader writing.
+    
+    
+    He is currently living in Kuala Lumpur, Malaysia.
+  links:
+    - { label: LinkedIn, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }
+
+
+- name: Srinath Ravichandran
+  picture: srinath_ravichandran.jpg
+  role: Google Summer of Code 2014 Participant
+  bio: >
+    Srinath is a M.S. by Research student at IIIT Hyderabad, India. He is currently working on research problems
+    that involve light transport algorithms, ray tracing and GPUs.
+
+
+    His GSoC project focused on efficient ray tracing of curve primitives for hair and fur.
+  links:
+    - { label: Web Site, url: "http://researchweb.iiit.ac.in/~srinath.ravichandran/" }
+
+
+- name: Marius Avram
+  picture: marius_avram.jpg
+  role: Google Summer of Code 2014 Participant
+  bio: >
+    Marius is a student at the Faculty of Automatic Control and Computers in Bucharest, Romania. He is new to
+    the open source community and always willing to learn new stuff.
+
+
+    For his GSoC project, Marius implemented a new editor in appleseed.studio for layered materials based on
+    Disney's BRDF model.
