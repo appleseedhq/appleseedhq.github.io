@@ -34,6 +34,7 @@ iframe
 
 body
 {
+    background-color: #282828;
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
 }
@@ -90,13 +91,13 @@ code
     line-height: 50px;
     text-align: center;
     font-size: 20px;
-    color: #111;
+    color: #282828;
     background-color: #666;
 }
 
 .button:hover
 {
-    color: #111;
+    color: #282828;
     background-color: #888;
 }
 
@@ -210,6 +211,25 @@ article ul
 .section.header ul.navigation li.active span
 {
     color: #ff6600;
+}
+
+.section.header .arrow
+{
+    position: relative;
+}
+
+.section.header .arrow:after
+{
+    top: 20px;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-top-color: #282828;
+    border-width: 10px;
+    margin-left: -10px;
 }
 
 /* ----------------------
@@ -383,7 +403,7 @@ article ul
 
 .section.features .group
 {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .section.features .group:last-child

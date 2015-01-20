@@ -1,4 +1,5 @@
 ---
-layout: features
 title: Features
+area: features
+layout: features
 ---

@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Documentation
+area: docs
+layout: default
 section: docs
 ---
 

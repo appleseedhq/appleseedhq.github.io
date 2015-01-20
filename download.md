@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Download
+area: download
+layout: default
 section: download
 ---
 
@@ -11,8 +12,6 @@ section: download
 The current version of appleseed is {{ release.version }}. It was released on {{ release.date }}.
 
 Please check the [release notes]({{ release.github }}) for the list of new features and bug fixes available in this version.
-
-Download appleseed {{ release.version }} for your platform:
 
 <div class="builds">
 {% for build in release.builds %}
@@ -32,6 +31,10 @@ Download appleseed {{ release.version }} for your platform:
 {% endfor %}
 </div>
 
+Intermediate, preview releases are also regularly made available from the [Releases](https://github.com/appleseedhq/appleseed/releases) page on GitHub.
+
+Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new releases.
+
 {% endfor %}
 
 ## Demo Scenes
@@ -40,7 +43,7 @@ Coming soon!
 
 ## Source Code
 
-Visit the [<i class="fa fa-github"></i> GitHub page](https://github.com/appleseedhq/appleseed) to&hellip;
+Visit the [GitHub page](https://github.com/appleseedhq/appleseed) to&hellip;
 
 - clone or fork the appleseed repository
 - browse the source code online

@@ -1,6 +1,7 @@
 ---
-layout: index
 title: A modern, open source production rendering engine
+area: index
+layout: index
 home: true
 ---
 

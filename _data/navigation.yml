@@ -1,20 +1,27 @@
 - label: Home
-  url: "/index.html"
+  area: index
+  url: /index.html
 
 - label: Features
-  url: "/features.html"
+  area: features
+  url: /features.html
 
 - label: Download
-  url: "/download.html"
+  area: download
+  url: /download.html
 
 - label: Docs
-  url: "/docs.html"
+  area: docs
+  url: /docs.html
 
 - label: Forum
-  url: "https://forum.appleseedhq.net/"
+  area: forum
+  url: https://forum.appleseedhq.net/
 
 - label: About
-  url: "/about.html"
+  area: about
+  url: /about.html
 
 - label: GitHub
-  url: "https://github.com/appleseedhq"
+  area: github
+  url: https://github.com/appleseedhq

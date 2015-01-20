@@ -1,3 +1,10 @@
 encoding: utf-8
 markdown: kramdown
 baseurl: 
+
+domain: appleseedhq.net
+google-analytics-id: UA-11430889-2
+
+collections:
+    docs:
+        output: true

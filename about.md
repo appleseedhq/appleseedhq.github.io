@@ -1,4 +1,5 @@
 ---
-layout: about
 title: About
+area: about
+layout: about
 ---

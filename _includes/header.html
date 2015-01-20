@@ -26,9 +26,10 @@
                 </div>
                 <ul class="navigation">
                     {% for item in site.data.navigation %}
-                        {% if page.url == item.url %}
+                        {% if item.area == page.area %}
                             <li class="active">
                                 <span>{{ item.label }}</span>
+                                <div class="arrow"></div>
                             </li>
                         {% else %}
                             <li>
