@@ -6,7 +6,7 @@
                 <h2>Feature List</h2>
 
                 <div class="group">
-                    <img src="img/features/fetch1.jpg">
+                    <img src="/img/features/fetch1.jpg">
                     <div class="columns">
                         <div class="column left">
                             <div class="block">
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="group">
-                    <img src="img/features/fluffycornellbox.jpg">
+                    <img src="/img/features/fluffycornellbox.jpg">
                     <div class="columns">
                         <div class="column left">
                             <div class="block">
@@ -118,7 +118,7 @@
                 </div>
 
                 <div class="group">
-                    <img src="img/features/fetch2.jpg">
+                    <img src="/img/features/fetch2.jpg">
                     <div class="columns">
                         <div class="column left">
                             <div class="block">
@@ -176,7 +176,7 @@
                 <div class="screenshots">
                     {% for item in site.data.screenshots %}
                         <div class="screenshot">
-                            <a href="{{ item.url }}">
+                            <a href="{{ item.url }}" data-lightbox="screenshots" data-title="{{ item.legend }}">
                                 <img src="{{ item.url }}">
                             </a>
                             <div class="legend">{{ item.legend | markdownify }}</div>

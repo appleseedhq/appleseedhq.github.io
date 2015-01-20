@@ -34,7 +34,7 @@ iframe
 
 body
 {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
 }
 
@@ -108,7 +108,7 @@ code
 }
 
 /* ----------------------
-   Posts.
+   Text content.
    --------------------- */
 
 article .date
@@ -120,6 +120,16 @@ article .date
 article p
 {
     padding-bottom: 15px;
+}
+
+article h2
+{
+    margin-bottom: 30px;
+}
+
+article h2:not(:first-child)
+{
+    margin-top: 40px;
 }
 
 article ul
@@ -291,11 +301,6 @@ article ul
     text-align: center;
 }
 
-.section.intro img
-{
-    padding-right: 5px;
-}
-
 .section.intro p:last-child a
 {
     color: inherit;
@@ -447,10 +452,6 @@ article ul
 .section.features .screenshots img
 {
     width: 768px;
-}
-
-.section.features .screenshots img:hover
-{
     box-shadow: 0px 0px 20px 5px #2b2b2b;
 }
 
@@ -506,4 +507,40 @@ article ul
 .section.team .member .profile .role
 {
     padding-bottom: 20px;
+}
+
+/* ----------------------
+   Download section.
+   --------------------- */
+
+.section.download .builds
+{
+    margin: 20px;
+    text-align: center;
+}
+
+.section.download .build
+{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.section.download .build a
+{
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: #666;
+}
+
+.section.download .build a:hover
+{
+    background-color: #ff6600;
+}
+
+.section.download .build a i
+{
+    width: 128px;
+    font-size: 128px;
+    color: #282828;
 }

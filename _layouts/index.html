@@ -7,9 +7,7 @@
     <div class="section light intro">
         <div class="content">
             <div class="wrapper">
-                {% for p in site.data.intro %}
-                    {{ p.text | markdownify }}
-                {% endfor %}
+                {{ content }}
             </div>
         </div>
     </div>
@@ -23,8 +21,24 @@
             <div class="buttons-wrapper">
                 <div class="buttons">
                     <div class="download">
-                        <a class="button" href="#">Download</a>
-                        <a class="version" href="https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-24">Current Version: 1.1.0 alpha-24</a>
+                        {% for release in site.data.releases limit:1 %}
+                            <a class="button" id="download-link" href="#"><i class="fa fa-download"></i> Download</a>
+                            <a class="version" href="{{ release.github }}">Current Version: {{ release.version }}</a>
+
+                            <script type="text/javascript">
+                                var platform = "";
+
+                                if (navigator.appVersion.indexOf("Win") != -1) platform = "windows";
+                                else if (navigator.appVersion.indexOf("Mac") != -1) platform = "osx";
+                                else if (navigator.appVersion.indexOf("Linux") != -1) platform = "linux";
+
+                                {% for build in release.builds %}
+                                    if (platform === "{{ build.platform }}") {
+                                        document.getElementById('download-link').href = "{{ build.url }}";
+                                    }
+                                {% endfor %}
+                            </script>
+                        {% endfor %}
                     </div>
                     <a class="button get-started" href="#">Get Started</a>
                 </div>
