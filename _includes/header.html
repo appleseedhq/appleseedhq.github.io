@@ -7,24 +7,48 @@
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="/css/styles.css">
-        <script src="/js/jquery-1.11.0.min.js"></script>
-        <!-- Lightbox -->
-        <script src="/js/lightbox.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/css/lightbox.css" />
+        <script src="/js/jquery-1.11.0.min.js"></script>
+        <script src="/js/lightbox.min.js"></script>
     </head>
     <body>
         <!------------------------
-          Header section.
+          Logo section.
           ----------------------->
 
-        <div class="section dark header">
+        <div class="section dark logo">
             <div class="content">
-                <div class="logo-wrapper">
+                <div class="wrapper">
                     <a href="/">
                         <img class="logo" src="/img/appleseed-website-logo.png" alt="appleseed Logo">
                     </a>
                 </div>
-                <ul class="navigation">
+            </div>
+        </div>
+
+        <!------------------------
+          Navigation section.
+          ----------------------->
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var $window = $(window);
+                var $nav = $(".section.navigation");
+                var navTop = $nav.offset().top;
+
+                $window.scroll(function () {
+                    if ($window.scrollTop() >= navTop) {
+                        $nav.addClass("sticky");
+                    } else {
+                        $nav.removeClass("sticky");
+                    }
+                });
+            });
+        </script>
+
+        <div class="section dark navigation">
+            <div class="content">
+                <ul>
                     {% for item in site.data.navigation %}
                         {% if item.area == page.area %}
                             <li class="active">
