@@ -45,6 +45,12 @@ body
     font-size: 16px;
 }
 
+a
+{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
 p
 {
     line-height: 26px;
