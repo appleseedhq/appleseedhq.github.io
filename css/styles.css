@@ -31,6 +31,7 @@ pre
 iframe
 {
     display: block;
+    box-shadow: 0px 0px 20px 5px #252525;
 }
 
 /* ----------------------
@@ -41,13 +42,17 @@ body
 {
     background-color: #282828;
     font-family: "Open Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 p
 {
-    margin-bottom: 15px;
-    line-height: 22px;
+    line-height: 26px;
+}
+
+p, pre
+{
+    margin-bottom: 20px;
 }
 
 h2:not(:first-child)
@@ -65,11 +70,16 @@ h2
 
 h3:not(:first-child)
 {
-    margin-top: 35px;
+    margin-top: -55px;
 }
 
 h3
 {
+    /* Trick to offset in-document links in presence of a fixed header.
+       http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D
+       http://stackoverflow.com/questions/28096195/shift-anchor-tags-in-html-generated-from-markdown-by-jekyll */
+    border-top: 80px solid transparent;
+    margin-top: -80px;
     margin-bottom: 25px;
     text-transform: uppercase;
     font-size: 18px;
@@ -100,19 +110,21 @@ ul, ol
     line-height: 24px;
 }
 
-code
+code, kbd
 {
+    margin-left: 2px;
+    margin-right: 2px;
     padding: 2px 4px;
 }
 
 pre
 {
     padding: 10px;
-    margin-bottom: 15px;
 }
 
-code, pre
+code, pre, kbd
 {
+    font-family: 'Inconsolata', monospace;
     background-color: #383838;
 }
 
@@ -132,6 +144,14 @@ code, pre
 {
     color: #1A1A1A;
     background-color: #888;
+}
+
+kbd
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #777 #1A1A1A #1A1A1A #777;
+    border-radius: 4px;
 }
 
 .legend
@@ -194,7 +214,7 @@ article .date
     text-align: center;
 }
 
-.section.logo .wrapper img.logo
+.section.logo img.logo
 {
     display: inline-block;
 }
@@ -207,7 +227,7 @@ article .date
 {
     width: 100%;
     z-index: 100;
-    transition: all 0.4s ease;
+    transition: 320ms;
 }
 
 .section.navigation.sticky
@@ -235,7 +255,14 @@ article .date
     display: inline-block;
     padding: 20px;
     text-transform: uppercase;
+    transition: 320ms;
 }
+
+/*.section.navigation.sticky ul li
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}*/
 
 .section.navigation ul li a
 {
@@ -243,6 +270,7 @@ article .date
 }
 
 .section.navigation ul li a:hover,
+.section.navigation ul li.active a,
 .section.navigation ul li.active span
 {
     color: #ff6600;
@@ -265,7 +293,7 @@ article .date
     border-top-color: #282828;
     border-width: 10px;
     margin-left: -10px;
-    transition: all 0.4s ease;
+    transition: 320ms;
 }
 
 .section.navigation.sticky .arrow:after
@@ -284,7 +312,7 @@ article .date
 
 .section.intro p
 {
-    padding-bottom: 25px;
+    margin-bottom: 25px;
     line-height: 35px;
     font-size: 17px;
     text-align: center;
@@ -309,9 +337,9 @@ article .date
    Quick section.
    --------------------- */
 
-.section.quick .buttons-wrapper
+.section.quick .wrapper
 {
-    padding-bottom: 60px;
+    padding-top: 0px;
     text-align: center;
 }
 
@@ -447,7 +475,7 @@ article .date
 .section.features .screenshots img
 {
     width: 768px;
-    box-shadow: 0px 0px 20px 5px #2b2b2b;
+    box-shadow: 0px 0px 20px 5px #252525;
 }
 
 /* ----------------------
@@ -541,6 +569,75 @@ article .date
 }
 
 /* ----------------------
+   Docs section.
+   --------------------- */
+
+.section.docs .tutorials
+{
+    margin-bottom: 40px;
+}
+
+.section.docs .tutorial
+{
+    display: inline-block;
+    width: 240px;
+    /*height: 400px;*/
+    overflow-y: hidden;
+    margin-right: 100px;
+    /*margin-bottom: 100px;*/
+}
+
+.section.docs .tutorial a
+{
+    color: inherit;
+}
+
+.section.docs .tutorial:hover a
+{
+    color: #ff6600;
+}
+
+.section.docs .tutorial img
+{
+    box-shadow: none;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: 320ms;
+}
+
+.section.docs .tutorial:hover img
+{
+    filter: initial;
+    -webkit-filter: initial;
+}
+
+.section.docs .tutorial .description
+{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.section.docs .tutorial .description h4
+{
+    margin-bottom: 10px;
+}
+
+.section.docs article .illustration
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section.docs article img
+{
+    display: block;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px 5px #252525;
+}
+
+/* ----------------------
    Footer section.
    --------------------- */
 
@@ -592,7 +689,7 @@ article .date
 
 .section.footer .copyright p
 {
-    padding-bottom: 5px;
+    margin-bottom: 5px;
     font-size: 14px;
     text-align: center;
     color: #555;

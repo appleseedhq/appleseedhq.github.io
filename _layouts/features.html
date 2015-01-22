@@ -177,7 +177,7 @@
                     {% for item in site.data.screenshots %}
                         <div class="screenshot">
                             <a href="{{ item.url }}" data-lightbox="screenshots" data-title="{{ item.legend }}">
-                                <img src="{{ item.url }}">
+                                <img src="{{ item.url }}" alt="{{ item.legend }}">
                             </a>
                             <div class="legend">{{ item.legend | markdownify }}</div>
                         </div>
