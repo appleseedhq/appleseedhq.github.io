@@ -1,11 +1,11 @@
-- version: 1.1.0 alpha-24
-  date: January 26th, 2015
-  github: https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-24
-  builds:
-    - platform: windows
-      url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-24/appleseed-1.1.0-alpha-24-0-g5e0d02c-win64-vs110.zip
-    - platform: linux
-      url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-24/appleseed-1.1.0-alpha-24-0-g5e0d02c-linux64-gcc4.zip
+# - version: 1.1.0 alpha-24
+#   date: January 26th, 2015
+#   github: https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-24
+#   builds:
+#     - platform: windows
+#       url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-24/appleseed-1.1.0-alpha-24-0-g5e0d02c-win64-vs110.zip
+#     - platform: linux
+#       url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-24/appleseed-1.1.0-alpha-24-0-g5e0d02c-linux64-gcc4.zip
 
 - version: 1.1.0 alpha-23
   date: October 25th, 2014
