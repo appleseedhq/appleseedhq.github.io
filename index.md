@@ -1,5 +1,5 @@
 ---
-title: A modern, open source production rendering engine
+title: A modern, open source production renderer
 area: index
 layout: index
 home: true
