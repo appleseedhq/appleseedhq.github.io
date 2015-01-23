@@ -2,6 +2,6 @@
   image: /img/scenes/materialtester.jpg
   url: https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/material_tester_1.0.zip
 
-- name: Disney Material
+- name: Disney Material 1.0
   image: /img/scenes/disneymaterial.jpg
-  url: https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/disney_material.zip
+  url: https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/disney_material_1.0.zip
