@@ -61,9 +61,18 @@ p, pre
     margin-bottom: 20px;
 }
 
+hr
+{
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    border: 0px;
+    background-color: #282828;
+}
+
 h2:not(:first-child)
 {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 h2
@@ -179,7 +188,6 @@ kbd
 
 article .date
 {
-    margin-bottom: 35px;
     color: #888;
 }
 
@@ -556,26 +564,59 @@ article .date
 {
     display: inline-block;
     margin-bottom: 20px;
+    color: inherit;
 }
 
-.section.download .build a
+.section.download .build i
 {
-    display: inline-block;
+    width: 128px;
     margin: 20px;
     padding: 20px;
+    font-size: 128px;
+    color: #1a1a1a;
     background-color: #666;
+    transition: 320ms;
 }
 
-.section.download .build a:hover
+.section.download .build:hover
+{
+    color: #ff6600;
+}
+
+.section.download .build:hover i
 {
     background-color: #ff6600;
 }
 
-.section.download .build a i
+.section.download .scenes
 {
-    width: 128px;
-    font-size: 128px;
-    color: #1A1A1A;
+    text-align: center;
+}
+
+.section.download .scene
+{
+    display: inline-block;
+    margin-bottom: 40px;
+    color: inherit;
+}
+
+.section.download .scene img
+{
+    margin: 15px 20px 15px 20px;
+    filter: grayscale(100%) brightness(0.4);
+    -webkit-filter: grayscale(100%);
+    transition: 320ms;
+}
+
+.section.download .scene:hover
+{
+    color: #ff6600;
+}
+
+.section.download .scene:hover img
+{
+    filter: initial;
+    -webkit-filter: initial;
 }
 
 /* ====================
