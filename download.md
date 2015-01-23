@@ -14,21 +14,21 @@ The current version of appleseed is {{ release.version }}. It was released on {{
 Please check the [release notes]({{ release.github }}) for the list of new features and bug fixes available in this version.
 
 <div class="builds">
-{% for build in release.builds %}
-    <div class="build">
-    {% case build.platform %}
-        {% when 'windows' %}
-            <a href="{{ build.url }}" download><i class="fa fa-windows"></i></a>
-            <div>Windows Vista and Later</div>
-        {% when 'linux' %}
-            <a href="{{ build.url }}" download><i class="fa fa-linux"></i></a>
-            <div>Linux</div>
-        {% when 'osx' %}
-            <a href="{{ build.url }}" download><i class="fa fa-apple"></i></a>
-            <div>OS X 10.9 and Later</div>
-        {% endcase %}
-    </div>
-{% endfor %}
+    {% for build in release.builds %}
+        <a class="build" href="{{ build.url }}" download>
+            {% case build.platform %}
+                {% when 'windows' %}
+                    <i class="fa fa-windows"></i>
+                    <div>Windows Vista and Later</div>
+                {% when 'linux' %}
+                    <i class="fa fa-linux"></i>
+                    <div>Linux</div>
+                {% when 'osx' %}
+                    <i class="fa fa-apple"></i>
+                    <div>OS X 10.9 and Later</div>
+            {% endcase %}
+        </a>
+    {% endfor %}
 </div>
 
 Intermediate, preview releases are also regularly made available from the [Releases](https://github.com/appleseedhq/appleseed/releases) page on GitHub.
@@ -39,7 +39,16 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
 
 ## Demo Scenes
 
-Coming soon!
+<div class="scenes">
+    {% for scene in site.data.scenes %}
+        <a class="scene" href="{{ scene.url }}">
+            <img src="{{ scene.image }}" alt="{{ scene.name }}">
+            <div>{{ scene.name }}</div>
+        </a>
+    {% endfor %}
+</div>
+
+We will be providing additional scenes soon. Thanks for your patience.
 
 ## Source Code
 
