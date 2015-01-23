@@ -42,12 +42,12 @@ body
 {
     background-color: #282828;
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
 }
 
-a
+body,
+a       /* Fixed link size on iPhone */
 {
-    font-size: 16px;    /* For iOS */
+    font-size: 16px;
 }
 
 p
@@ -106,6 +106,12 @@ a
 a:hover
 {
     color: #ff6600;
+}
+
+/* Remove border on image links on IE 10. */
+a img
+{
+    border: 0px;
 }
 
 ul, ol
@@ -303,6 +309,8 @@ article .date
 
 .section.navigation.sticky .arrow:after
 {
+
+    top: 10px;
     border-top-color: transparent;
 }
 
@@ -323,13 +331,9 @@ article .date
     text-align: center;
 }
 
-.section.intro p:last-child
-{
-    font-size: 20px;
-}
-
 .section.intro p:last-child a
 {
+    font-size: 20px;
     color: inherit;
 }
 
