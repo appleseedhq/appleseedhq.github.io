@@ -47,8 +47,7 @@ body
 
 a
 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 16px;    /* For iOS */
 }
 
 p
