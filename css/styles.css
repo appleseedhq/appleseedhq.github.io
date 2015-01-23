@@ -296,14 +296,14 @@ article .date
     width: 0;
     position: absolute;
     border-top-color: #282828;
-    border-width: 10px;
-    margin-left: -10px;
+    border-width: 15px;
+    margin-left: -15px;
     transition: 320ms;
 }
 
 .section.navigation.sticky .arrow:after
 {
-    border-top-color: #1a1a1a;
+    border-top-color: transparent;
 }
 
 /* ----------------------
