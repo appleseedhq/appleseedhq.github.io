@@ -263,11 +263,11 @@ article .date
     transition: 320ms;
 }
 
-/*.section.navigation.sticky ul li
+.section.navigation.sticky ul li
 {
     padding-top: 10px;
     padding-bottom: 10px;
-}*/
+}
 
 .section.navigation ul li a
 {
