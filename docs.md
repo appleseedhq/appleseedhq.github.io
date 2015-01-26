@@ -21,6 +21,12 @@ section: docs
 
 We are actively working on additional tutorials. Thanks for your patience.
 
+## Documentation
+
+### appleseed Tools
+
+- [makefluffy](/docs/makefluffy.html)
+
 <!---
 
 ## Tutorials
