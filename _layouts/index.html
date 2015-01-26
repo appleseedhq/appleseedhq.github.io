@@ -29,6 +29,8 @@
                             else if (navigator.appVersion.indexOf("Mac") != -1) platform = "osx";
                             else if (navigator.appVersion.indexOf("Linux") != -1) platform = "linux";
 
+                            document.getElementById('download-link').href = "/download.html";
+
                             {% for build in release.builds %}
                                 if (platform === "{{ build.platform }}") {
                                     document.getElementById('download-link').href = "{{ build.url }}";
