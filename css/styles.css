@@ -724,6 +724,11 @@ iframe
     color: #555;
 }
 
+.section.footer .copyright p a
+{
+    font-weight: bold;
+}
+
 .section.footer .copyright p a:not(:hover)
 {
     color: inherit;
