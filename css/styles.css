@@ -1,53 +1,70 @@
 /* ====================
-   Resets.
-   ==================== */
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ * Our tweaks:
+ *  - Removed <ul> and <ol> list style resets.
+ * ==================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
 
 body
 {
-    margin: 0px;
+    line-height: 1;
 }
 
-ul, ol
+blockquote, q
 {
-    margin: 0px;
-    padding: 0px;
+    quotes: none;
 }
 
-p
+blockquote:before, blockquote:after,
+q:before, q:after
 {
-    margin: 0px;
+    content: '';
+    content: none;
 }
 
-h1, h2, h3, h4
+table
 {
-    margin: 0px;
-}
-
-pre
-{
-    margin: 0px;
-}
-
-iframe
-{
-    display: block;
-    border: 0px;
-    box-shadow: 0px 0px 20px 5px #252525;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* ====================
-   Common styles.
-   ==================== */
+ * Common styles.
+ * ==================== */
 
 body
 {
     background-color: #282828;
     font-family: "Open Sans", sans-serif;
-}
-
-body,
-a       /* Fixed link size on iPhone */
-{
     font-size: 16px;
 }
 
@@ -64,46 +81,38 @@ p, pre
 hr
 {
     height: 1px;
-    margin-top: 30px;
-    margin-bottom: 35px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     border: 0px;
     background-color: #282828;
 }
 
-h2:not(:first-child)
-{
-    margin-top: 60px;
-}
-
 h2
 {
-    margin-bottom: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     text-transform: uppercase;
     font-size: 25px;
-    font-weight: normal;
-}
-
-h3:not(:first-child)
-{
-    margin-top: -55px;
 }
 
 h3
 {
-    /* Trick to offset in-document links in presence of a fixed header.
-       http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D
-       http://stackoverflow.com/questions/28096195/shift-anchor-tags-in-html-generated-from-markdown-by-jekyll */
-    border-top: 80px solid transparent;
-    margin-top: -80px;
-    margin-bottom: 25px;
+    border-top: 80px solid transparent;     /* Border trick to offset in-document links in presence of a fixed header */
+    margin-top: -50px;                      /* See http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D */
+    padding-bottom: 30px;
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: normal;
 }
 
 h4
 {
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2 + h3
+{
+    margin-top: -80px;
 }
 
 a
@@ -115,13 +124,7 @@ a
 
 a:hover
 {
-    color: #ff6600;
-}
-
-/* Remove border on image links on IE 10. */
-a img
-{
-    border: 0px;
+    color: #f60;
 }
 
 ul, ol
@@ -149,6 +152,20 @@ code, pre, kbd
     background-color: #383838;
 }
 
+kbd
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #777 #1a1a1a #1a1a1a #777;
+    border-radius: 4px;
+}
+
+iframe
+{
+    display: block;
+    box-shadow: 0px 0px 20px 5px #252525;
+}
+
 .button
 {
     display: inline-block;
@@ -167,14 +184,6 @@ code, pre, kbd
     background-color: #888;
 }
 
-kbd
-{
-    border-style: solid;
-    border-width: 1px;
-    border-color: #777 #1a1a1a #1a1a1a #777;
-    border-radius: 4px;
-}
-
 .legend
 {
     margin-top: 20px;
@@ -183,21 +192,8 @@ kbd
 }
 
 /* ====================
-   Posts.
-   ==================== */
-
-article .date
-{
-    color: #888;
-}
-
-/* ====================
-   Sections.
-   ==================== */
-
-.section
-{
-}
+ * Sections.
+ * ==================== */
 
 .section.light
 {
@@ -214,20 +210,16 @@ article .date
     width: 768px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 30px;
     color: #ccc;
 }
 
-.section .content .wrapper
-{
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
 /* ====================
-   Logo section.
-   ==================== */
+ * Logo section.
+ * ==================== */
 
-.section.logo .wrapper
+.section.logo .content
 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -240,14 +232,20 @@ article .date
 }
 
 /* ====================
-   Navigation section.
-   ==================== */
+ * Navigation section.
+ * ==================== */
 
 .section.navigation
 {
     width: 100%;
     z-index: 100;
     transition: 320ms;
+}
+
+.section.navigation .content
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .section.navigation.sticky
@@ -284,16 +282,15 @@ article .date
     padding-bottom: 10px;
 }
 
-.section.navigation ul li a
+.section.navigation ul li a:not(:hover)
 {
     color: inherit;
 }
 
-.section.navigation ul li a:hover,
 .section.navigation ul li.active a,
 .section.navigation ul li.active span
 {
-    color: #ff6600;
+    color: #f60;
 }
 
 .section.navigation .arrow
@@ -324,11 +321,12 @@ article .date
 }
 
 /* ====================
-   Intro section.
-   ==================== */
+ * Intro section.
+ * ==================== */
 
-.section.intro .wrapper
+.section.intro .content
 {
+    padding-top: 60px;
     padding-bottom: 15px;
 }
 
@@ -343,21 +341,21 @@ article .date
 .section.intro p:last-child a
 {
     font-size: 20px;
+}
+
+.section.intro p:last-child a:not(:hover)
+{
     color: inherit;
 }
 
-.section.intro p:last-child a:hover
-{
-    color: #ff6600;
-}
-
 /* ====================
-   Quick section.
-   ==================== */
+ * Quick section.
+ * ==================== */
 
-.section.quick .wrapper
+.section.quick .content
 {
     padding-top: 0px;
+    padding-bottom: 60px;
     text-align: center;
 }
 
@@ -374,7 +372,7 @@ article .date
 .section.quick .download .button
 {
     display: block;
-    background-color: #ff6600;
+    background-color: #f60;
 }
 
 .section.quick .download .button:hover
@@ -382,14 +380,9 @@ article .date
     background-color: #da854c;
 }
 
-.section.quick .download .version
+.section.quick .download .version:not(:hover)
 {
     color: #888;
-}
-
-.section.quick .download .version:hover
-{
-    color: #ff6600;
 }
 
 .section.quick .button.get-started
@@ -398,8 +391,13 @@ article .date
 }
 
 /* ====================
-   Showcase section.
-   ==================== */
+ * Showcase section.
+ * ==================== */
+
+.section.showcase .content
+{
+    padding-top: 60px;
+}
 
 .section.showcase .legend
 {
@@ -407,8 +405,8 @@ article .date
 }
 
 /* ====================
-   News section.
-   ==================== */
+ * News section.
+ * ==================== */
 
 .section.news article
 {
@@ -417,9 +415,16 @@ article .date
     vertical-align: top;
 }
 
+.section.news article .date
+{
+    margin-top: -10px;
+    padding-bottom: 40px;
+    color: #888;
+}
+
 /* ====================
-   Features section.
-   ==================== */
+ * Features section.
+ * ==================== */
 
 .section.features .group
 {
@@ -433,7 +438,7 @@ article .date
 
 .section.features .group img
 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .section.features .columns
@@ -497,17 +502,12 @@ article .date
 }
 
 /* ====================
-   Team section.
-   ==================== */
+ * Team section.
+ * ==================== */
 
-.section.team .group
+.section.team .group:not(:last-child)
 {
-    margin-bottom: 100px;
-}
-
-.section.team .group:last-child
-{
-    margin-bottom: 0px;
+    margin-bottom: 80px;
 }
 
 .section.team .member
@@ -517,7 +517,12 @@ article .date
 
 .section.team .member:last-child
 {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
+}
+
+.section.team .member h3
+{
+    margin-top: -60px;
 }
 
 .section.team .member .column
@@ -537,22 +542,9 @@ article .date
     margin-top: 2px;
 }
 
-.section.team .member .profile
-{
-    display: inline-block;
-    width: 400px;
-    vertical-align: top;
-    margin-left: 70px;
-}
-
-.section.team .member .profile .role
-{
-    padding-bottom: 20px;
-}
-
 /* ====================
-   Download section.
-   ==================== */
+ * Download section.
+ * ==================== */
 
 .section.download .builds
 {
@@ -564,6 +556,10 @@ article .date
 {
     display: inline-block;
     margin-bottom: 20px;
+}
+
+.section.download .build:not(:hover)
+{
     color: inherit;
 }
 
@@ -578,14 +574,9 @@ article .date
     transition: 320ms;
 }
 
-.section.download .build:hover
-{
-    color: #ff6600;
-}
-
 .section.download .build:hover i
 {
-    background-color: #ff6600;
+    background-color: #f60;
 }
 
 .section.download .scenes
@@ -597,6 +588,10 @@ article .date
 {
     display: inline-block;
     margin-bottom: 40px;
+}
+
+.section.download .scene:not(:hover)
+{
     color: inherit;
 }
 
@@ -608,11 +603,6 @@ article .date
     transition: 320ms;
 }
 
-.section.download .scene:hover
-{
-    color: #ff6600;
-}
-
 .section.download .scene:hover img
 {
     filter: initial;
@@ -620,12 +610,12 @@ article .date
 }
 
 /* ====================
-   Docs section.
-   ==================== */
+ * Docs section.
+ * ==================== */
 
 .section.docs .tutorials
 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .section.docs .tutorial
@@ -638,14 +628,9 @@ article .date
     /*margin-bottom: 100px;*/
 }
 
-.section.docs .tutorial a
+.section.docs .tutorial a:not(:hover)
 {
     color: inherit;
-}
-
-.section.docs .tutorial:hover a
-{
-    color: #ff6600;
 }
 
 .section.docs .tutorial img
@@ -664,7 +649,6 @@ article .date
 
 .section.docs .tutorial .description
 {
-    margin-top: 15px;
     text-align: left;
 }
 
@@ -673,13 +657,13 @@ article .date
     margin-bottom: 10px;
 }
 
-.section.docs article .illustration
+.section.docs .illustration
 {
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.section.docs article img
+.section.docs img
 {
     display: block;
     max-width: 768px;
@@ -689,8 +673,8 @@ article .date
 }
 
 /* ====================
-   Footer section.
-   ==================== */
+ * Footer section.
+ * ==================== */
 
 .section.footer .columns-wrapper
 {
@@ -728,35 +712,19 @@ article .date
     margin: 10px;
 }
 
-.section.footer ul.column li a
+.section.footer ul.column li a:not(:hover)
 {
     color: #888;
 }
 
-.section.footer ul.column li a:hover
-{
-    color: #ff6600;
-}
-
 .section.footer .copyright p
 {
-    margin-bottom: 5px;
     font-size: 14px;
     text-align: center;
     color: #555;
 }
 
-.section.footer .copyright p:last-child
+.section.footer .copyright p a:not(:hover)
 {
-    padding-bottom: 30px;
-}
-
-.section.footer .copyright p a
-{
-    color: #555;
-}
-
-.section.footer .copyright p a:hover
-{
-    color: #ff6600;
+    color: inherit;
 }

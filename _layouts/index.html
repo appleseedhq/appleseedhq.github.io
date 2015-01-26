@@ -6,9 +6,7 @@
 
     <div class="section light intro">
         <div class="content">
-            <div class="wrapper">
-                {{ content }}
-            </div>
+            {{ content }}
         </div>
     </div>
 
@@ -18,30 +16,28 @@
 
     <div class="section light quick">
         <div class="content">
-            <div class="wrapper">
-                <div class="buttons">
-                    <div class="download">
-                        {% for release in site.data.releases limit:1 %}
-                            <a class="button" id="download-link" href="#"><i class="fa fa-download"></i> Download</a>
-                            <a class="version" href="{{ release.github }}">Current Version: {{ release.version }}</a>
+            <div class="buttons">
+                <div class="download">
+                    {% for release in site.data.releases limit:1 %}
+                        <a class="button" id="download-link" href="#"><i class="fa fa-download"></i> Download</a>
+                        <a class="version" href="{{ release.github }}">Current Version: {{ release.version }}</a>
 
-                            <script type="text/javascript">
-                                var platform = "";
+                        <script type="text/javascript">
+                            var platform = "";
 
-                                if (navigator.appVersion.indexOf("Win") != -1) platform = "windows";
-                                else if (navigator.appVersion.indexOf("Mac") != -1) platform = "osx";
-                                else if (navigator.appVersion.indexOf("Linux") != -1) platform = "linux";
+                            if (navigator.appVersion.indexOf("Win") != -1) platform = "windows";
+                            else if (navigator.appVersion.indexOf("Mac") != -1) platform = "osx";
+                            else if (navigator.appVersion.indexOf("Linux") != -1) platform = "linux";
 
-                                {% for build in release.builds %}
-                                    if (platform === "{{ build.platform }}") {
-                                        document.getElementById('download-link').href = "{{ build.url }}";
-                                    }
-                                {% endfor %}
-                            </script>
-                        {% endfor %}
-                    </div>
-                    <a class="button get-started" href="/docs/gettingstarted.html">Get Started</a>
+                            {% for build in release.builds %}
+                                if (platform === "{{ build.platform }}") {
+                                    document.getElementById('download-link').href = "{{ build.url }}";
+                                }
+                            {% endfor %}
+                        </script>
+                    {% endfor %}
                 </div>
+                <a class="button get-started" href="/docs/gettingstarted.html">Get Started</a>
             </div>
         </div>
     </div>
@@ -52,10 +48,8 @@
 
     <div class="section dark showcase">
         <div class="content">
-            <div class="wrapper">
-                <iframe src="//player.vimeo.com/video/92172277?title=0&amp;byline=0&amp;portrait=0&amp;color=ff6600" width="768" height="432" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <p class="legend"><a href="http://www.fetchaveryshortfilm.com/">Fetch</a> is a short film produced by the development team and entirely rendered with appleseed</p>
-            </div>
+            <iframe src="//player.vimeo.com/video/92172277?title=0&amp;byline=0&amp;portrait=0&amp;color=ff6600" width="768" height="432" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <p class="legend"><a href="http://www.fetchaveryshortfilm.com/">Fetch</a> is a short film produced by the development team and entirely rendered with appleseed</p>
         </div>
     </div>
 
@@ -65,15 +59,13 @@
 
     <div class="section light news">
         <div class="content">
-            <div class="wrapper">
-                {% for post in site.posts limit:1 %}
-                    <article>
-                        <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
-                        <h3>{{ post.title }}</h3>
-                        {{ post.content }}
-                    </article>
-                {% endfor %}
-            </div>
+            {% for post in site.posts limit:1 %}
+                <article>
+                    <h2>{{ post.title }}</h2>
+                    <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
+                    {{ post.content }}
+                </article>
+            {% endfor %}
         </div>
     </div>
 

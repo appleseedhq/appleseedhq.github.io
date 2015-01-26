@@ -5,16 +5,15 @@ layout: default
 section: docs
 ---
 
-<h2>Tutorials</h2>
+## Tutorials
+
 <div class="tutorials">
     {% for tutorial in site.data.tutorials %}
         <div class="tutorial">
             <a href="{{ tutorial.url }}">
                 <img src="{{ tutorial.image }}" alt="{{ tutorial.title }}">
-                <div class="description">
-                    <h4>{{ tutorial.title }}</h4>
-                    {{ tutorial.description }}
-                </div>
+                <h4>{{ tutorial.title }}</h4>
+                <p class="description">{{ tutorial.description }}</p>
             </a>
         </div>
     {% endfor %}

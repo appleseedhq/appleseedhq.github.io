@@ -2,27 +2,25 @@
 
     <div class="section light team">
         <div class="content">
-            <div class="wrapper">
-                <div class="group">
-                    <h2>Core Team</h2>
-                    {% for member in site.data.coreteam %}
-                        {% include member.html %}
-                    {% endfor %}
-                </div>
+            <div class="group">
+                <h2>Core Team</h2>
+                {% for member in site.data.coreteam %}
+                    {% include member.html %}
+                {% endfor %}
+            </div>
 
-                <div class="group">
-                    <h2>Contributors</h2>
-                    {% for member in site.data.contributors %}
-                        {% include member.html %}
-                    {% endfor %}
-                </div>
+            <div class="group">
+                <h2>Contributors</h2>
+                {% for member in site.data.contributors %}
+                    {% include member.html %}
+                {% endfor %}
+            </div>
 
-                <div class="group">
-                    <h2>External Projects</h2>
-                    {% for member in site.data.externalprojects %}
-                        {% include member.html %}
-                    {% endfor %}
-                </div>
+            <div class="group">
+                <h2>External Projects</h2>
+                {% for member in site.data.externalprojects %}
+                    {% include member.html %}
+                {% endfor %}
             </div>
         </div>
     </div>

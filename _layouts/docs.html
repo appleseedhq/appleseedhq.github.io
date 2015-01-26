@@ -2,31 +2,26 @@
 
     <div class="section light docs">
         <div class="content">
-            <div class="wrapper">
-                <article>
-                    {{ content }}
-                </article>
-
-                <script type="text/javascript">
-                    $(window).load(function () {
-                        $(".section.docs article img").replaceWith(function () {
-                            var $this = $(this);
-                            var src = $this.attr("src");
-                            var title = $this.attr("alt");
-                            var image = "<img src='" + src + "' alt='" + title + "'>";
-
-                            if ($this.width() >= 768) {
-                                var link = "<a href='" + src + "' data-lightbox='docs' data-title='" + title + "'>" + image + "</a>";
-                                var legend = "<div class='legend'>" + title + "</div>";
-                                image = link + legend;
-                            }
-
-                            return "<div class='illustration'>" + image + "</div>";
-                        });
-                    });
-                </script>
-            </div>
+            {{ content }}
         </div>
+        <script type="text/javascript">
+            $(window).load(function () {
+                $(".section.docs img").replaceWith(function () {
+                    var $this = $(this);
+                    var src = $this.attr("src");
+                    var title = $this.attr("alt");
+                    var image = "<img src='" + src + "' alt='" + title + "'>";
+
+                    if ($this.width() >= 768) {
+                        var link = "<a href='" + src + "' data-lightbox='docs' data-title='" + title + "'>" + image + "</a>";
+                        var legend = "<div class='legend'>" + title + "</div>";
+                        image = link + legend;
+                    }
+
+                    return "<div class='illustration'>" + image + "</div>";
+                });
+            });
+        </script>
     </div>
 
 {% include footer.html %}
