@@ -1,9 +1,8 @@
 ---
-layout: post
 title: appleseed 1.1.0 alpha-21 Released
 ---
 
-We just released **appleseed 1.1.0 alpha-21**.
+We just released appleseed 1.1.0 alpha-21.
 
 This is a major release with hundreds of changes from 14 contributors.
 

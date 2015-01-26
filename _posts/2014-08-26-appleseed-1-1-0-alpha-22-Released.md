@@ -1,9 +1,8 @@
 ---
-layout: post
 title: appleseed 1.1.0 alpha-22 Released
 ---
 
-We just released **appleseed 1.1.0 alpha-22**.
+We just released appleseed 1.1.0 alpha-22.
 
 This is a major release packed with new features and improvements, most notably:
 

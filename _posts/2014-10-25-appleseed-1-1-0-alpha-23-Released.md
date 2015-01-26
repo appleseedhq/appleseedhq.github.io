@@ -1,9 +1,8 @@
 ---
-layout: post
 title: appleseed 1.1.0 alpha-23 Released
 ---
 
-We just released **appleseed 1.1.0 alpha-23**.
+We just released appleseed 1.1.0 alpha-23.
 
 This is a minor release which mostly improves OSL support:
 
