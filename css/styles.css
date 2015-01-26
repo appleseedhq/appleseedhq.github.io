@@ -87,9 +87,16 @@ hr
     background-color: #282828;
 }
 
+/* Trick to offset in-document links in presence of a fixed header.
+   See http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D */
+h2, h3
+{
+    border-top: 80px solid transparent;
+}
+
 h2
 {
-    padding-top: 35px;
+    margin-top: -45px;
     padding-bottom: 35px;
     text-transform: uppercase;
     font-size: 25px;
@@ -97,8 +104,7 @@ h2
 
 h3
 {
-    border-top: 80px solid transparent;     /* Border trick to offset in-document links in presence of a fixed header */
-    margin-top: -50px;                      /* See http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D */
+    margin-top: -50px;
     padding-bottom: 30px;
     text-transform: uppercase;
     font-size: 18px;
@@ -239,7 +245,6 @@ iframe
 {
     width: 100%;
     z-index: 100;
-    transition: 320ms;
 }
 
 .section.navigation .content
@@ -300,22 +305,21 @@ iframe
 
 .section.navigation .arrow:after
 {
+    position: absolute;
     top: 20px;
     left: 50%;
-    border: solid transparent;
+    width: 0px;
+    height: 0px;
     content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
+    margin-left: -15px;
+    border: solid transparent;
     border-top-color: #282828;
     border-width: 15px;
-    margin-left: -15px;
     transition: 320ms;
 }
 
 .section.navigation.sticky .arrow:after
 {
-
     top: 10px;
     border-top-color: transparent;
 }

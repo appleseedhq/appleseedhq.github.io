@@ -35,13 +35,17 @@
                 var $nav = $(".section.navigation");
                 var navTop = $nav.offset().top;
 
-                $window.scroll(function () {
+                updateStickyness = function () {
                     if ($window.scrollTop() >= navTop) {
                         $nav.addClass("sticky");
                     } else {
                         $nav.removeClass("sticky");
                     }
-                });
+                };
+
+                updateStickyness();
+
+                $window.scroll(updateStickyness);
             });
         </script>
 
