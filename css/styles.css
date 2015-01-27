@@ -200,19 +200,19 @@ iframe
 
 td, th
 {
-    border: solid 1px #111;
+    border: solid 1px #2f2f2f;
     padding: 15px;
 }
 
 td
 {
-    background-color: #282828;
+    background-color: #444;
 }
 
-th
+th, tfoot td
 {
-    background-color: #666;
-
+    background-color: #383838;
+    font-size: 18px;
 }
 
 /* ====================
@@ -701,16 +701,21 @@ th
 
 .section.stats .release
 {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
-.section.stats .release .name
+.section.stats .release table
+{
+    margin-top: 30px;
+}
+
+.section.stats .release .file
 {
     width: 500px;
     text-align: left;
 }
 
-.section.stats .release .value
+.section.stats .release .count
 {
     width: 100px;
     text-align: right;
