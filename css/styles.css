@@ -150,6 +150,7 @@ code, kbd
 pre
 {
     padding: 10px;
+    line-height: 24px;
 }
 
 code, pre, kbd
