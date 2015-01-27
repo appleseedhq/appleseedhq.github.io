@@ -198,6 +198,23 @@ iframe
     color: #888;
 }
 
+td, th
+{
+    border: solid 1px #111;
+    padding: 15px;
+}
+
+td
+{
+    background-color: #282828;
+}
+
+th
+{
+    background-color: #666;
+
+}
+
 /* ====================
  * Sections.
  * ==================== */
@@ -676,6 +693,27 @@ iframe
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 0px 20px 5px #252525;
+}
+
+/* ====================
+ * Statistics.
+ * ==================== */
+
+.section.stats .release
+{
+    margin-bottom: 40px;
+}
+
+.section.stats .release .name
+{
+    width: 500px;
+    text-align: left;
+}
+
+.section.stats .release .value
+{
+    width: 100px;
+    text-align: right;
 }
 
 /* ====================
