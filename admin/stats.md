@@ -84,7 +84,12 @@ section: stats
         };
 
         if (true) {
-            $.getJSON("https://api.github.com/repos/appleseedhq/appleseed/releases", processReleases);
+            $.getJSON("https://api.github.com/repos/appleseedhq/appleseed/releases", function (appleseedReleases) {
+                $.getJSON("https://api.github.com/repos/appleseedhq/appleseed-scenes/releases", function (scenesReleases) {
+                    var releases = appleseedReleases.concat(scenesReleases);
+                    processReleases(releases);
+                });
+            });
         } else {
             processReleases({% include releases.json %});
         }
