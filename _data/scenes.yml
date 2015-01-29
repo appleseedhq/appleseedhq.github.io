@@ -1,11 +1,11 @@
 - name: Material Tester 1.0
-  image: /img/scenes/material_tester.jpg
-  url: https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/material_tester_1.0.zip
+  image: "/img/scenes/material_tester.jpg"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/material_tester_1.0.zip"
 
 - name: Disney Material 1.0
-  image: /img/scenes/disney_material.jpg
-  url: https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/disney_material_1.0.zip
+  image: "/img/scenes/disney_material.jpg"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/disney_material_1.0.zip"
 
 - name: Fluffy Cornell Box 1.0
-  image: /img/scenes/fluffy_cornell_box.jpg
-  url: https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/fluffy_cornell_box_1.0.zip
+  image: "/img/scenes/fluffy_cornell_box.jpg"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/fluffy_cornell_box_1.0.zip"

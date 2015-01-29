@@ -1,17 +1,17 @@
 - version: 1.1.0-beta
   date: January 26th, 2015
-  github: https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-beta
+  github: "https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-beta"
   builds:
     - platform: windows
-      url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-beta/appleseed-1.1.0-beta-0-g369e747-win64-vs110.zip
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-beta/appleseed-1.1.0-beta-0-g369e747-win64-vs110.zip"
     - platform: linux
-      url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-beta/appleseed-1.1.0-beta-0-g369e747-linux64-gcc4.zip
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-beta/appleseed-1.1.0-beta-0-g369e747-linux64-gcc4.zip"
 
 - version: 1.1.0 alpha-23
   date: October 25th, 2014
-  github: https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-23
+  github: "https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-23"
   builds:
     - platform: windows
-      url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-win64-vs110.zip
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-win64-vs110.zip"
     - platform: linux
-      url: https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-linux64-gcc48.zip
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-linux64-gcc48.zip"

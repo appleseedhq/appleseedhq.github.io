@@ -1,6 +1,6 @@
 - title: Getting Started
-  url: /docs/gettingstarted.html
-  image: /img/docs/cornellbox.jpg
+  url: "/docs/gettingstarted.html"
+  image: "/img/docs/cornellbox.jpg"
   description: >
     The very basics: downloading and installing appleseed,
     starting up appleseed.studio and rendering the built-in
