@@ -10,6 +10,7 @@
 
     François lives in Annecy, France.
   links:
+    - { label: Twitter, url: "https://twitter.com/franzbeaune" }
     - { label: LinkedIn, url: "https://www.linkedin.com/in/fbeaune" }
 
 
@@ -25,4 +26,5 @@
     
     Esteban lives in Madrid, Spain.
   links:
+    - { label: Twitter, url: "https://twitter.com/EstTovagliari" }
     - { label: Blog, url: "http://inappropiateresponse.blogspot.fr/" }
