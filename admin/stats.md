@@ -1,5 +1,6 @@
 ---
 title: Download Statistics
+area: stats
 layout: default
 section: stats
 ---
