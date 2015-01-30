@@ -1,0 +1,26 @@
+# Use this site to retrieve the thumbnail for a Vimeo video:
+# http://video.depone.eu/
+
+- thumbnail: "//i.vimeocdn.com/video/477494365_640.jpg"
+  video: "//player.vimeo.com/video/107152587?color=f60&title=0&byline=0&portrait=0"
+  legend: "Fetch, a very short film"
+
+- thumbnail: "//i.vimeocdn.com/video/490479239_640.jpg"
+  video: "//player.vimeo.com/video/107152587?color=f60&title=0&byline=0&portrait=0"
+  legend: "Fetch Shot 11 Breakdown"
+
+- thumbnail: "//i.vimeocdn.com/video/457361819_640.jpg"
+  video: "//player.vimeo.com/video/81199785?color=f60&title=0&byline=0&portrait=0"
+  legend: "Light and Dark (BBC 4 Documentary Series)"
+
+- thumbnail: "//i.vimeocdn.com/video/315587590_640.jpg"
+  video: "//player.vimeo.com/video/33368351?color=f60&title=0&byline=0&portrait=0"
+  legend: "WRECK (Early Animation Test)"
+
+- thumbnail: "//i.vimeocdn.com/video/373275454_640.jpg"
+  video: "//player.vimeo.com/video/41689789?color=f60&title=0&byline=0&portrait=0"
+  legend: "Early Normal Mapping Test"
+
+- thumbnail: "//i.vimeocdn.com/video/494049310_640.jpg"
+  video: "//player.vimeo.com/video/109894596?color=f60&title=0&byline=0&portrait=0"
+  legend: "Experimental 'Frozen Display' mode in appleseed.studio"

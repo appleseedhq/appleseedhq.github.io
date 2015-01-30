@@ -5,10 +5,20 @@ layout: default
 section: gallery
 ---
 
-## Renders
+## Animations
 
-<div class="image-gallery">
-    {% for item in site.data.renders %}
+<div class="collection">
+    {% for item in site.data.animations %}
+        <a href="{{ item.video }}" rel="video">
+            <img src="{{ item.thumbnail }}" alt="{{ item.legend | markdownify | strip_html }}">
+        </a>
+    {% endfor %}
+</div>
+
+## Still Images
+
+<div class="collection">
+    {% for item in site.data.stillimages %}
         <a href="{{ item.url }}">
             <img src="{{ item.url }}" alt="{{ item.legend | markdownify | strip_html }}">
         </a>
@@ -17,7 +27,7 @@ section: gallery
 
 ## Screenshots
 
-<div class="image-gallery">
+<div class="collection">
     {% for item in site.data.screenshots %}
         <a href="{{ item.url }}">
             <img src="{{ item.url }}" alt="{{ item.legend | markdownify | strip_html }}">
@@ -27,11 +37,11 @@ section: gallery
 
 <script type="text/javascript">
     $(window).load(function () {
-        $(".image-gallery").packery({
+        $(".collection").packery({
             itemSelector: "a",
             gutter: 10
         });
-    });
 
-    $(".image-gallery").photobox("a");
+        $(".collection").photobox("a");
+    });
 </script>

@@ -529,14 +529,14 @@ th, tfoot td
  * Gallery.
  * ==================== */
 
-.section.gallery .image-gallery
+.section.gallery .collection
 {
     margin-bottom: 40px;
 }
 
-.section.gallery .image-gallery img
+.section.gallery .collection img
 {
-    max-width: 150px;
+    max-width: 240px;
     box-shadow: 0px 0px 20px 5px #252525;
 }
 

@@ -4,8 +4,14 @@
 - url: "/img/screenshots/appleseed.studio-fetch.jpg"
   legend: "appleseed.studio, editing a scene from [Fetch](http://www.fetchaveryshortfilm.com/)"
 
+- url: "/img/screenshots/appleseed.studio-seexpr.jpg"
+  legend: "appleseed.studio, playing with Disney's SeExpr expression editor"
+
 - url: "/img/screenshots/gafferseed.jpg"
   legend: "appleseed inside Image Engine's [Gaffer](http://imageengine.github.io/gaffer/) lookdev application, here running on Linux"
 
 - url: "/img/screenshots/appleseed.cli.png"
   legend: "appleseed.cli, our command line renderer, here running on Windows 7"
+
+- url: "/img/screenshots/appleseed.studio-tests.png"
+  legend: "appleseed's built-in unit tests"
