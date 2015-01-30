@@ -169,19 +169,6 @@
                     </div>
                 </div>
             </div>
-
-            <h2>Screenshots</h2>
-
-            <div class="screenshots">
-                {% for item in site.data.screenshots %}
-                    <div class="screenshot">
-                        <a href="{{ item.url }}" data-lightbox="screenshots" data-title="{{ item.legend | markdownify | strip_html }}">
-                            <img src="{{ item.url }}" alt="{{ item.legend }}">
-                        </a>
-                        <div class="legend">{{ item.legend | markdownify }}</div>
-                    </div>
-                {% endfor %}
-            </div>
         </div>
     </div>
 

@@ -508,61 +508,19 @@ th, tfoot td
     margin-bottom: 10px;
 }
 
-.section.features .screenshot
-{
-    margin-bottom: 100px;
-}
-
-.section.features .screenshot:last-child
-{
-    margin-bottom: 0px;
-}
-
-.section.features .screenshots img
-{
-    width: 768px;
-    box-shadow: 0px 0px 20px 5px #252525;
-}
-
 /* ====================
- * Team section.
+ * Gallery.
  * ==================== */
 
-.section.team .group:not(:last-child)
+.section.gallery .image-gallery
 {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
-.section.team .member
+.section.gallery .image-gallery img
 {
-    margin-bottom: 60px;
-}
-
-.section.team .member:last-child
-{
-    margin-bottom: 30px;
-}
-
-.section.team .member h3
-{
-    margin-top: -60px;
-}
-
-.section.team .member .column
-{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.section.team .member .column.left
-{
-    width: 290px;
-}
-
-.section.team .member .column.right
-{
-    width: 470px;
-    margin-top: 2px;
+    max-width: 150px;
+    box-shadow: 0px 0px 20px 5px #252525;
 }
 
 /* ====================
@@ -693,6 +651,47 @@ th, tfoot td
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 0px 20px 5px #252525;
+}
+
+/* ====================
+ * Team section.
+ * ==================== */
+
+.section.team .group:not(:last-child)
+{
+    margin-bottom: 80px;
+}
+
+.section.team .member
+{
+    margin-bottom: 60px;
+}
+
+.section.team .member:last-child
+{
+    margin-bottom: 30px;
+}
+
+.section.team .member h3
+{
+    margin-top: -60px;
+}
+
+.section.team .member .column
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.section.team .member .column.left
+{
+    width: 290px;
+}
+
+.section.team .member .column.right
+{
+    width: 470px;
+    margin-top: 2px;
 }
 
 /* ====================

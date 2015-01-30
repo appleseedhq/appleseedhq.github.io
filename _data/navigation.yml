@@ -1,10 +1,10 @@
-- label: Home
-  area: index
-  url: "/index.html"
-
 - label: Features
   area: features
   url: "/features.html"
+
+- label: Gallery
+  area: gallery
+  url: "/gallery.html"
 
 - label: Download
   area: download

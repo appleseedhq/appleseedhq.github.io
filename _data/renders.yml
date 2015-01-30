@@ -1,0 +1,38 @@
+- url: "/img/renders/cornellbox-water.png"
+  legend: "Cornell Box filled with water - Rendered with Stochastic Progressive Photon Mapping"
+
+- url: "/img/renders/fetch-basket.jpg"
+  legend: "A scene from our short film Fetch"
+
+- url: "/img/renders/fetch-forest.png"
+  legend: "A scene from our short film Fetch"
+
+- url: "/img/renders/fetch-oh.png"
+  legend: "A scene from our short film Fetch"
+
+- url: "/img/renders/fetch-wolf1.png"
+  legend: "A scene from our short film Fetch"
+
+- url: "/img/renders/fetch-wolf2.png"
+  legend: "A scene from our short film Fetch"
+
+- url: "/img/renders/fluffycornellbox.png"
+  legend: "Fluffy Cornell Box"
+
+- url: "/img/renders/jarmaizsolt-patio.jpg"
+  legend: "A scene from forum user @jarmaizsolt"
+
+- url: "/img/renders/materialtester-glass.png"
+  legend: "Our material tester scene, here made of glass"
+
+- url: "/img/renders/max-vl1.png"
+  legend: "A scene from forum user @Max"
+
+- url: "/img/renders/max-vl2.png"
+  legend: "A scene from forum user @Max"
+
+- url: "/img/renders/microfacet-btdf.png"
+  legend: "Microfacet Refraction Test"
+
+- url: "/img/renders/thomas-heightfield.png"
+  legend: "A scene from forum user @Thomas"
