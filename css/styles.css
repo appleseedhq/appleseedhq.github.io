@@ -645,14 +645,16 @@ th, tfoot td
     -webkit-filter: initial;
 }
 
-.section.docs .tutorial .description
+.section.docs .tutorial h4
 {
-    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 25px;
 }
 
-.section.docs .tutorial .description h4
+.section.docs .tutorial .description
 {
-    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: left;
 }
 
 .section.docs .illustration

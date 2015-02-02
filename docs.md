@@ -13,8 +13,8 @@ section: docs
             <a href="{{ tutorial.url }}">
                 <img src="{{ tutorial.image }}" alt="{{ tutorial.title }}">
                 <h4>{{ tutorial.title }}</h4>
-                <p class="description">{{ tutorial.description }}</p>
             </a>
+            <p class="description">{{ tutorial.description }}</p>
         </div>
     {% endfor %}
 </div>
