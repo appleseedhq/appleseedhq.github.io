@@ -620,7 +620,7 @@ th, tfoot td
 {
     display: inline-block;
     width: 240px;
-    /*height: 400px;*/
+    height: 450px;
     overflow-y: hidden;
     margin-right: 100px;
     /*margin-bottom: 100px;*/
