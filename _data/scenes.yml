@@ -9,3 +9,7 @@
 - name: Fluffy Cornell Box 1.0
   image: "/img/scenes/fluffy_cornell_box.jpg"
   url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/fluffy_cornell_box_1.0.zip"
+
+- name: Bedroom 1.0
+  image: "/img/scenes/bedroom.jpg"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/bedroom_1.0.zip"
