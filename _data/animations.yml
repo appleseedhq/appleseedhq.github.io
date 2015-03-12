@@ -24,3 +24,7 @@
 - thumbnail: "//i.vimeocdn.com/video/494049310_640.jpg"
   video: "//player.vimeo.com/video/109894596?color=f60&title=0&byline=0&portrait=0"
   legend: "Experimental 'Frozen Display' mode in appleseed.studio"
+
+- thumbnail: "//i.vimeocdn.com/video/510513031_640.jpg"
+  video: "//player.vimeo.com/video/121917016?color=f60&title=0&byline=0&portrait=0"
+  legend: "Interactive lookdev with appleseed inside Image Engine's Gaffer"
