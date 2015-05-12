@@ -33,7 +33,7 @@ We are actively working on additional tutorials. Thanks for your patience.
 
 Franz was invited by [Filmakademie](http://www.filmakademie.de/en/main-page/) to present appleseed at [FMX](http://fmx.de/) 2015 during a one hour talk.
 
-Here is some of the material presented during the talk:
+Here are the slides and the appleseed.studio lookdev video used during the talk:
 
 * Slides (PowerPoint 2013): [appleseed-fmx-2015-no-videos.pptx](/docs/fmx/2015/appleseed-fmx-2015-no-videos.pptx)
 * Slides with comments (PDF): [appleseed-fmx-2015-slides-comments.pdf](/docs/fmx/2015/appleseed-fmx-2015-slides-comments.pdf)
