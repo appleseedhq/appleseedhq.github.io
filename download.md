@@ -50,6 +50,15 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
 
 We will be providing additional scenes soon. Thanks for your patience.
 
+## Exporters & Integrations
+
+### blenderseed
+
+blenderseed is our appleseed plugin for Blender.
+
+- [Download the latest version](https://github.com/appleseedhq/blenderseed/releases/latest)
+- [Installation instructions and documentation](https://github.com/appleseedhq/blenderseed/wiki)
+
 ## Source Code
 
 Visit the [GitHub page](https://github.com/appleseedhq/appleseed) to&hellip;
