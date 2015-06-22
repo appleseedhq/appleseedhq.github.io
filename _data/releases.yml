@@ -3,8 +3,13 @@
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.2.0-beta"
   builds:
     - platform: windows
+      label: Windows Vista and Later
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.2.0-beta/appleseed-1.2.0-beta-0-g7cc9ec1-win64-vs120.zip"
+    - platform: windows
+      label: Windows Vista and Later<br>(SSE 4.2)
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.2.0-beta/appleseed-1.2.0-beta-0-g7cc9ec1-win64-vs120-sse42.zip"
     - platform: linux
+      label: Linux
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.2.0-beta/appleseed-1.2.0-beta-0-g7cc9ec1-linux64-gcc48-py27.zip"
 
 - version: 1.1.0-beta
@@ -12,8 +17,10 @@
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-beta"
   builds:
     - platform: windows
+      label: Windows Vista and Later
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-beta/appleseed-1.1.0-beta-0-g369e747-win64-vs110.zip"
     - platform: linux
+      label: Linux
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-beta/appleseed-1.1.0-beta-0-g369e747-linux64-gcc4.zip"
 
 - version: 1.1.0 alpha-23
@@ -21,6 +28,8 @@
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-alpha-23"
   builds:
     - platform: windows
+      label: Windows Vista and Later
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-win64-vs110.zip"
     - platform: linux
+      label: Linux
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.1.0-alpha-23/appleseed-1.1.0-alpha-23-0-gb5445bd-linux64-gcc48.zip"

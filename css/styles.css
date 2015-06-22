@@ -554,6 +554,8 @@ th, tfoot td
 {
     display: inline-block;
     margin-bottom: 20px;
+    vertical-align: top;
+    font-size: 14px;
 }
 
 .section.download .build:not(:hover)

@@ -19,14 +19,12 @@ Please check the [release notes]({{ release.github }}) for the list of new featu
             {% case build.platform %}
                 {% when 'windows' %}
                     <i class="fa fa-windows"></i>
-                    <div>Windows Vista and Later</div>
                 {% when 'linux' %}
                     <i class="fa fa-linux"></i>
-                    <div>Linux</div>
                 {% when 'osx' %}
                     <i class="fa fa-apple"></i>
-                    <div>OS X 10.9 and Later</div>
             {% endcase %}
+            <div>{{ build.label }}</div>
         </a>
     {% endfor %}
 </div>
