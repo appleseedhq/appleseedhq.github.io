@@ -42,3 +42,6 @@
 
 - url: "/img/renders/bedroom.png"
   legend: "The Bedroom scene from 3dRender.com Lighting Challenge #21"
+
+- url: "/img/renders/sss-indirect-mosaic.png"
+  legend: "Indirect lighting through a translucent medium"
