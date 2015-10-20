@@ -802,3 +802,45 @@ th, tfoot td
 {
     color: inherit;
 }
+
+.section.footer #emailPopup
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.section.footer #emailPopup #window
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 500px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -250px;
+    background-color: #2f2f2f;
+    padding: 10px;
+}
+
+.section.footer #emailPopup #window a
+{
+    text-decoration: none;
+    color: #da854c;
+    transition: 320ms;
+}
+
+.section.footer #emailPopup #window a#closeEmailPopupLink:not(:hover)
+{
+    color: #888;
+}
+
+.section.footer #emailPopup #window a:hover
+{
+    color: #f60;
+}

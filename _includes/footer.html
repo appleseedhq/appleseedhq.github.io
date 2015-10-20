@@ -3,14 +3,47 @@
              ==================== -->
 
         <div class="section dark footer">
+            <script>
+                $(document).ready(function () {
+                    $("#emailLink").click(function () {
+                        $("#emailPopup").show();
+                        return false;
+                    });
+
+                    $("#emailPopup #window").click(function (event) {
+                        event.stopPropagation();
+                    });
+
+                    $("#emailPopup, #closeEmailPopupLink").click(function () {
+                        $("#emailPopup").hide();
+                        return false;
+                    });
+
+                    $(document).keyup(function (e) {
+                        if (e.keyCode == 27) {
+                            $("#emailPopup").hide();
+                            return false;
+                        }
+                    });
+                });
+            </script>
             <div class="content">
                 <div class="columns-wrapper">
                     <div class="columns">
                         <ul class="column" id="contact">
                             <li class="header">Contact</li>
-                            <li><a href="mailto:hello@appleseedhq.net">hello@appleseedhq.net</a></li>
                             <li><a href="https://forum.appleseedhq.net/">User Forum</a></li>
                             <li><a href="https://groups.google.com/forum/#!forum/appleseed-dev">Development Mailing List</a></li>
+                            <li>
+                                <a id="emailLink" href="#">Email</a>
+                                <div id="emailPopup">
+                                    <div id="window">
+                                        <p>The <a href="https://forum.appleseedhq.net/">user forum</a> is the best place for most questions and inquiries.</p>
+                                        <p>You can also contact us privately at <a href="mailto:hello@appleseedhq.net">hello@appleseedhq.net</a> but you may not get an answer as quickly as on the forum.</p>
+                                        <p><div style="text-align: center"><a id="closeEmailPopupLink" href="#">Close</a></div></p>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                         <ul class="column" id="social">
                             <li class="header">Social</li>
