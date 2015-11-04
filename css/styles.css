@@ -556,6 +556,7 @@ th, tfoot td
     margin-bottom: 20px;
     vertical-align: top;
     font-size: 14px;
+    line-height: 18px;
 }
 
 .section.download .build:not(:hover)
@@ -565,10 +566,10 @@ th, tfoot td
 
 .section.download .build i
 {
-    width: 128px;
+    width: 80px;
     margin: 20px;
     padding: 20px;
-    font-size: 128px;
+    font-size: 80px;
     color: #1a1a1a;
     background-color: #666;
     transition: 320ms;

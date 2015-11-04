@@ -29,6 +29,15 @@
                                 <li>Automatic spectral / RGB switching</li>
                             </ul>
                         </div>
+                        <div class="block">
+                            <h3>Subsurface Scattering</h3>
+                            <ul>
+                                <li>Raytraced Subsurface Scattering</li>
+                                <li>No precomputation or storage</li>
+                                <li>Available in interactive rendering</li>
+                                <li>Available in OSL shaders</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="column right">
                         <div class="block">
@@ -45,7 +54,18 @@
                                 <li>Anisotropic Ashikhmin-Shirley BRDF</li>
                                 <li>Kelemen BRDF</li>
                                 <li>Disney's Layered BRDF</li>
+                                <li>Velvet BRDF</li>
                                 <li>Arbitrary mixture of BRDFs</li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <h3>Subsurface Scattering Profiles</h3>
+                            <ul>
+                                <li>Gaussian</li>
+                                <li>Standard Dipole</li>
+                                <li>Better Dipole</li>
+                                <li>Directional Dipole</li>
+                                <li>Normalized Diffusion</li>
                             </ul>
                         </div>
                     </div>
@@ -151,7 +171,7 @@
                             <h3>Performance</h3>
                             <ul>
                                 <li>Multithreaded, scalable</li>
-                                <li>SSE / SSE2 vectorization</li>
+                                <li>SSE / SSE2 / SSE 4.2 vectorization</li>
                                 <li>Memory-bounded texture cache</li>
                                 <li>Multiple Importance Sampling</li>
                                 <li>Efficient handling of alpha maps</li>

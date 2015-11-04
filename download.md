@@ -46,8 +46,6 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
     {% endfor %}
 </div>
 
-We will be providing additional scenes soon. Thanks for your patience.
-
 ## Exporters & Integrations
 
 ### blenderseed
