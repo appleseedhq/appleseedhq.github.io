@@ -137,7 +137,12 @@ ul, ol
 {
     padding-left: 35px;
     padding-bottom: 20px;
-    line-height: 24px;
+    line-height: 26px;
+}
+
+li
+{
+    padding-bottom: 4px;
 }
 
 code, kbd
