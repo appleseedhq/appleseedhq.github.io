@@ -312,7 +312,7 @@ th, tfoot td
 .section.navigation ul li
 {
     display: inline-block;
-    padding: 20px;
+    padding: 20px 15px 20px 15px;
     text-transform: uppercase;
     transition: 320ms;
 }
@@ -451,8 +451,12 @@ th, tfoot td
 .section.news article
 {
     display: inline-block;
-    margin-right: 30px;
     vertical-align: top;
+}
+
+.section.news article + article
+{
+    margin-top: 40px;
 }
 
 .section.news article .date
@@ -460,6 +464,12 @@ th, tfoot td
     margin-top: -10px;
     padding-bottom: 40px;
     color: #888;
+}
+
+.section.news #older-news
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* ====================

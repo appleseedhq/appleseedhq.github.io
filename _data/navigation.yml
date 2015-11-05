@@ -10,6 +10,10 @@
   area: download
   url: "/download.html"
 
+- label: News
+  area: news
+  url: "/news.html"
+
 - label: Docs
   area: docs
   url: "/docs.html"
