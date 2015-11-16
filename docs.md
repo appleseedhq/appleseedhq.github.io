@@ -39,6 +39,10 @@ Please refer the [SeExpr User Documentation](http://wdas.github.io/SeExpr/doxyge
 
 - [makefluffy](/docs/makefluffy.html)
 
+### Wiki
+
+The [wiki on GitHub](https://github.com/appleseedhq/appleseed/wiki) also contains documentation that you may find useful.
+
 ## Conference Materials
 
 ### FMX 2015
