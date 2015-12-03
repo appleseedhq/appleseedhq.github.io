@@ -51,6 +51,36 @@ section: stats
 
 <script type="text/javascript">
     $(document).ready(function () {
+        var repos = [
+            "appleseedhq/appleseed",
+            "appleseedhq/appleseed-scenes",
+            "appleseedhq/appleseed-max"
+        ];
+
+        var debugging = false;
+
+        if (debugging) {
+            processReleases({% include releases.json %});
+        } else {
+            var fetchReleases = function (repoIndex, processFunc) {
+                $.getJSON("https://api.github.com/repos/" + repos[repoIndex] + "/releases", function (releases) {
+                    if (repoIndex + 1 < repos.length) {
+                        fetchReleases(repoIndex + 1, function (nextReleases) {
+                            processFunc(releases.concat(nextReleases));
+                        });
+                    } else {
+                        processFunc(releases);
+                    }
+                });
+            };
+
+            if (repos.length > 0) {
+                fetchReleases(0, function (releases) {
+                    processReleases(releases);
+                });
+            }
+        }
+
         var renderDownloadStatsSrc = $("#render-download-stats-template").html();
         var renderDownloadStats = Handlebars.compile(renderDownloadStatsSrc);
 
@@ -83,16 +113,5 @@ section: stats
             var html = renderDownloadStats(releases);
             $("#download-stats").replaceWith(html);
         };
-
-        if (true) {
-            $.getJSON("https://api.github.com/repos/appleseedhq/appleseed/releases", function (appleseedReleases) {
-                $.getJSON("https://api.github.com/repos/appleseedhq/appleseed-scenes/releases", function (scenesReleases) {
-                    var releases = appleseedReleases.concat(scenesReleases);
-                    processReleases(releases);
-                });
-            });
-        } else {
-            processReleases({% include releases.json %});
-        }
     });
 </script>
