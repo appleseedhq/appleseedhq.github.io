@@ -46,15 +46,6 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
     {% endfor %}
 </div>
 
-## Exporters & Integrations
-
-### blenderseed
-
-blenderseed is our appleseed plugin for Blender.
-
-- [Download the latest version](https://github.com/appleseedhq/blenderseed/releases/latest)
-- [Installation instructions and documentation](https://github.com/appleseedhq/blenderseed/wiki)
-
 ## Source Code
 
 Visit the [GitHub page](https://github.com/appleseedhq/appleseed) to&hellip;
@@ -68,3 +59,27 @@ This will allow you to stay in sync with the latest updates and fixes as soon as
 
 If you're planning on building appleseed yourself, make sure to check out our detailed
 [compilation guide](https://github.com/appleseedhq/appleseed/wiki/Building-appleseed).
+
+## Exporters & Integrations
+
+### appleseed-maya
+
+appleseed-maya is a native plugin for Autodesk Maya 2015/2016 currently in development.
+
+- [Features and documentation](http://appleseed-maya.readthedocs.org/en/latest/)
+- [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
+
+### appleseed-max
+
+appleseed-max is a native plugin for Autodesk 3ds Max 2015/2016 currently in development.
+
+- [Daily builds and progress updates](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
+- [GitHub repository](https://github.com/appleseedhq/appleseed-max)
+
+### blenderseed
+
+blenderseed is our appleseed plugin for Blender.
+
+- [Download the latest version](https://github.com/appleseedhq/blenderseed/releases/latest)
+- [Installation instructions and documentation](https://github.com/appleseedhq/blenderseed/wiki)
+- [GitHub repository](https://github.com/appleseedhq/blenderseed)
