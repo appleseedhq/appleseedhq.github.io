@@ -711,7 +711,9 @@ th, tfoot td
 
 .section.team .member h3
 {
-    margin-top: -60px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    border-top: 0px;
 }
 
 .section.team .member .column
@@ -728,7 +730,6 @@ th, tfoot td
 .section.team .member .column.right
 {
     width: 470px;
-    margin-top: 2px;
 }
 
 /* ========================================================================
