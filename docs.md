@@ -23,9 +23,15 @@ We are actively working on additional tutorials. Thanks for your patience.
 
 ## Documentation
 
-### Disney BRDF and Material
+### appleseed Apps & Tools
 
-Disney's principled BRDF model is available in appleseed in two forms: as a standard appleseed BRDF, and as a custom layered material.
+- [appleseed.studio](/docs/appleseed.studio.html)
+- [makefluffy](/docs/makefluffy.html)
+
+### Disney BRDF & Material
+
+Disney's principled BRDF model is available in appleseed in two forms: as a standard appleseed BRDF ("Disney BRDF"),
+and as a custom layered material ("Disney Material").
 
 The best reference for the Disney reflection model is probably
 [RenderMan's PxrDisney documentation](http://renderman.pixar.com/resources/current/RenderMan/PxrDisney.html).
@@ -34,10 +40,6 @@ The best reference for the Disney reflection model is probably
 
 appleseed's Disney material allows using arbitrary expressions for any of its inputs. Expressions follow Disney's SeExpr syntax.
 Please refer the [SeExpr User Documentation](http://wdas.github.io/SeExpr/doxygen/userdoc.html) for details.
-
-### appleseed Tools
-
-- [makefluffy](/docs/makefluffy.html)
 
 ### Wiki
 

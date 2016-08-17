@@ -203,6 +203,11 @@ iframe
     color: #888;
 }
 
+table
+{
+    margin-bottom: 20px;
+}
+
 td, th
 {
     border: solid 1px #2f2f2f;
