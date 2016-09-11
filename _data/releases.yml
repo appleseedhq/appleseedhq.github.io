@@ -1,3 +1,20 @@
+- version: 1.5.0-beta
+  date: September 11th, 2016
+  github: "https://github.com/appleseedhq/appleseed/releases/tag/1.5.0-beta"
+  builds:
+    - platform: windows
+      label: Windows Vista<br>and Later (SSE 4.2)
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.5.0-beta/appleseed-1.5.0-beta-0-g49ce05a-win64-vs120-sse42.zip"
+    - platform: windows
+      label: Windows Vista<br>and Later
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.5.0-beta/appleseed-1.5.0-beta-0-g49ce05a-win64-vs120.zip"
+    - platform: osx
+      label: OS X 10.10 (Yosemite)<br>and Later
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.5.0-beta/appleseed-1.5.0-beta-0-g49ce05a-mac64-clang.zip"
+    - platform: linux
+      label: Linux (SSE 4.2)
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.5.0-beta/appleseed-1.5.0-beta-0-g49ce05a-linux64-gcc48-py27.zip"
+
 - version: 1.4.0-beta
   date: April 1st, 2016
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.4.0-beta"
