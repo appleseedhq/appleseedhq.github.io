@@ -66,7 +66,7 @@ If you're planning on building appleseed yourself, make sure to check out our de
 
 appleseed-max is a native plugin for Autodesk 3ds Max 2015/2016.
 
-- [Releases](https://github.com/appleseedhq/appleseed-max/releases)
+- [Downloads](https://github.com/appleseedhq/appleseed-max/releases)
 - [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
 - [GitHub repository](https://github.com/appleseedhq/appleseed-max)
 
