@@ -6,7 +6,7 @@ We are pleased to announce the release of appleseed 1.4.0-beta, the fourth relea
 
 The big focus of this release was improving our support for transparent materials: we implemented full support for nested dielectrics which, together with automatic tracking of indices of refractions, considerably simplifies the construction of scenes with complex nested transparent volumes.
 
-For good measure, we also added a new advanced glass BRDF and a state-of-the-art metal BRDF based on recent research (both also available as OSL closures). You can see examples of these new BRDFs in the release notes.
+For good measure, we also added a new advanced glass BSDF and a state-of-the-art metal BRDF based on recent research (both also available as OSL closures). You can see examples of these new BRDFs in the release notes.
 
 Of course, this release includes numerous other changes and improvements, like a much improved OSL shader library, refinements of appleseed.studio's user interface, and the usual assortment of bug fixes and performance improvements.
 
