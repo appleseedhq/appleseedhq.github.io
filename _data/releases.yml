@@ -13,7 +13,7 @@
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.5.0-beta/appleseed-1.5.0-beta-0-g49ce05a-mac64-clang.zip"
     - platform: linux
       label: Linux (SSE 4.2)
-      url: "https://github.com/appleseedhq/appleseed/releases/download/1.5.0-beta/appleseed-1.5.0-beta-0-g49ce05a-linux64-gcc48-py27.zip"
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.5.0-beta/appleseed-1.5.0-beta-0-g49ce05a-linux64-gcc48-py27-sse42.zip"
 
 - version: 1.4.0-beta
   date: April 1st, 2016
