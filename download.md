@@ -62,6 +62,14 @@ If you're planning on building appleseed yourself, make sure to check out our de
 
 ## Exporters & Integrations
 
+### appleseed-max
+
+appleseed-max is a native plugin for Autodesk 3ds Max 2015/2016.
+
+- [Releases](https://github.com/appleseedhq/appleseed-max/releases)
+- [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
+- [GitHub repository](https://github.com/appleseedhq/appleseed-max)
+
 ### appleseed-maya
 
 appleseed-maya is a native plugin for Autodesk Maya 2015/2016 currently in development.
@@ -69,16 +77,9 @@ appleseed-maya is a native plugin for Autodesk Maya 2015/2016 currently in devel
 - [Features and documentation](http://appleseed-maya.readthedocs.org/en/latest/)
 - [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
 
-### appleseed-max
-
-appleseed-max is a native plugin for Autodesk 3ds Max 2015/2016 currently in development.
-
-- [Daily builds and progress updates](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
-- [GitHub repository](https://github.com/appleseedhq/appleseed-max)
-
 ### blenderseed
 
-blenderseed is our appleseed plugin for Blender.
+blenderseed is a appleseed plugin for Blender.
 
 - [Download the latest version](https://github.com/appleseedhq/blenderseed/releases/latest)
 - [Installation instructions and documentation](https://github.com/appleseedhq/blenderseed/wiki)
