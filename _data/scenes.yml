@@ -4,7 +4,7 @@
 
 - name: Bedroom
   image: "/img/scenes/bedroom.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.4.0-beta/bedroom_1.1.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/bedroom_1.2.zip"
 
 - name: Rose
   image: "/img/scenes/rose.jpg"
@@ -16,7 +16,7 @@
 
 - name: Material Tester
   image: "/img/scenes/material_tester.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.4.0-beta/material_tester_1.1.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/material_tester_1.2.zip"
 
 - name: Disney Material
   image: "/img/scenes/disney_material.jpg"
@@ -24,4 +24,12 @@
 
 - name: Whisky Glass
   image: "/img/scenes/whisky_glass.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.4.0-beta/whisky_glass_1.0.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/whisky_glass_1.1.zip"
+
+- name: Design Glasses
+  image: "/img/scenes/design_glasses.jpg"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/design_glasses_1.0.zip"
+
+- name: Jar Jar Bean
+  image: "/img/scenes/jar_jar_bean.jpg"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/jar_jar_bean_1.0.zip"
