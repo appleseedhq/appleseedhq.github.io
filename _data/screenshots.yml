@@ -1,17 +1,26 @@
-- url: "/img/screenshots/appleseed.studio.jpg"
-  legend: "appleseed.studio, featuring our material tester scene"
+- url: "/img/screenshots/appleseed.studio-glasses.png"
+  legend: "appleseed.studio, rendering our Design Glasses demo scene"
 
-- url: "/img/screenshots/appleseed.studio-fetch.jpg"
+- url: "/img/screenshots/appleseed.studio-fetch.png"
   legend: "appleseed.studio, editing a scene from [Fetch](http://www.fetchaveryshortfilm.com/)"
 
-- url: "/img/screenshots/appleseed.studio-seexpr.jpg"
+- url: "/img/screenshots/appleseed.studio-wireframe.png"
+  legend: "appleseed.studio, rendering a scene from [Fetch](http://www.fetchaveryshortfilm.com/) with the built-in wireframe shader"
+
+- url: "/img/screenshots/appleseed.studio-sss.png"
+  legend: "appleseed.studio, rendering our Rose demo scene"
+
+- url: "/img/screenshots/appleseed.studio-seexpr.png"
   legend: "appleseed.studio, playing with Disney's SeExpr expression editor"
+
+- url: "/img/screenshots/appleseed.studio-unit-tests.png"
+  legend: "Running appleseed's built-in unit tests in appleseed.studio"
+
+- url: "/img/screenshots/appleseed-max.png"
+  legend: "appleseed-max, our native 3ds Max plugin"
 
 - url: "/img/screenshots/gafferseed.jpg"
   legend: "appleseed inside Image Engine's [Gaffer](http://imageengine.github.io/gaffer/) lookdev application, here running on Linux"
 
 - url: "/img/screenshots/appleseed.cli.png"
-  legend: "appleseed.cli, our command line renderer, here running on Windows 7"
-
-- url: "/img/screenshots/appleseed.studio-tests.png"
-  legend: "appleseed's built-in unit tests"
+  legend: "appleseed.cli, our command line renderer, here running on Windows 10"
