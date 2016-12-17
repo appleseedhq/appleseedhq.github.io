@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>appleseed Test Suite Report</title>
+        <script src="./appleseed Test Suite Report_files/jquery.min.js.download"></script>
+        <script>
+            function makeImageComparator(container) {
+                var $container = $(container);
+                var first = $container.children().first();
+                var width = first.width();
+                var height = first.height();
+                $container.height(height);
+                first.css({
+                    "background-color": "#000",
+                    "position": "absolute",
+                    "z-index": 0
+                });
+                $container.children().eq(1).replaceWith(function () {
+                    return $("<div>").css({
+                        "position": "absolute",
+                        "z-index": 1,
+                        "background-color": "#000",
+                        "background-image": "url('" + $(this).attr("src") + "')",
+                        "background-position": "left",
+                        "width": width / 2,
+                        "height": height,
+                        "border-right": "1px solid #222"
+                    });
+                });
+                var handle = $container.children("div").eq(0);
+                $container.children().mousemove(function (e) {
+                    var newWidth = e.pageX - $container.offset().left;
+                    handle.width(Math.min(newWidth, width));
+                });
+            }
+
+            function gatherUpdateCommands() {
+                $("ul.commands").empty();
+                $(".result").each(function () {
+                    var result = $(this);
+                    var checkbox = result.find(".update-checkbox");
+                    if (checkbox.is(":checked")) {
+                        var command = result.find(".command").text();
+                        $("ul.commands").append("<li>" + command + "</li>");
+                    }
+                });
+            }
+
+            $(document).ready(function () {
+                $("img").error(function () {
+                    $(this).width(500);
+                    $(this).height(375);
+                });
+
+                $(".popup-toggle").each(function () {
+                    $(this).click(function () {
+                        var popup = $(this).prevAll(".popup").first();
+                        popup.toggle();
+                        var imagesContainer = popup.find(".compare-images");
+                        if (!imagesContainer.data("initialized")) {
+                            var img = imagesContainer.find("img").first();
+                            var width = img.width();
+                            var height = img.height();
+                            popup.find(".window").css({
+                                "width": width,
+                                "height": height,
+                                "margin-top": -height / 2,
+                                "margin-left": -width / 2
+                            });
+                            imagesContainer.each(function () {
+                                makeImageComparator(this);
+                            });
+                            imagesContainer.data("initialized", true);
+                        }
+                        return false;
+                    });
+                });
+
+                $(".popup").click(function () {
+                    $(this).hide();
+                    return false;
+                });
+
+                $(document).keyup(function (e) {
+                    if (e.keyCode == 27) {
+                        $(".popup").hide();
+                        return false;
+                    }
+                });
+
+                $(".result").on("click", ".update-checkbox", function () {
+                    gatherUpdateCommands();
+                });
+            });
+        </script>
+        <style type="text/css">
+            /* ========================================================================
+             * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+             * http://cssreset.com
+             * Our tweaks:
+             *  - Removed <ul> and <ol> list style resets.
+             * ======================================================================== */
+
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video
+            {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section
+            {
+                display: block;
+            }
+
+            body
+            {
+                line-height: 1;
+            }
+
+            blockquote, q
+            {
+                quotes: none;
+            }
+
+            blockquote:before, blockquote:after,
+            q:before, q:after
+            {
+                content: '';
+                content: none;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            /* ========================================================================
+             * Common styles.
+             * ======================================================================== */
+
+            body
+            {
+                background-color: #282828;
+                color: #ccc;
+                font-family: "Open Sans", sans-serif;
+                padding: 10px;
+            }
+
+            h1
+            {
+                margin-top: 40px;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+            
+            h2
+            {
+                margin-top: 30px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+
+            a
+            {
+                color: #da854c;
+            }
+
+            pre
+            {
+                font-family: "Inconsolata", monospace;
+            }
+
+            table
+            {
+                margin-bottom: 20px;
+            }
+
+            td, th
+            {
+                border: solid 1px #2f2f2f;
+                padding: 10px;
+            }
+
+            td
+            {
+                background-color: #444;
+            }
+
+            th, tfoot td
+            {
+                background-color: #383838;
+                font-size: 18px;
+            }
+
+            /* ========================================================================
+             * Test case result.
+             * ======================================================================== */
+
+            .result
+            {
+                background-color: #2f2f2f;
+                margin-bottom: 60px;
+            }
+
+            .result td
+            {
+                background-color: inherit;
+            }
+
+            .result .title
+            {
+                font-size: 18px;
+                font-weight: bold;
+                padding-bottom: 40px;
+            }
+
+            .result .reference,
+            .result .output,
+            .result .diff
+            {
+                width: 510px;
+            }
+
+            .result .reference img,
+            .result .output img,
+            .result .diff img
+            {
+                max-width: 500px;
+            }
+
+            .result .details td
+            {
+                border: solid 1px #282828;
+            }
+
+            .command,
+            ul.commands li
+            {
+                font-family: monospace;
+                font-size: 15px;
+            }
+
+            .command,
+            td.command,
+            ul.commands
+            {
+                background-color: #383838;
+            }
+            
+            ul.commands
+            {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            ul.commands li
+            {
+                padding: 8px;
+            }
+
+            /* ========================================================================
+             * Image comparator.
+             * ======================================================================== */
+
+            .popup
+            {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: none;
+            }
+
+            .window
+            {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                z-index: 10;
+                background-color: #282828;
+                border: 1px solid #222;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>appleseed Test Suite Report</h1>
+        <div>
+            <h2>Setup</h2>
+            <table class="details">
+                <tbody><tr>
+                    <td>Test Date</td>
+                    <td>2016-12-17 01:04:12.595000</td>
+                </tr>
+                <tr>
+                    <td>appleseed Binary</td>
+                    <td><pre>N:\appleseed\appleseed\scripts\runtestsuite\..\..\sandbox\bin\Release\appleseed.cli.exe</pre></td>
+                </tr>
+                <tr>
+                    <td>Maximum Absolute Component Difference</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Maximum Number of Differing Components</td>
+                    <td>8</td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div>
+            <h2>Failures</h2>
+            <div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\alembic\02 - cube with normals and uvs.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/02 - cube with normals and uvs.png"><img src="./appleseed Test Suite Report_files/02 - cube with normals and uvs.png" alt="Reference Image" title="Reference Image"></a>
+            </td>
+            <td class="diff">
+                <a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/%7Bdiff-image-url%7D"><img src="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/%7Bdiff-image-url%7D" alt="Difference Image" title="Difference Image" style="width: 500px; height: 375px;"></a>
+            </td>
+            <td class="output">
+                <a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/alembic/renders/02%20-%20cube%20with%20normals%20and%20uvs.png"><img src="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/alembic/renders/02%20-%20cube%20with%20normals%20and%20uvs.png" alt="Output Image" title="Output Image" style="width: 500px; height: 375px;"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>Output image is missing</td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/alembic/renders/02%20-%20cube%20with%20normals%20and%20uvs.txt">02 - cube with normals and uvs.txt</a></td>
+                    </tr>
+                    <tr>
+                        <td>Set Reference Image</td>
+                        <td class="command">copy /Y ".\alembic\renders\02 - cube with normals and uvs.png" ".\alembic\ref\02 - cube with normals and uvs.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\alembic\03 - cube without normals or uvs.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/03 - cube without normals or uvs.png"><img src="./appleseed Test Suite Report_files/03 - cube without normals or uvs.png" alt="Reference Image" title="Reference Image"></a>
+            </td>
+            <td class="diff">
+                <a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/%7Bdiff-image-url%7D"><img src="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/%7Bdiff-image-url%7D" alt="Difference Image" title="Difference Image" style="width: 500px; height: 375px;"></a>
+            </td>
+            <td class="output">
+                <a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/alembic/renders/03%20-%20cube%20without%20normals%20or%20uvs.png"><img src="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/alembic/renders/03%20-%20cube%20without%20normals%20or%20uvs.png" alt="Output Image" title="Output Image" style="width: 500px; height: 375px;"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>Output image is missing</td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/alembic/renders/03%20-%20cube%20without%20normals%20or%20uvs.txt">03 - cube without normals or uvs.txt</a></td>
+                    </tr>
+                    <tr>
+                        <td>Set Reference Image</td>
+                        <td class="command">copy /Y ".\alembic\renders\03 - cube without normals or uvs.png" ".\alembic\ref\03 - cube without normals or uvs.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bsdf\coarse geometry\07 - db9 hood - ptne.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bsdf/coarse%20geometry/ref/07%20-%20db9%20hood%20-%20ptne.png"><img src="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bsdf/coarse%20geometry/ref/07%20-%20db9%20hood%20-%20ptne.png" alt="Reference Image" title="Reference Image" style="width: 500px; height: 375px;"></a>
+            </td>
+            <td class="diff">
+                <a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/%7Bdiff-image-url%7D"><img src="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/%7Bdiff-image-url%7D" alt="Difference Image" title="Difference Image" style="width: 500px; height: 375px;"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/07 - db9 hood - ptne.png"><img src="./appleseed Test Suite Report_files/07 - db9 hood - ptne.png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>Reference image is missing</td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bsdf/coarse%20geometry/renders/07%20-%20db9%20hood%20-%20ptne.txt">07 - db9 hood - ptne.txt</a></td>
+                    </tr>
+                    <tr>
+                        <td>Set Reference Image</td>
+                        <td class="command">copy /Y ".\bsdf\coarse geometry\renders\07 - db9 hood - ptne.png" ".\bsdf\coarse geometry\ref\07 - db9 hood - ptne.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\11 - standard dipole osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/11 - standard dipole osl.png"><img src="./appleseed Test Suite Report_files/11 - standard dipole osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/11 - standard dipole osl.diff.png"><img src="./appleseed Test Suite Report_files/11 - standard dipole osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/11 - standard dipole osl(1).png"><img src="./appleseed Test Suite Report_files/11 - standard dipole osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/11 - standard dipole osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/11 - standard dipole osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/11%20-%20standard%20dipole%20osl.txt"><pre>11 - standard dipole osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>96</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>125427 (7.09 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\11 - standard dipole osl.png" ".\bssrdf\ref\11 - standard dipole osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\12 - better dipole osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/12 - better dipole osl.png"><img src="./appleseed Test Suite Report_files/12 - better dipole osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/12 - better dipole osl.diff.png"><img src="./appleseed Test Suite Report_files/12 - better dipole osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/12 - better dipole osl(1).png"><img src="./appleseed Test Suite Report_files/12 - better dipole osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/12 - better dipole osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/12 - better dipole osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/12%20-%20better%20dipole%20osl.txt"><pre>12 - better dipole osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>94</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>124361 (7.03 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\12 - better dipole osl.png" ".\bssrdf\ref\12 - better dipole osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\13 - directional dipole osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/13 - directional dipole osl.png"><img src="./appleseed Test Suite Report_files/13 - directional dipole osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/13 - directional dipole osl.diff.png"><img src="./appleseed Test Suite Report_files/13 - directional dipole osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/13 - directional dipole osl(1).png"><img src="./appleseed Test Suite Report_files/13 - directional dipole osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/13 - directional dipole osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/13 - directional dipole osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/13%20-%20directional%20dipole%20osl.txt"><pre>13 - directional dipole osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>111</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>126373 (7.14 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\13 - directional dipole osl.png" ".\bssrdf\ref\13 - directional dipole osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\14 - normalized diffusion osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/14 - normalized diffusion osl.png"><img src="./appleseed Test Suite Report_files/14 - normalized diffusion osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/14 - normalized diffusion osl.diff.png"><img src="./appleseed Test Suite Report_files/14 - normalized diffusion osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/14 - normalized diffusion osl(1).png"><img src="./appleseed Test Suite Report_files/14 - normalized diffusion osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/14 - normalized diffusion osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/14 - normalized diffusion osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/14%20-%20normalized%20diffusion%20osl.txt"><pre>14 - normalized diffusion osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>97</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>133485 (7.54 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\14 - normalized diffusion osl.png" ".\bssrdf\ref\14 - normalized diffusion osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\16 - multi profile osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/16 - multi profile osl.png"><img src="./appleseed Test Suite Report_files/16 - multi profile osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/16 - multi profile osl.diff.png"><img src="./appleseed Test Suite Report_files/16 - multi profile osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/16 - multi profile osl(1).png"><img src="./appleseed Test Suite Report_files/16 - multi profile osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/16 - multi profile osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/16 - multi profile osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/16%20-%20multi%20profile%20osl.txt"><pre>16 - multi profile osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>238</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>3757 (0.21 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\16 - multi profile osl.png" ".\bssrdf\ref\16 - multi profile osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\17 - standard dipole bump osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/17 - standard dipole bump osl.png"><img src="./appleseed Test Suite Report_files/17 - standard dipole bump osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/17 - standard dipole bump osl.diff.png"><img src="./appleseed Test Suite Report_files/17 - standard dipole bump osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/17 - standard dipole bump osl(1).png"><img src="./appleseed Test Suite Report_files/17 - standard dipole bump osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/17 - standard dipole bump osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/17 - standard dipole bump osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/17%20-%20standard%20dipole%20bump%20osl.txt"><pre>17 - standard dipole bump osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>91</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>108478 (6.13 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\17 - standard dipole bump osl.png" ".\bssrdf\ref\17 - standard dipole bump osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\18 - better dipole bump osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/18 - better dipole bump osl.png"><img src="./appleseed Test Suite Report_files/18 - better dipole bump osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/18 - better dipole bump osl.diff.png"><img src="./appleseed Test Suite Report_files/18 - better dipole bump osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/18 - better dipole bump osl(1).png"><img src="./appleseed Test Suite Report_files/18 - better dipole bump osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/18 - better dipole bump osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/18 - better dipole bump osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/18%20-%20better%20dipole%20bump%20osl.txt"><pre>18 - better dipole bump osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>91</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>106295 (6.01 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\18 - better dipole bump osl.png" ".\bssrdf\ref\18 - better dipole bump osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\19 - directional dipole bump osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/19 - directional dipole bump osl.png"><img src="./appleseed Test Suite Report_files/19 - directional dipole bump osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/19 - directional dipole bump osl.diff.png"><img src="./appleseed Test Suite Report_files/19 - directional dipole bump osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/19 - directional dipole bump osl(1).png"><img src="./appleseed Test Suite Report_files/19 - directional dipole bump osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/19 - directional dipole bump osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/19 - directional dipole bump osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/19%20-%20directional%20dipole%20bump%20osl.txt"><pre>19 - directional dipole bump osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>237</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>115941 (6.55 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\19 - directional dipole bump osl.png" ".\bssrdf\ref\19 - directional dipole bump osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\bssrdf\20 - normalized diffusion bump osl.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl.png"><img src="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl.diff.png"><img src="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl(1).png"><img src="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl(1).png">
+                                        <img src="./appleseed Test Suite Report_files/20 - normalized diffusion bump osl.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/bssrdf/renders/20%20-%20normalized%20diffusion%20bump%20osl.txt"><pre>20 - normalized diffusion bump osl.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>89</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>102620 (5.80 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\bssrdf\renders\20 - normalized diffusion bump osl.png" ".\bssrdf\ref\20 - normalized diffusion bump osl.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\01 - lambertian osl - ptne.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/01 - lambertian osl - ptne.png"><img src="./appleseed Test Suite Report_files/01 - lambertian osl - ptne.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/01 - lambertian osl - ptne.diff.png"><img src="./appleseed Test Suite Report_files/01 - lambertian osl - ptne.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/01 - lambertian osl - ptne(1).png"><img src="./appleseed Test Suite Report_files/01 - lambertian osl - ptne(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/01 - lambertian osl - ptne(1).png">
+                                        <img src="./appleseed Test Suite Report_files/01 - lambertian osl - ptne.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/01%20-%20lambertian%20osl%20-%20ptne.txt"><pre>01 - lambertian osl - ptne.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>35784 (2.91 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\01 - lambertian osl - ptne.png" ".\osl\ref\01 - lambertian osl - ptne.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\02 - simple glass.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/02 - simple glass.png"><img src="./appleseed Test Suite Report_files/02 - simple glass.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/02 - simple glass.diff.png"><img src="./appleseed Test Suite Report_files/02 - simple glass.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/02 - simple glass(1).png"><img src="./appleseed Test Suite Report_files/02 - simple glass(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/02 - simple glass(1).png">
+                                        <img src="./appleseed Test Suite Report_files/02 - simple glass.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/02%20-%20simple%20glass.txt"><pre>02 - simple glass.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>64</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>78091 (6.36 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\02 - simple glass.png" ".\osl\ref\02 - simple glass.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\03 - glass absorption.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/03 - glass absorption.png"><img src="./appleseed Test Suite Report_files/03 - glass absorption.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/03 - glass absorption.diff.png"><img src="./appleseed Test Suite Report_files/03 - glass absorption.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/03 - glass absorption(1).png"><img src="./appleseed Test Suite Report_files/03 - glass absorption(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/03 - glass absorption(1).png">
+                                        <img src="./appleseed Test Suite Report_files/03 - glass absorption.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/03%20-%20glass%20absorption.txt"><pre>03 - glass absorption.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>55</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>73844 (6.01 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\03 - glass absorption.png" ".\osl\ref\03 - glass absorption.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\04 - transparency.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/04 - transparency.png"><img src="./appleseed Test Suite Report_files/04 - transparency.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/04 - transparency.diff.png"><img src="./appleseed Test Suite Report_files/04 - transparency.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/04 - transparency(1).png"><img src="./appleseed Test Suite Report_files/04 - transparency(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/04 - transparency(1).png">
+                                        <img src="./appleseed Test Suite Report_files/04 - transparency.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/04%20-%20transparency.txt"><pre>04 - transparency.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>74094 (6.03 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\04 - transparency.png" ".\osl\ref\04 - transparency.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\05 - object space.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/05 - object space.png"><img src="./appleseed Test Suite Report_files/05 - object space.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/05 - object space.diff.png"><img src="./appleseed Test Suite Report_files/05 - object space.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/05 - object space(1).png"><img src="./appleseed Test Suite Report_files/05 - object space(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/05 - object space(1).png">
+                                        <img src="./appleseed Test Suite Report_files/05 - object space.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/05%20-%20object%20space.txt"><pre>05 - object space.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>76468 (6.22 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\05 - object space.png" ".\osl\ref\05 - object space.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\06 - closure mix.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/06 - closure mix.png"><img src="./appleseed Test Suite Report_files/06 - closure mix.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/06 - closure mix.diff.png"><img src="./appleseed Test Suite Report_files/06 - closure mix.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/06 - closure mix(1).png"><img src="./appleseed Test Suite Report_files/06 - closure mix(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/06 - closure mix(1).png">
+                                        <img src="./appleseed Test Suite Report_files/06 - closure mix.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/06%20-%20closure%20mix.txt"><pre>06 - closure mix.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>51</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>149746 (12.19 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\06 - closure mix.png" ".\osl\ref\06 - closure mix.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\08 - point velocity.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/08 - point velocity.png"><img src="./appleseed Test Suite Report_files/08 - point velocity.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/08 - point velocity.diff.png"><img src="./appleseed Test Suite Report_files/08 - point velocity.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/08 - point velocity(1).png"><img src="./appleseed Test Suite Report_files/08 - point velocity(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/08 - point velocity(1).png">
+                                        <img src="./appleseed Test Suite Report_files/08 - point velocity.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/08%20-%20point%20velocity.txt"><pre>08 - point velocity.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>37907 (3.08 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\08 - point velocity.png" ".\osl\ref\08 - point velocity.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\09 - simple texture.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/09 - simple texture.png"><img src="./appleseed Test Suite Report_files/09 - simple texture.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/09 - simple texture.diff.png"><img src="./appleseed Test Suite Report_files/09 - simple texture.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/09 - simple texture(1).png"><img src="./appleseed Test Suite Report_files/09 - simple texture(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/09 - simple texture(1).png">
+                                        <img src="./appleseed Test Suite Report_files/09 - simple texture.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/09%20-%20simple%20texture.txt"><pre>09 - simple texture.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>38514 (3.13 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\09 - simple texture.png" ".\osl\ref\09 - simple texture.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\10 - transparent shadows opaque obj.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj.png"><img src="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj.diff.png"><img src="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj(1).png"><img src="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj(1).png">
+                                        <img src="./appleseed Test Suite Report_files/10 - transparent shadows opaque obj.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/10%20-%20transparent%20shadows%20opaque%20obj.txt"><pre>10 - transparent shadows opaque obj.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>36</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>48879 (3.98 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\10 - transparent shadows opaque obj.png" ".\osl\ref\10 - transparent shadows opaque obj.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\12 - surface area - ptne.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/12 - surface area - ptne.png"><img src="./appleseed Test Suite Report_files/12 - surface area - ptne.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/12 - surface area - ptne.diff.png"><img src="./appleseed Test Suite Report_files/12 - surface area - ptne.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/12 - surface area - ptne(1).png"><img src="./appleseed Test Suite Report_files/12 - surface area - ptne(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/12 - surface area - ptne(1).png">
+                                        <img src="./appleseed Test Suite Report_files/12 - surface area - ptne.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/12%20-%20surface%20area%20-%20ptne.txt"><pre>12 - surface area - ptne.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>281685 (22.92 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\12 - surface area - ptne.png" ".\osl\ref\12 - surface area - ptne.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\13 - point velocity moving assembly.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/13 - point velocity moving assembly.png"><img src="./appleseed Test Suite Report_files/13 - point velocity moving assembly.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/13 - point velocity moving assembly.diff.png"><img src="./appleseed Test Suite Report_files/13 - point velocity moving assembly.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/13 - point velocity moving assembly(1).png"><img src="./appleseed Test Suite Report_files/13 - point velocity moving assembly(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/13 - point velocity moving assembly(1).png">
+                                        <img src="./appleseed Test Suite Report_files/13 - point velocity moving assembly.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/13%20-%20point%20velocity%20moving%20assembly.txt"><pre>13 - point velocity moving assembly.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>48425 (3.94 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\13 - point velocity moving assembly.png" ".\osl\ref\13 - point velocity moving assembly.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\14 - matrix param.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/14 - matrix param.png"><img src="./appleseed Test Suite Report_files/14 - matrix param.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/14 - matrix param.diff.png"><img src="./appleseed Test Suite Report_files/14 - matrix param.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/14 - matrix param(1).png"><img src="./appleseed Test Suite Report_files/14 - matrix param(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/14 - matrix param(1).png">
+                                        <img src="./appleseed Test Suite Report_files/14 - matrix param.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/14%20-%20matrix%20param.txt"><pre>14 - matrix param.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>39</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>156209 (12.71 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\14 - matrix param.png" ".\osl\ref\14 - matrix param.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\16 - rough glass.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/16 - rough glass.png"><img src="./appleseed Test Suite Report_files/16 - rough glass.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/16 - rough glass.diff.png"><img src="./appleseed Test Suite Report_files/16 - rough glass.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/16 - rough glass(1).png"><img src="./appleseed Test Suite Report_files/16 - rough glass(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/16 - rough glass(1).png">
+                                        <img src="./appleseed Test Suite Report_files/16 - rough glass.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/16%20-%20rough%20glass.txt"><pre>16 - rough glass.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>90256 (7.35 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\16 - rough glass.png" ".\osl\ref\16 - rough glass.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\18 - bump noise3d.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/18 - bump noise3d.png"><img src="./appleseed Test Suite Report_files/18 - bump noise3d.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/18 - bump noise3d.diff.png"><img src="./appleseed Test Suite Report_files/18 - bump noise3d.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/18 - bump noise3d(1).png"><img src="./appleseed Test Suite Report_files/18 - bump noise3d(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/18 - bump noise3d(1).png">
+                                        <img src="./appleseed Test Suite Report_files/18 - bump noise3d.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/18%20-%20bump%20noise3d.txt"><pre>18 - bump noise3d.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>84</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>182158 (14.82 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\18 - bump noise3d.png" ".\osl\ref\18 - bump noise3d.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\20 - appleseed osl texture match.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/20 - appleseed osl texture match.png"><img src="./appleseed Test Suite Report_files/20 - appleseed osl texture match.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/20 - appleseed osl texture match.diff.png"><img src="./appleseed Test Suite Report_files/20 - appleseed osl texture match.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/20 - appleseed osl texture match(1).png"><img src="./appleseed Test Suite Report_files/20 - appleseed osl texture match(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup" style="display: none;">
+                                <div class="window" style="width: 640px; height: 480px; margin-top: -240px; margin-left: -320px;">
+                                    <div class="compare-images" style="height: 480px;">
+                                        <img src="./appleseed Test Suite Report_files/20 - appleseed osl texture match(1).png" style="background-color: rgb(0, 0, 0); position: absolute; z-index: 0;">
+                                        <div style="position: absolute; z-index: 1; background-color: rgb(0, 0, 0); background-image: url(&quot;./osl/ref/20%20-%20appleseed%20osl%20texture%20match.png&quot;); background-position: left center; width: 635px; height: 480px; border-right: 1px solid rgb(34, 34, 34);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/20%20-%20appleseed%20osl%20texture%20match.txt"><pre>20 - appleseed osl texture match.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>35221 (2.87 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\20 - appleseed osl texture match.png" ".\osl\ref\20 - appleseed osl texture match.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="3"><pre>.\osl\21 - appleseed osl translucent match.appleseed</pre></td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./appleseed Test Suite Report_files/21 - appleseed osl translucent match.png"><img src="./appleseed Test Suite Report_files/21 - appleseed osl translucent match.png" alt="Reference Image" title="Reference Image">/a&gt;
+            </a></td>
+            <td class="diff">
+                <a href="./appleseed Test Suite Report_files/21 - appleseed osl translucent match.diff.png"><img src="./appleseed Test Suite Report_files/21 - appleseed osl translucent match.diff.png" alt="Difference Image" title="Difference Image"></a>
+            </td>
+            <td class="output">
+                <a href="./appleseed Test Suite Report_files/21 - appleseed osl translucent match(1).png"><img src="./appleseed Test Suite Report_files/21 - appleseed osl translucent match(1).png" alt="Output Image" title="Output Image"></a>
+                <br><label><input type="checkbox" class="update-checkbox">Update</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>Reason</td>
+                        <td>
+                            Output and reference images are significantly different
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./appleseed Test Suite Report_files/21 - appleseed osl translucent match(1).png">
+                                        <img src="./appleseed Test Suite Report_files/21 - appleseed osl translucent match.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Log File</td>
+                        <td><a href="file:///N:/appleseed/appleseed/sandbox/tests/test%20scenes/osl/renders/21%20-%20appleseed%20osl%20translucent%20match.txt"><pre>21 - appleseed osl translucent match.txt</pre></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Absolute Component Difference (as an 8-bit integer)</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Differing Components</td>
+                        <td>96123 (7.82 %)</td>
+                    </tr>
+                    <tr>
+                        <td>Update Reference Image</td>
+                        <td class="command">copy /Y ".\osl\renders\21 - appleseed osl translucent match.png" ".\osl\ref\21 - appleseed osl translucent match.png"</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+            </div>
+        </div>
+        <div>
+            <h2>Update commands for marked images</h2>
+            <div>
+                <ul class="commands">
+                </ul>
+            </div>
+        </div>
+    
+
+</body></html>
