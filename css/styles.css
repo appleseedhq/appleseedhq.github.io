@@ -145,6 +145,16 @@ li
     padding-bottom: 4px;
 }
 
+strong
+{
+    font-weight: bold;
+}
+
+em
+{
+    font-style: italic;
+}
+
 code, kbd
 {
     margin-left: 2px;
