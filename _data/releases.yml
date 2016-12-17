@@ -6,8 +6,8 @@
       label: Windows Vista<br>and Later (SSE 4.2)
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.6.0-beta/appleseed-1.6.0-beta-0-gb18a9fe-win64-vs140-sse42.zip"
     - platform: osx
-      label: OS X 10.10<br>and Later (SSE 2)
-      url: "https://github.com/appleseedhq/appleseed/releases/download/1.6.0-beta/appleseed-1.6.0-beta-0-gb18a9fe-mac64-clang.zip"
+      label: OS X 10.10<br>and Later (SSE 4.2)
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.6.0-beta/appleseed-1.6.0-beta-0-gb18a9fe-mac64-clang-sse42.zip"
     - platform: linux
       label: Linux (SSE 4.2)
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.6.0-beta/appleseed-1.6.0-beta-0-gb18a9fe-linux64-gcc48-py27-sse42.zip"
