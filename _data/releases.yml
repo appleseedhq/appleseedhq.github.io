@@ -1,3 +1,17 @@
+- version: 1.6.0-beta
+  date: December 17th, 2016
+  github: "https://github.com/appleseedhq/appleseed/releases/tag/1.6.0-beta"
+  builds:
+    - platform: windows
+      label: Windows Vista<br>and Later (SSE 4.2, VS 2015 build)
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.6.0-beta/appleseed-1.6.0-beta-0-gb18a9fe-win64-vs140-sse42.zip"
+    - platform: osx
+      label: macOS 10.10 (Yosemite, SSE 2)<br>and Later
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.6.0-beta/appleseed-1.6.0-beta-0-gb18a9fe-mac64-clang.zip"
+    - platform: linux
+      label: Linux (SSE 4.2)
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.6.0-beta/appleseed-1.6.0-beta-0-gb18a9fe-linux64-gcc48-py27-sse42.zip"
+
 - version: 1.5.0-beta
   date: September 11th, 2016
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.5.0-beta"
