@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Mitsuba/appleseed Comparison</title>
+        <script src="./index_files/jquery.min.js.download"></script>
+        <script>
+            function makeImageComparator(container) {
+                var $container = $(container);
+                var first = $container.children().first();
+                var width = first.width();
+                var height = first.height();
+                $container.height(height);
+                first.css({
+                    "background-color": "#000",
+                    "position": "absolute",
+                    "z-index": 0
+                });
+                $container.children().eq(1).replaceWith(function () {
+                    return $("<div>").css({
+                        "position": "absolute",
+                        "z-index": 1,
+                        "background-color": "#000",
+                        "background-image": "url('" + $(this).attr("src") + "')",
+                        "background-position": "left",
+                        "width": width / 2,
+                        "height": height,
+                        "border-right": "1px solid #222"
+                    });
+                });
+                var handle = $container.children("div").eq(0);
+                $container.children().mousemove(function (e) {
+                    var newWidth = e.pageX - $container.offset().left;
+                    handle.width(Math.min(newWidth, width));
+                });
+            }
+
+            $(document).ready(function () {
+                $("img").error(function () {
+                    $(this).width(500);
+                    $(this).height(375);
+                });
+
+                $(".popup-toggle").each(function () {
+                    $(this).click(function () {
+                        var popup = $(this).prevAll(".popup").first();
+                        popup.toggle();
+                        var imagesContainer = popup.find(".compare-images");
+                        if (!imagesContainer.data("initialized")) {
+                            var img = imagesContainer.find("img").first();
+                            var width = img.width();
+                            var height = img.height();
+                            popup.find(".window").css({
+                                "width": width,
+                                "height": height,
+                                "margin-top": -height / 2,
+                                "margin-left": -width / 2
+                            });
+                            imagesContainer.each(function () {
+                                makeImageComparator(this);
+                            });
+                            imagesContainer.data("initialized", true);
+                        }
+                        return false;
+                    });
+                });
+
+                $(".popup").click(function () {
+                    $(this).hide();
+                    return false;
+                });
+
+                $(document).keyup(function (e) {
+                    if (e.keyCode == 27) {
+                        $(".popup").hide();
+                        return false;
+                    }
+                });
+            });
+        </script>
+        <style type="text/css">
+            /* ========================================================================
+             * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+             * http://cssreset.com
+             * Our tweaks:
+             *  - Removed <ul> and <ol> list style resets.
+             * ======================================================================== */
+
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video
+            {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section
+            {
+                display: block;
+            }
+
+            body
+            {
+                line-height: 1;
+            }
+
+            blockquote, q
+            {
+                quotes: none;
+            }
+
+            blockquote:before, blockquote:after,
+            q:before, q:after
+            {
+                content: '';
+                content: none;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            /* ========================================================================
+             * Common styles.
+             * ======================================================================== */
+
+            body
+            {
+                background-color: #282828;
+                color: #ccc;
+                font-family: "Open Sans", sans-serif;
+                padding: 10px;
+            }
+
+            h1
+            {
+                margin-top: 40px;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+            
+            h2
+            {
+                margin-top: 30px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+
+            a
+            {
+                color: #da854c;
+            }
+
+            pre
+            {
+                font-family: "Inconsolata", monospace;
+            }
+
+            table
+            {
+                margin-bottom: 20px;
+            }
+
+            td, th
+            {
+                border: solid 1px #2f2f2f;
+                padding: 10px;
+            }
+
+            td
+            {
+                background-color: #444;
+            }
+
+            th, tfoot td
+            {
+                background-color: #383838;
+                font-size: 18px;
+            }
+
+            /* ========================================================================
+             * Test case result.
+             * ======================================================================== */
+
+            .result
+            {
+                background-color: #2f2f2f;
+                margin-bottom: 60px;
+            }
+
+            .result td
+            {
+                background-color: inherit;
+            }
+
+            .result .title
+            {
+                font-size: 18px;
+                font-weight: bold;
+                padding-bottom: 20px;
+            }
+
+            .result .reference,
+            .result .output,
+            .result .diff
+            {
+                width: 510px;
+            }
+
+            .result .reference img,
+            .result .output img,
+            .result .diff img
+            {
+                max-width: 500px;
+            }
+
+            .result .details td
+            {
+                border: solid 1px #282828;
+            }
+
+            .command,
+            ul.commands li
+            {
+                font-family: monospace;
+                font-size: 15px;
+            }
+
+            .command,
+            td.command,
+            ul.commands
+            {
+                background-color: #383838;
+            }
+            
+            ul.commands
+            {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            ul.commands li
+            {
+                padding: 8px;
+            }
+
+            /* ========================================================================
+             * Image comparator.
+             * ======================================================================== */
+
+            .popup
+            {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: none;
+            }
+
+            .window
+            {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                z-index: 10;
+                background-color: #282828;
+                border: 1px solid #222;
+            }
+        </style>
+    </head>
+    <body>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">bathroom</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender.png"><img src="./index_files/TungstenRender.png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender.png"><img src="./index_files/appleseedTestRender.png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender.png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender.png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">bathroom2</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(1).png"><img src="./index_files/TungstenRender(1).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(1).png"><img src="./index_files/appleseedTestRender(1).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(1).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(1).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">bedroom</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(2).png"><img src="./index_files/TungstenRender(2).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(2).png"><img src="./index_files/appleseedTestRender(2).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(2).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(2).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">car</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(3).png"><img src="./index_files/TungstenRender(3).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/car/appleseedTestRender.png"><img src="file:///D:/cg/appleseed/scenes/tungsten%20scenes/car/appleseedTestRender.png" alt="appleseed Render" title="appleseed Render" style="width: 500px; height: 375px;"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(3).png" alt="Tungsten Render">
+                                        <img src="file:///D:/cg/appleseed/scenes/tungsten%20scenes/car/appleseedTestRender.png" alt="appleseed Render" style="width: 500px; height: 375px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">car2</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(4).png"><img src="./index_files/TungstenRender(4).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(3).png"><img src="./index_files/appleseedTestRender(3).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(4).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(3).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">classroom</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(5).png"><img src="./index_files/TungstenRender(5).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(4).png"><img src="./index_files/appleseedTestRender(4).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(5).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(4).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">coffee</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(6).png"><img src="./index_files/TungstenRender(6).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(5).png"><img src="./index_files/appleseedTestRender(5).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(6).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(5).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">cornell-box</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(7).png"><img src="./index_files/TungstenRender(7).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(6).png"><img src="./index_files/appleseedTestRender(6).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(7).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(6).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">curly-hair</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(8).png"><img src="./index_files/TungstenRender(8).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(7).png"><img src="./index_files/appleseedTestRender(7).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(8).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(7).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">dining-room</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(9).png"><img src="./index_files/TungstenRender(9).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(8).png"><img src="./index_files/appleseedTestRender(8).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(9).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(8).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">dragon</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(10).png"><img src="./index_files/TungstenRender(10).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(9).png"><img src="./index_files/appleseedTestRender(9).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(10).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(9).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">furball</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(11).png"><img src="./index_files/TungstenRender(11).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(10).png"><img src="./index_files/appleseedTestRender(10).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(11).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(10).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">glass-of-water</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(12).png"><img src="./index_files/TungstenRender(12).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(11).png"><img src="./index_files/appleseedTestRender(11).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(12).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(11).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">hair-curl</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(13).png"><img src="./index_files/TungstenRender(13).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(12).png"><img src="./index_files/appleseedTestRender(12).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(13).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(12).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">house</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(14).png"><img src="./index_files/TungstenRender(14).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(13).png"><img src="./index_files/appleseedTestRender(13).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(14).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(13).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">kitchen</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(15).png"><img src="./index_files/TungstenRender(15).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(14).png"><img src="./index_files/appleseedTestRender(14).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(15).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(14).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">lamp</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(16).png"><img src="./index_files/TungstenRender(16).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(15).png"><img src="./index_files/appleseedTestRender(15).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(16).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(15).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">living-room</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(17).png"><img src="./index_files/TungstenRender(17).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(16).png"><img src="./index_files/appleseedTestRender(16).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(17).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(16).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">living-room-2</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(18).png"><img src="./index_files/TungstenRender(18).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(17).png"><img src="./index_files/appleseedTestRender(17).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(18).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(17).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">living-room-3</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(19).png"><img src="./index_files/TungstenRender(19).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(18).png"><img src="./index_files/appleseedTestRender(18).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(19).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(18).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">material-testball</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(20).png"><img src="./index_files/TungstenRender(20).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(19).png"><img src="./index_files/appleseedTestRender(19).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(20).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(19).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">spaceship</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(21).png"><img src="./index_files/TungstenRender(21).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(20).png"><img src="./index_files/appleseedTestRender(20).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(21).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(20).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">staircase</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(22).png"><img src="./index_files/TungstenRender(22).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(21).png"><img src="./index_files/appleseedTestRender(21).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(22).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(21).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">staircase2</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(23).png"><img src="./index_files/TungstenRender(23).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(22).png"><img src="./index_files/appleseedTestRender(22).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(23).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(22).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">straight-hair</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(24).png"><img src="./index_files/TungstenRender(24).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(23).png"><img src="./index_files/appleseedTestRender(23).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(24).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(23).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">teapot</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(25).png"><img src="./index_files/TungstenRender(25).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(24).png"><img src="./index_files/appleseedTestRender(24).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(25).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(24).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">teapot-full</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(26).png"><img src="./index_files/TungstenRender(26).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(25).png"><img src="./index_files/appleseedTestRender(25).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(26).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(25).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">veach-ajar</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(27).png"><img src="./index_files/TungstenRender(27).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(26).png"><img src="./index_files/appleseedTestRender(26).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(27).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(26).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">veach-bidir</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(28).png"><img src="./index_files/TungstenRender(28).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(27).png"><img src="./index_files/appleseedTestRender(27).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(28).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(27).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">veach-mis</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(29).png"><img src="./index_files/TungstenRender(29).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(28).png"><img src="./index_files/appleseedTestRender(28).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(29).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(28).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">volumetric-caustic</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(30).png"><img src="./index_files/TungstenRender(30).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(29).png"><img src="./index_files/appleseedTestRender(29).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(30).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(29).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div class="result">
+    <table>
+        <tbody><tr>
+            <td class="title" colspan="2">water-caustic</td>
+        </tr>
+        <tr>
+            <td class="reference">
+                <a href="./index_files/TungstenRender(31).png"><img src="./index_files/TungstenRender(31).png" alt="Tungsten Render" title="Tungsten Render"></a>
+            </td>
+            <td class="output">
+                <a href="./index_files/appleseedTestRender(30).png"><img src="./index_files/appleseedTestRender(30).png" alt="appleseed Render" title="appleseed Render"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="details">
+                    <tbody><tr>
+                        <td>
+                            <div class="popup">
+                                <div class="window">
+                                    <div class="compare-images">
+                                        <img src="./index_files/TungstenRender(31).png" alt="Tungsten Render">
+                                        <img src="./index_files/appleseedTestRender(30).png" alt="appleseed Render">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="popup-toggle" href="file:///D:/cg/appleseed/scenes/tungsten%20scenes/report.html#">Compare</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    
+
+</body></html>
