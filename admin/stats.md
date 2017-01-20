@@ -57,28 +57,22 @@ section: stats
             "appleseedhq/appleseed-max"
         ];
 
-        var debugging = false;
+        var fetchReleases = function (repoIndex, processFunc) {
+            $.getJSON("https://api.github.com/repos/" + repos[repoIndex] + "/releases", function (releases) {
+                if (repoIndex + 1 < repos.length) {
+                    fetchReleases(repoIndex + 1, function (nextReleases) {
+                        processFunc(releases.concat(nextReleases));
+                    });
+                } else {
+                    processFunc(releases);
+                }
+            });
+        };
 
-        if (debugging) {
-            processReleases({% include releases.json %});
-        } else {
-            var fetchReleases = function (repoIndex, processFunc) {
-                $.getJSON("https://api.github.com/repos/" + repos[repoIndex] + "/releases", function (releases) {
-                    if (repoIndex + 1 < repos.length) {
-                        fetchReleases(repoIndex + 1, function (nextReleases) {
-                            processFunc(releases.concat(nextReleases));
-                        });
-                    } else {
-                        processFunc(releases);
-                    }
-                });
-            };
-
-            if (repos.length > 0) {
-                fetchReleases(0, function (releases) {
-                    processReleases(releases);
-                });
-            }
+        if (repos.length > 0) {
+            fetchReleases(0, function (releases) {
+                processReleases(releases);
+            });
         }
 
         var renderDownloadStatsSrc = $("#render-download-stats-template").html();
