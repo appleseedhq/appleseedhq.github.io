@@ -64,15 +64,15 @@ If you're planning on building appleseed yourself, make sure to check out our de
 
 ### appleseed-max
 
-appleseed-max is a native plugin for Autodesk 3ds Max 2015/2016.
+appleseed-max is a native plugin for Autodesk 3ds Max 2015, 2016 and 2017.
 
-- [Downloads](https://github.com/appleseedhq/appleseed-max/releases)
-- [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
 - [GitHub repository](https://github.com/appleseedhq/appleseed-max)
+- [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
+- [Downloads](https://github.com/appleseedhq/appleseed-max/releases)
 
-### appleseed-maya
+### appleseed-maya2
 
-appleseed-maya is a native plugin for Autodesk Maya 2015/2016 currently in development.
+appleseed-maya2 is a native plugin for Autodesk Maya 2015, 2016 and 2017 currently in development.
 
-- [Features and documentation](http://appleseed-maya.readthedocs.org/en/latest/)
-- [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
+- [GitHub repository](https://github.com/appleseedhq/appleseed-maya2)
+- [Progress updates](https://forum.appleseedhq.net/t/maya-plugin-development/129)
