@@ -76,11 +76,3 @@ appleseed-maya is a native plugin for Autodesk Maya 2015/2016 currently in devel
 
 - [Features and documentation](http://appleseed-maya.readthedocs.org/en/latest/)
 - [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
-
-### blenderseed
-
-blenderseed is a appleseed plugin for Blender.
-
-- [Download the latest version](https://github.com/appleseedhq/blenderseed/releases/latest)
-- [Installation instructions and documentation](https://github.com/appleseedhq/blenderseed/wiki)
-- [GitHub repository](https://github.com/appleseedhq/blenderseed)
