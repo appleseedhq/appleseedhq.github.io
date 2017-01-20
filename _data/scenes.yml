@@ -1,35 +1,35 @@
 - name: Digital Emily
   image: "/img/scenes/emily.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.4.0-beta/emily_1.2.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/emily_1.3.zip"
 
 - name: Bedroom
   image: "/img/scenes/bedroom.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/bedroom_1.2.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/bedroom_1.3.zip"
 
 - name: Rose
   image: "/img/scenes/rose.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.4.0-beta/rose_1.1.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/rose_1.2.zip"
 
 - name: Fluffy Cornell Box
   image: "/img/scenes/fluffy_cornell_box.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/fluffy_cornell_box_1.0.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/fluffy_cornell_box_1.1.zip"
 
 - name: Material Tester
   image: "/img/scenes/material_tester.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/material_tester_1.2.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/material_tester_1.3.zip"
 
 - name: Disney Material
   image: "/img/scenes/disney_material.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.0/disney_material_1.0.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/disney_material_1.1.zip"
 
 - name: Whisky Glass
   image: "/img/scenes/whisky_glass.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/whisky_glass_1.1.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/whisky_glass_1.2.zip"
 
 - name: Design Glasses
   image: "/img/scenes/design_glasses.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/design_glasses_1.0.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/design_glasses_1.1.zip"
 
 - name: Jar Jar Bean
   image: "/img/scenes/jar_jar_bean.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.5.0-beta/jar_jar_bean_1.0.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/jar_jar_bean_1.1.zip"
