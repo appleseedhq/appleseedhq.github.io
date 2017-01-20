@@ -1,6 +1,6 @@
 - name: Digital Emily
   image: "/img/scenes/emily.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/emily_1.3.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/emily/emily_1.3.zip"
 
 - name: Bedroom
   image: "/img/scenes/bedroom.jpg"
