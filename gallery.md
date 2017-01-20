@@ -5,7 +5,7 @@ layout: default
 section: gallery
 ---
 
-## Animations & Demos
+## Videos
 
 <div class="collection">
     {% for item in site.data.animations %}
