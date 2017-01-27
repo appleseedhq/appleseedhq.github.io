@@ -392,10 +392,15 @@ th, tfoot td
 
 .section.intro p
 {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     line-height: 35px;
     font-size: 17px;
     text-align: center;
+}
+
+.section.intro p:last-child
+{
+    margin-bottom: 30px;
 }
 
 .section.intro p:last-child a
