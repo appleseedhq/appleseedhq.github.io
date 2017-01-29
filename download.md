@@ -60,7 +60,7 @@ This will allow you to stay in sync with the latest updates and fixes as soon as
 If you're planning on building appleseed yourself, make sure to check out our detailed
 [compilation guide](https://github.com/appleseedhq/appleseed/wiki/Building-appleseed).
 
-## Exporters & Integrations
+## Plugins
 
 ### appleseed-max
 
