@@ -14,7 +14,7 @@ This release also brings many bug fixes, performance optimizations and smaller a
 
 However, **most of the work for this release has happened under the hood**. Here is a partial summary of the code and infrastructure improvements that were achieved in the past few months:
 
-* We switch the entire shading pipeline of appleseed from double-precision to single-precision floating point. It was simply wasteful to do all the shading calculations in double precision. While this switch has no immediate benefit, it paves the way for a faster shading pipeline. The geometric pipeline still uses double precision as this provides a clear robustness advantage.
+* We switched the entire shading pipeline of appleseed from double-precision to single-precision floating point. It was simply wasteful to do all the shading calculations in double precision. While this switch has no immediate benefit, it paves the way for a faster shading pipeline. The geometric pipeline still uses double precision as this provides a clear robustness advantage.
 
 * We improved our [Travis CI-based continuous build system](https://travis-ci.org/appleseedhq/appleseed) (which builds every single pull request merged into master) by expanding the *build matrix* to both gcc 4.8 and gcc 5.0, both in C++03 and C++11 mode, in preparation to finally switching to C++11 in the next release.
 
