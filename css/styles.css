@@ -332,7 +332,7 @@ th, tfoot td
 .section.navigation ul li
 {
     display: inline-block;
-    padding: 20px 15px 20px 15px;
+    padding: 20px 13px 20px 13px;
     text-transform: uppercase;
     transition: 320ms;
 }
