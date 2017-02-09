@@ -27,3 +27,17 @@
     Esteban lives in Madrid, Spain.
   links:
     - { label: Twitter, url: "https://twitter.com/EstTovagliari" }
+
+    
+- name: Luis Barrancos
+  picture: luis_barrancos.jpg
+  role: Developer
+  bio: >
+    Luis is a freelance CG artist and shader writer with a background in fine arts and photography. He was
+    a developer of Shrimp, a RSL node-based shader authoring system. He has a kink for physically based
+    rendering, RSL, OSL and VEX shader writing.
+    
+    
+    He is currently living in Kuala Lumpur, Malaysia.
+  links:
+    - { label: LinkedIn, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }
