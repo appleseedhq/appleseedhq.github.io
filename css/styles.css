@@ -213,6 +213,14 @@ iframe
     color: #888;
 }
 
+.small-legend
+{
+    margin-top: -15px;
+    font-size: 12px;
+    text-align: center;
+    color: #888;
+}
+
 table
 {
     margin-bottom: 20px;
