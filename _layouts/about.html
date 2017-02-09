@@ -14,14 +14,22 @@
                     {% include member.html %}
                 {% endfor %}
             </div>
+        </div>
+    </div>
 
+    <div class="section light team">
+        <div class="content">
             <div class="group">
                 <h2>Contributors</h2>
                 {% for member in site.data.contributors %}
                     {% include member.html %}
                 {% endfor %}
             </div>
+        </div>
+    </div>
 
+    <div class="section dark team">
+        <div class="content">
             <div class="group">
                 <h2>External Projects</h2>
                 {% for member in site.data.externalprojects %}
