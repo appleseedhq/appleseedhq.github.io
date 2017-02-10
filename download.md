@@ -79,6 +79,8 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 
 ## Source Code
 
+![GitHub Octocat Logo](/img/github-octocat-logo.png)
+
 Visit the [GitHub page](https://github.com/appleseedhq/appleseed) to&hellip;
 
 - clone or fork the appleseed repository
