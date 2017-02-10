@@ -643,15 +643,13 @@ th, tfoot td
 .section.download .scene img
 {
     margin: 15px 20px 15px 20px;
-    filter: grayscale(100%) brightness(0.4);
-    -webkit-filter: grayscale(100%);
     transition: 320ms;
 }
 
 .section.download .scene:hover img
 {
-    filter: initial;
-    -webkit-filter: initial;
+    filter: grayscale(100%) brightness(0.4);
+    -webkit-filter: grayscale(100%);
 }
 
 /* ========================================================================
