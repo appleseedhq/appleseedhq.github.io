@@ -9,7 +9,7 @@ layout: about
 ### Overview
 
 ![Japanese Classroom, by Blender Swap's user NovaZeeke](/img/renders/classroom.jpg)
- 
+
 Japanese Classroom, by Blender Swap's user [NovaZeeke](http://www.blendswap.com/users/view/NovaZeeke)
 {:.small-legend}
 
