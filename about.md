@@ -46,8 +46,8 @@ The Bedroom scene from [3dRender.com Lighting Challenge #21](http://forums.cgsoc
 
 Along with the core renderer, the team is actively developing high quality integrations:
 
-- appleseed for Autodesk Maya: [appleseed-maya](https://github.com/appleseedhq/appleseed-maya)
-- appleseed for Autodesk 3ds Max: [appleseed-max](https://github.com/appleseedhq/appleseed-max)
+- appleseed for Autodesk® Maya® &rarr; [appleseed-maya](https://github.com/appleseedhq/appleseed-maya)
+- appleseed for Autodesk® 3ds Max® &rarr; [appleseed-max](https://github.com/appleseedhq/appleseed-max)
 
 appleseed is also the default rendering engine of [Image Engine's Gaffer](http://www.gafferhq.org/).
 

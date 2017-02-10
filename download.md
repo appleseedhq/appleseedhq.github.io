@@ -37,9 +37,8 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
 
 ## Integrations
 
-### Gaffer
-
-![Gaffer Logo](/img/imageengine-gaffer-logo.png)
+&nbsp;
+{: .gaffer-logo}
 
 appleseed is the default renderer of [Gaffer](http://www.gafferhq.org/) by [Image Engine](http://image-engine.com/).
 
@@ -47,21 +46,19 @@ Gaffer is a general purpose node-based application designed for use in the visua
 
 It provides basic tools for procedural scene generation, shader authoring, rendering, and image compositing.
 
-### Autodesk 3ds Max
+### Autodesk® 3ds Max®
+{: .max-logo}
 
-![Autodesk 3ds Max Logo](/img/autodesk-3dsmax-logo.png)
-
-**appleseed-max** is a native plugin for [Autodesk 3ds Max](http://www.autodesk.com/products/3ds-max/overview) 2015, 2016 and 2017.
+**appleseed-max** is a native plugin for [Autodesk® 3ds Max®](http://www.autodesk.com/products/3ds-max/overview) 2015, 2016 and 2017.
 
 - [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)
 - [GitHub repository](https://github.com/appleseedhq/appleseed-max)
 - [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
 
-### Autodesk Maya
+### Autodesk® Maya®
+{: .maya-logo}
 
-![Autodesk Maya Logo](/img/autodesk-maya-logo.png)
-
-**appleseed-maya** is a native plugin for [Autodesk Maya](http://www.autodesk.com/products/maya/overview) 2015, 2016 and 2017 currently in development.
+**appleseed-maya** is a native plugin for [Autodesk® Maya®](http://www.autodesk.com/products/maya/overview) 2015, 2016 and 2017 currently in development.
 
 - [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
 - [Progress updates](https://forum.appleseedhq.net/t/maya-plugin-development/129)

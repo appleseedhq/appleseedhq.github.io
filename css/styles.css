@@ -652,6 +652,27 @@ th, tfoot td
     -webkit-filter: grayscale(100%);
 }
 
+.section.download .gaffer-logo
+{
+    background: no-repeat url("/img/imageengine-gaffer-logo.png");
+    line-height: 80px;
+}
+
+.section.download .max-logo
+{
+    background: no-repeat url("/img/autodesk-3dsmax-logo.png");
+    line-height: 64px;
+    padding-left: 75px;
+}
+
+.section.download .maya-logo
+{
+    background: no-repeat url("/img/autodesk-maya-logo.png");
+    line-height: 64px;
+    padding-left: 85px;
+    padding-top: 5px;
+}
+
 /* ========================================================================
  * Docs section.
  * ======================================================================== */
