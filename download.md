@@ -39,6 +39,8 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
 
 ### Gaffer
 
+![Gaffer Logo](/img/imageengine-gaffer-logo.png)
+
 appleseed is the native renderer of [Gaffer](http://www.gafferhq.org/) by [Image Engine](http://image-engine.com/).
 
 Gaffer is a general purpose node-based application designed for use in the visual effects industry.
@@ -47,6 +49,8 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 
 ### Autodesk 3ds Max
 
+![Autodesk 3ds Max Logo](/img/autodesk-3dsmax-logo.png)
+
 **appleseed-max** is a native plugin for Autodesk 3ds Max 2015, 2016 and 2017.
 
 - [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)
@@ -54,6 +58,8 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 - [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
 
 ### Autodesk Maya
+
+![Autodesk Maya Logo](/img/autodesk-maya-logo.png)
 
 **appleseed-maya** is a native plugin for Autodesk Maya 2015, 2016 and 2017 currently in development.
 
