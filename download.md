@@ -9,7 +9,7 @@ section: download
 
 {% for release in site.data.releases limit:1 %}
 
-The current version of appleseed is {{ release.version }}. It was released on {{ release.date }}.
+The latest version is **appleseed {{ release.version }}**. It was released on {{ release.date }}.
 
 Please check the [release notes]({{ release.github }}) for the list of new features and bug fixes available in this version.
 
@@ -35,6 +35,23 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
 
 {% endfor %}
 
+## Plugins
+
+### appleseed-max
+
+appleseed-max is a native plugin for Autodesk 3ds Max 2015, 2016 and 2017.
+
+- [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)
+- [GitHub repository](https://github.com/appleseedhq/appleseed-max)
+- [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
+
+### appleseed-maya
+
+appleseed-maya is a native plugin for Autodesk Maya 2015, 2016 and 2017 currently in development.
+
+- [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
+- [Progress updates](https://forum.appleseedhq.net/t/maya-plugin-development/129)
+
 ## Demo Scenes
 
 <div class="scenes">
@@ -57,22 +74,4 @@ Visit the [GitHub page](https://github.com/appleseedhq/appleseed) to&hellip;
 Note that the preferred way to obtain appleseed source code is to clone the Git repository hosted on GitHub.
 This will allow you to stay in sync with the latest updates and fixes as soon as we pushed them to GitHub.
 
-If you're planning on building appleseed yourself, make sure to check out our detailed
-[compilation guide](https://github.com/appleseedhq/appleseed/wiki/Building-appleseed).
-
-## Plugins
-
-### appleseed-max
-
-appleseed-max is a native plugin for Autodesk 3ds Max 2015, 2016 and 2017.
-
-- [GitHub repository](https://github.com/appleseedhq/appleseed-max)
-- [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
-- [Downloads](https://github.com/appleseedhq/appleseed-max/releases)
-
-### appleseed-maya
-
-appleseed-maya is a native plugin for Autodesk Maya 2015, 2016 and 2017 currently in development.
-
-- [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
-- [Progress updates](https://forum.appleseedhq.net/t/maya-plugin-development/129)
+Make sure to follow our detailed [build instructions](https://github.com/appleseedhq/appleseed/wiki/Building-appleseed) if you want to build appleseed from sources.
