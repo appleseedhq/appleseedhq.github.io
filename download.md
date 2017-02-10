@@ -41,7 +41,7 @@ Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new r
 
 ![Gaffer Logo](/img/imageengine-gaffer-logo.png)
 
-appleseed is the native renderer of [Gaffer](http://www.gafferhq.org/) by [Image Engine](http://image-engine.com/).
+appleseed is the default renderer of [Gaffer](http://www.gafferhq.org/) by [Image Engine](http://image-engine.com/).
 
 Gaffer is a general purpose node-based application designed for use in the visual effects industry.
 
