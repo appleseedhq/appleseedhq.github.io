@@ -1,46 +1,45 @@
 - name: Jonathan Topf
   picture: jonathan_topf.jpg
-  role: mayaseed (early Autodesk® Maya® exporter)
+  role: mayaseed
   bio: >
     Jonathan is an animation director from London who also works in visual effects and technical direction.
-    He is also the creator of mayaseed, an early exporter from Maya to appleseed, which he has been using
-    in production for a few years.
+    He is also the creator of [mayaseed](http://mayaseed.net/), an early exporter from Autodesk® Maya® to
+    appleseed, which he has been using in production for a few years.
 
 
     Jon lives in London, UK.
   links:
-    - { label: Blog, url: "http://jonathantopf.com/" }
-    - { label: mayaseed, url: "http://mayaseed.net/" }
+    - { type: blog, url: "http://jonathantopf.com/" }
 
 
 - name: Haggi Krey
   picture: haggi_krey.jpg
-  role: mayaToAppleseed (early Autodesk® Maya® integration)
+  role: mayaToAppleseed
   bio: >
     Haggi is a freelance VFX supervisor. He worked on music videos such as Sven Väth's "The beauty and the beast"
     and on animated movies such as "Back to Gaya", "Impy's Island", "Impy's Wonderland", "Animals United" or
     "Tarzan".
 
 
-    Haggi is the author of mayaToAppleseed, an early native integration of appleseed into Autodesk® Maya®.
+    Haggi is the author of mayaToAppleseed, an early native integration of appleseed into Autodesk® Maya®, which
+    later became the first version of appleseed-maya.
 
 
     Haggi has studied graphics design in Hannover, Germany where he still lives.
   links:
-    - { label: mayaToAppleseed, url: "http://www.openmaya.net/openmaya/mayatoappleseed/" }
+    - { type: homepage, url: "http://www.haggi.de/" }
 
 
 - name: Joel Daniels
   picture: joel_daniels.jpg
-  role: blenderseed (early Blender integration)
+  role: blenderseed
   bio: >
     Joel is a freelance CG artist hailing from Austin, Texas, with a background in music, art, and multimedia.
-    Joel contributed to blenderseed, an early integration of appleseed into Blender.
+    Joel contributed to [blenderseed](https://github.com/appleseedhq/blenderseed-deprecated), an early integration
+    of appleseed into Blender.
 
 
     Joel lives in Cincinnati, Ohio.
-  links:
-    - { label: blenderseed, url: "https://github.com/appleseedhq/blenderseed" }
 
 
 - name: Srinath Ravichandran
@@ -54,7 +53,7 @@
     Srinath was a successful participant to Google Summer of Code 2014. His project focused on efficient ray tracing
     of curve primitives for hair and fur.
   links:
-    - { label: Web Site, url: "http://researchweb.iiit.ac.in/~srinath.ravichandran/" }
+    - { type: homepage, url: "http://researchweb.iiit.ac.in/~srinath.ravichandran/" }
 
 
 - name: Marius Avram
@@ -71,15 +70,16 @@
 
 - name: Hans Hoogenboom
   picture: hans_hoogenboom.jpg
-  role: houseed (early Houdini Exporter)
+  role: houseed
   bio: >
-    Hans is an architect with a strong interest in CG and VFX. In 2014 he started working on the integration
-    of appleseed and Houdini as well as adding Open Shading Language support to Houdini.
+    Hans is an architect with a strong interest in CG and VFX. In 2014 he started working on
+    [houseed](https://github.com/appleseedhq/houseed-deprecated), an early integration of appleseed and Houdini,
+    as well as adding Open Shading Language support to Houdini.
 
 
     Hans lives in Delft, The Netherlands.
   links:
-    - { label: LinkedIn, url: "https://www.linkedin.com/pub/hans-hoogenboom/2/b21/45b" }
+    - { type: linkedin, url: "https://www.linkedin.com/pub/hans-hoogenboom/2/b21/45b" }
 
 
 - name: Thomas Arthus
@@ -91,3 +91,5 @@
 
 
     He lives in Annecy, France.
+  links:
+    - { type: twitter, url: "https://twitter.com/phonosheet" }

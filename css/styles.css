@@ -764,6 +764,17 @@ th, tfoot td
     border-top: 0px;
 }
 
+.section.team .member a.profile-link
+{
+    margin-left: 10px;
+    color: inherit;
+}
+
+.section.team .member a.profile-link:hover
+{
+    color: #f60;
+}
+
 .section.team .member .column
 {
     display: inline-block;

@@ -4,8 +4,8 @@
   bio: >
     François is a self-taught CG artist with 15 years of experience as a modeler, animator and illustrator.
     He works in a small french video game company as an art director and team manager.
-    
-    
+
+
     François is our in-house artist and contributes in many ways, from testing and providing feedback on our
     Autodesk® 3ds Max® plugin, to modeling test geometry and color grading our renders. Recently, he directed
     [Fetch, a very short film](http://www.fetchaveryshortfilm.com/) rendered with appleseed.
@@ -13,8 +13,7 @@
 
     François lives in Annecy, France.
   links:
-    - { label: Blog, url: "http://loiseaunoir.blogspot.fr/" }
-    - { label: Fetch, url: "http://www.fetchaveryshortfilm.com/" }
+    - { type: blog, url: "http://loiseaunoir.blogspot.fr/" }
 
 
 - name: Dorian Fevrier
@@ -23,14 +22,14 @@
   bio: >
     Dorian is a rendering lover since the first days of the CGI. He provides bug reports, testing, use cases,
     and technical feedback to have a production vision about how things could be done/used.
-    
-    
+
+
     Lighter by training, his day job involves technical lighting, pipeline and support for different full feature
     film projects.
 
 
     Dorian lives in Montréal, Canada.
   links:
-    - { label: Blog, url: "http://www.fevrierdorian.com/blog/" }
-    - { label: Twitter, url: "https://twitter.com/NarannCG" }
-    - { label: LinkedIn, url: "https://www.linkedin.com/in/dorianfevrier" }
+    - { type: blog, url: "http://www.fevrierdorian.com/blog/" }
+    - { type: twitter, url: "https://twitter.com/NarannCG" }
+    - { type: linkedin, url: "https://www.linkedin.com/in/dorianfevrier" }

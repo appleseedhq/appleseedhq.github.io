@@ -1,18 +1,20 @@
 - name: François Beaune
   picture: francois_beaune.jpg
-  role: Project Founder and Manager
+  role: Project Founder and Lead Architect
   bio: >
     François is a software engineer specialized in production rendering and high-end visualization software.
     He joined mental images in 2004 where he co-designed and implemented the next generation of CPU ray tracing
     technology of mental ray and RealityServer. Before starting developing appleseed in 2009, he wrote toxic,
     an early open source global illumination renderer released in 2003.
+
+
     By day, François is Principal Software Engineer at [Launchmetrics](https://www.launchmetrics.com/).
 
 
     François lives in Annecy, France.
   links:
-    - { label: Twitter, url: "https://twitter.com/franzbeaune" }
-    - { label: LinkedIn, url: "https://www.linkedin.com/in/fbeaune" }
+    - { type: twitter, url: "https://twitter.com/franzbeaune" }
+    - { type: linkedIn, url: "https://www.linkedin.com/in/fbeaune" }
 
 
 - name: Esteban Tovagliari
@@ -27,7 +29,7 @@
 
     Esteban lives in Barcelona, Spain.
   links:
-    - { label: Twitter, url: "https://twitter.com/EstTovagliari" }
+    - { type: twitter, url: "https://twitter.com/EstTovagliari" }
 
 
 - name: Luis Barrancos
@@ -41,4 +43,4 @@
 
     He is currently living in Kuala Lumpur, Malaysia.
   links:
-    - { label: LinkedIn, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }
+    - { type: linkedin, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }

@@ -3,8 +3,34 @@
         <img src="/img/team/{{ member.picture }}" alt="{{ member.name }}">
     </div>
     <div class="column right">
-        <h3>{{ member.name }}</h3>
+        <h3>
+            {{ member.name }}
+            {% for link in member.links %}
+                {% case link.type %}
+                    {% when 'linkedin' %}
+                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-linkedin"></i></a>
+                    {% when 'twitter' %}
+                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-twitter"></i></a>
+                    {% when 'blog' %}
+                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-rss"></i></a>
+                    {% when 'homepage' %}
+                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-home"></i></a>
+                {% endcase %}
+            {% endfor %}
+        </h3>
         <h4 class="role">{{ member.role }}</h4>
         <div class="bio">{{ member.bio | markdownify }}</div>
+        {% for link in member.links %}
+            {% case link.type %}
+                {% when 'linkedin' %}
+                {% when 'twitter' %}
+                {% when 'blog' %}
+                {% when 'homepage' %}
+                {% else %}
+                    <p>
+                        <a href="{{ link.url }}">{{ link.label }}</a>
+                    </p>
+            {% endcase %}
+        {% endfor %}
     </div>
 </div>
