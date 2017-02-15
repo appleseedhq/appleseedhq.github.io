@@ -35,7 +35,7 @@ section: gallery
     {% endfor %}
 </div>
 
-<script type="text/javascript">
+<script>
     $(window).load(function () {
         $(".collection").packery({
             itemSelector: "a",

@@ -49,7 +49,7 @@ section: stats
 </script>
 {% endraw %}
 
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         var repos = [
             "appleseedhq/appleseed",
