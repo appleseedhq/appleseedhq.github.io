@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    $(window).load(function () {
+        $(".section.illustrated img").replaceWith(function () {
+            var $this = $(this);
+            var src = $this.attr("src");
+            var title = $this.attr("alt");
+            var mdLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/;
+            var cleanTitle = title.replace(mdLinkRegex, "$1").replace("'", "&quot;");
+            var htmlTitle = title.replace(mdLinkRegex, "<a href='$2'>$1</a>");
+            var image = "<img src='" + src + "' alt='" + cleanTitle + "'>";
+
+            if ($this.width() >= 768) {
+                var link = "<a href='" + src + "' data-lightbox='docs' data-title='" + cleanTitle + "'>" + image + "</a>";
+                var legend = "<div class='legend'>" + htmlTitle + "</div>";
+                image = link + legend;
+            }
+
+            return "<div class='illustration'>" + image + "</div>";
+        });
+    });
+</script>
