@@ -1,11 +1,12 @@
 - name: François Beaune
   picture: francois_beaune.jpg
-  role: Project Founder
+  role: Project Founder and Manager
   bio: >
     François is a software engineer specialized in production rendering and high-end visualization software.
-    He joined mental images in 2004 where he designed and implemented the next generation of CPU ray tracing
-    technology of mental ray and RealityServer. Before starting writing appleseed in 2009, he wrote toxic,
+    He joined mental images in 2004 where he co-designed and implemented the next generation of CPU ray tracing
+    technology of mental ray and RealityServer. Before starting developing appleseed in 2009, he wrote toxic,
     an early open source global illumination renderer released in 2003.
+    By day, François is Principal Software Engineer at [Launchmetrics](https://www.launchmetrics.com/).
 
 
     François lives in Annecy, France.
@@ -16,28 +17,28 @@
 
 - name: Esteban Tovagliari
   picture: esteban_tovagliari.jpg
-  role: Core Developer
+  role: Core Architect
   bio: >
     Esteban is a software engineer and VFX artist with more than 15 years of experience. He was the main
     developer of the Ramen compositor first released in 2009. He started working on appleseed in 2012, doing
     general maintenance, Linux specific development, Python bindings and lately, adding support for Open Shading
     Language shaders.
-    
-    
-    Esteban lives in Madrid, Spain.
+
+
+    Esteban lives in Barcelona, Spain.
   links:
     - { label: Twitter, url: "https://twitter.com/EstTovagliari" }
 
-    
+
 - name: Luis Barrancos
   picture: luis_barrancos.jpg
-  role: Developer
+  role: Core Developer
   bio: >
     Luis is a freelance CG artist and shader writer with a background in fine arts and photography. He was
     a developer of Shrimp, a RSL node-based shader authoring system. He has a kink for physically based
     rendering, RSL, OSL and VEX shader writing.
-    
-    
+
+
     He is currently living in Kuala Lumpur, Malaysia.
   links:
     - { label: LinkedIn, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }
