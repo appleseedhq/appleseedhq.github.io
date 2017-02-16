@@ -41,7 +41,7 @@
                 var $nav = $(".section.navigation");
                 var navTop = $nav.offset().top;
 
-                updateStickyness = function () {
+                var updateStickyness = function () {
                     if ($window.scrollTop() >= navTop) {
                         $nav.addClass("sticky");
                     } else {
