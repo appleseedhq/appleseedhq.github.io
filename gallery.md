@@ -36,6 +36,8 @@ section: gallery
 </div>
 
 <script>
+    "use strict";
+
     $(window).load(function () {
         $(".collection").packery({
             itemSelector: "a",

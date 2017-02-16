@@ -50,6 +50,8 @@ section: stats
 {% endraw %}
 
 <script>
+    "use strict";
+
     $(document).ready(function () {
         var repos = [
             "appleseedhq/appleseed",
