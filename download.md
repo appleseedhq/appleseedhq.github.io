@@ -74,6 +74,19 @@ It provides basic tools for procedural scene generation, shader authoring, rende
     {% endfor %}
 </div>
 
+## Shaderball
+
+[![appleseed shaderball](/img/appleseed-shaderball.png)](https://raw.githubusercontent.com/appleseedhq/shaderball/master/render.png)
+
+Our branded shaderball is a convenient scene to design and visualize appleseed materials.
+
+It is available in a number of formats:
+
+- appleseed project: [appleseed_shaderball_v2.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2.zip)
+- Autodesk® 3ds Max® 2015 project: [appleseed_shaderball_v2_3dsmax.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2_3dsmax.zip)
+- Alembic file: [appleseed_shaderball_v2_alembic.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2_alembic.zip)
+- OBJ file: [appleseed_shaderball_v2_obj.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2_obj.zip)
+
 ## Source Code
 
 ![GitHub Octocat Logo](/img/github-octocat-logo.png)
