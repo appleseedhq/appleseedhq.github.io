@@ -4,7 +4,7 @@ area: about
 layout: about
 ---
 
-![Japanese Classroom, by Blender Swap's user [NovaZeeke](http://www.blendswap.com/users/view/NovaZeeke)](/img/renders/classroom.jpg)
+![Japanese Classroom by Blend Swap user [NovaZeeke](http://www.blendswap.com/users/view/NovaZeeke)](/img/renders/classroom.jpg)
 
 ## Overview
 
@@ -14,13 +14,13 @@ appleseed is actively developed by a small, international team of talented volun
 
 Over the years appleseed has been used on several projects including [TV documentaries](https://vimeo.com/81199785), ads, promotional videos and [an animation short](http://www.fetchaveryshortfilm.com/).
 
-![Country Kitchen, by Blender Swap's user [Jay-Artist](http://www.blendswap.com/user/Jay-Artist)](/img/renders/kitchen.jpg)
+![Country Kitchen by Blend Swap user [Jay-Artist](http://www.blendswap.com/user/Jay-Artist)](/img/renders/kitchen.jpg)
 
 ## Paradigm
 
 appleseed implements a modern workflow based on path tracing that enables artifact-free, single pass rendering with very little technical tuning. It is simultaneously capable of strictly unbiased rendering when total accuracy matters, and biased rendering when artistic freedom and shorter rendering time are paramount.
 
-![The White Room, by Blender Swap's user [Jay-Artist](http://www.blendswap.com/user/Jay-Artist)](/img/renders/living-room-2.jpg)
+![The White Room by Blend Swap user [Jay-Artist](http://www.blendswap.com/user/Jay-Artist)](/img/renders/living-room-2.jpg)
 
 ## Features
 
@@ -37,7 +37,7 @@ Along with the core renderer, the team is actively developing high quality integ
 
 appleseed is also the default rendering engine of [Image Engine's Gaffer](http://www.gafferhq.org/).
 
-![Bedroom, by Blender Swap's user [SlykDrako](http://www.blendswap.com/user/SlykDrako)](/img/renders/bedroom-2.jpg)
+![Bedroom by Blend Swap user [SlykDrako](http://www.blendswap.com/user/SlykDrako)](/img/renders/bedroom-2.jpg)
 
 ## Timeline
 

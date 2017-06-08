@@ -2,7 +2,7 @@
 title: News
 area: news
 layout: default
-section: news
+section: news illustrated
 ---
 
 ## News History
