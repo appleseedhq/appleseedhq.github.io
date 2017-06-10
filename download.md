@@ -58,7 +58,7 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 ### Autodesk® Maya®
 {: .maya-logo}
 
-**appleseed-maya** is a native plugin for [Autodesk® Maya®](http://www.autodesk.com/products/maya/overview) 2015, 2016 and 2017 currently in development.
+**appleseed-maya** is a native plugin for [Autodesk® Maya®](http://www.autodesk.com/products/maya/overview) 2017+ currently in development.
 
 - [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
 - [Progress updates](https://forum.appleseedhq.net/t/maya-plugin-development/129)
