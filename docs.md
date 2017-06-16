@@ -34,7 +34,7 @@ Disney's principled BRDF model is available in appleseed in two forms: as a stan
 and as a custom layered material ("Disney Material").
 
 The best reference for the Disney reflection model is probably
-[RenderMan's PxrDisney documentation](http://renderman.pixar.com/resources/current/RenderMan/PxrDisney.html).
+[RenderMan's PxrDisney documentation](https://renderman.pixar.com/resources/RenderMan_20/PxrDisney.html).
 
 ### SeExpr
 
@@ -49,7 +49,7 @@ The [wiki on GitHub](https://github.com/appleseedhq/appleseed/wiki) also contain
 
 ### FMX 2015
 
-Franz was invited by [Filmakademie](http://www.filmakademie.de/en/main-page/) to present appleseed at [FMX](http://fmx.de/) 2015 during a one hour talk.
+Franz was invited by [Filmakademie](https://www.filmakademie.de/en/ueberuns/the-film-academy/introduction/) to present appleseed at [FMX](http://fmx.de/) 2015 during a one hour talk.
 
 Here are the slides and the appleseed.studio lookdev video used during the talk:
 
