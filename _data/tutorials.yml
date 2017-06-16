@@ -5,9 +5,3 @@
     The very basics: downloading and installing appleseed,
     starting up appleseed.studio and rendering the built-in
     Cornell Box scene.
-
-- title: Render Layers
-  url: "/docs/tutorials/renderlayers.html"
-  image: "/img/docs/regexp-render-layer-dialog.png"
-  description: >
-    A quick and incomplete tutorial on how to use render layers.

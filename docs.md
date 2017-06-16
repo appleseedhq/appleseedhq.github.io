@@ -61,10 +61,6 @@ Here are the slides and the appleseed.studio lookdev video used during the talk:
 
 <!---
 
-## Tutorials
-
-- [Render Layers Assignment Rules](/docs/tutorials/renderlayers.html)
-
 ## Tools
 
 ### appleseed.studio
