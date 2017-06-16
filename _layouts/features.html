@@ -11,7 +11,6 @@
                         <div class="block">
                             <h3>Light Transport</h3>
                             <ul>
-                                <li>Distributed Ray Tracing</li>
                                 <li>Unidirectional Path Tracing</li>
                                 <li>Stochastic Progressive Photon Mapping</li>
                                 <li>Light Tracing</li>
@@ -33,9 +32,11 @@
                             <h3>Subsurface Scattering</h3>
                             <ul>
                                 <li>Raytraced Subsurface Scattering</li>
+                                <li>Animation-friendly</li>
                                 <li>No precomputation or storage</li>
                                 <li>Available in interactive rendering</li>
-                                <li>Available in OSL shaders</li>
+                                <li>Exposed to OSL shaders</li>
+                                <li>Support for SSS sets</li>
                             </ul>
                         </div>
                     </div>
@@ -55,11 +56,13 @@
                                 <li>Anisotropic Ashikhmin-Shirley BRDF</li>
                                 <li>Kelemen BRDF</li>
                                 <li>Glossy BRDF</li>
-                                <li>Advanced metal BRDF</li>
-                                <li>Advanced glass BSDF</li>
+                                <li>Physically-based metal BRDF</li>
+                                <li>Physically-based plastic BRDF</li>
+                                <li>Physically-based glass BSDF</li>
                                 <li>Disney's layered BRDF</li>
                                 <li>Velvet BRDF</li>
-                                <li>Arbitrary mixture of BRDFs</li>
+                                <li>Arbitrary mixtures of BRDFs</li>
+                                <li>Highlight falloff control for several models</li>
                             </ul>
                         </div>
                         <div class="block">
@@ -106,6 +109,7 @@
                                 <li>Preetham physically-based day sky</li>
                                 <li>Hosek & Wilkie physically-based day sky</li>
                                 <li>Physically-based sun</li>
+                                <li>Environment transforms</li>
                             </ul>
                         </div>
                     </div>
@@ -122,21 +126,24 @@
                         <div class="block">
                             <h3>Production Features</h3>
                             <ul>
-                                <li>Open Shading Language</li>
+                                <li>Open Shading Language (OSL)</li>
                                 <li>OSL shader library</li>
                                 <li>Disney's SeExpr expressions</li>
-                                <li>Rule-based render layers</li>
+                                <li>AOVs</li>
                                 <li>Hierarchical instancing</li>
                                 <li>Per-instance visibility flags</li>
                                 <li>Alpha mapping</li>
                                 <li>Automatic color space conversions</li>
-                                <li>Ray bias</li>
+                                <li>Ray differentials</li>
+                                <li>Ray Bias</li>
                                 <li>Light Near Start</li>
                                 <li>Low Light Threshold</li>
                                 <li>Max Ray Intensity</li>
-                                <li>Separate Bounce Limits</li>
+                                <li>Bounce limits per scattering types</li>
                                 <li>Nested dielectrics</li>
                                 <li>Automatic tracking of indices of refraction</li>
+                                <li>Packed, single-file scenes for easy transport</li>
+                                <li>Search paths for external assets</li>
                                 <li>Dozens of diagnostic modes</li>
                             </ul>
                         </div>
@@ -151,21 +158,21 @@
                         <div class="block">
                             <h3>Interoperability</h3>
                             <ul>
-                                <li>Windows, Linux and OS X (64-bit)</li>
-                                <li>OBJ, BinaryMesh (proprietary)</li>
-                                <li>OpenEXR, PNG</li>
-                                <li>Full support of OpenShadingLanguage</li>
+                                <li>Windows, Linux and macOS (64-bit)</li>
+                                <li>OBJ geometry files</li>
+                                <li>OpenEXR, TIFF, HDR, PNG, JPEG, PSD...</li>
+                                <li>Full Open Shading Language support</li>
                                 <li>Native Image Engine's Gaffer integration</li>
-                                <li>Autodesk Maya native plugin (WIP)</li>
-                                <li>Autodesk 3ds Max native plugin (WIP)</li>
-                                <li>Blender Python plugin (WIP)</li>
+                                <li>Native Autodesk® 3ds Max® 2015+ plugin</li>
+                                <li>Native Autodesk® Maya® 2017+ plugin</li>
+                                <li>Excellent coverage of Maya shading nodes</li>
                             </ul>
                         </div>
                         <div class="block">
                             <h3>Hackability</h3>
                             <ul>
-                                <li>Fully open source, MIT license</li>
-                                <li>Exceptionally clean code</li>
+                                <li>100% open source, MIT license</li>
+                                <li>Exceptionally clean, fully reviewed code</li>
                                 <li>Full featured C++ API</li>
                                 <li>Full featured Python 2.x/3.x API</li>
                                 <li>More than 1300 built-in unit tests</li>
@@ -200,7 +207,7 @@
                                 <li>Git and GitHub for source control</li>
                                 <li>CMake build system</li>
                                 <li>Continuous Integration with Travis CI</li>
-                                <li>Slack team for developers and users chats</li>
+                                <li>Slack team for developers</li>
                                 <li>Discourse forum for users</li>
                                 <li>Developer mailing list</li>
                                 <li>appleseedhq.net mail addresses</li>
