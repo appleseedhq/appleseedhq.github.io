@@ -76,16 +76,40 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 
 ## Shaderball
 
-[![appleseed shaderball](/img/appleseed-shaderball.png)](https://raw.githubusercontent.com/appleseedhq/shaderball/master/render.png)
+<img src="/img/appleseed-shaderball.png" alt="appleseed shaderball" class="shaderball-render" />
 
-Our branded shaderball is a convenient scene to design and visualize appleseed materials.
+<div class="shaderballs">
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4.zip" download>
+        <div class="card">
+            <img src="/img/appleseed-seeds-64-gray.png" />
+        </div>
+        <div>appleseed</div>
+    </a>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4_maya.zip" download>
+        <div class="card">
+            <img src="/img/autodesk-maya-logo-gray.png" />
+        </div>
+        <div>Maya® 2015</div>
+    </a>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4_alembic.zip" download>
+        <div class="card">
+            <img src="/img/alembic-logo.png" />
+        </div>
+        <div>Alembic cache</div>
+    </a>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4_obj.zip" download>
+        <div class="card">
+            <img src="/img/obj-logo.png" />
+        </div>
+        <div>OBJ file</div>
+    </a>
+</div>
 
-It is available in a number of formats:
+The shaderball, like all our assets, is licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
-- appleseed project: [appleseed_shaderball_v2.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2.zip)
-- Autodesk® 3ds Max® 2015 project: [appleseed_shaderball_v2_3dsmax.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2_3dsmax.zip)
-- Alembic file: [appleseed_shaderball_v2_alembic.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2_alembic.zip)
-- OBJ file: [appleseed_shaderball_v2_obj.zip](https://github.com/appleseedhq/shaderball/releases/download/v2/appleseed_shaderball_v2_obj.zip)
+<div class="license-notice">
+    OBJ icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.
+</div>
 
 ## Source Code
 

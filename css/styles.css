@@ -653,13 +653,13 @@ th, tfoot td
 .section.download .scene img
 {
     margin: 15px 20px 15px 20px;
+    border: solid 7px transparent;
     transition: 320ms;
 }
 
 .section.download .scene:hover img
 {
-    filter: grayscale(100%) brightness(0.4);
-    -webkit-filter: grayscale(100%);
+    border-color: #f60;
 }
 
 .section.download .gaffer-logo
@@ -681,6 +681,67 @@ th, tfoot td
     line-height: 64px;
     padding-left: 85px;
     padding-top: 5px;
+}
+
+.section.download .shaderball-render
+{
+    display: block;
+    margin: 30px auto 40px auto;
+}
+
+.section.download .shaderballs
+{
+    margin: 20px;
+    text-align: center;
+}
+
+.section.download .shaderball
+{
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.section.download .shaderball:not(:hover)
+{
+    color: inherit;
+}
+
+.section.download .shaderball .card
+{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    padding: 20px;
+    line-height: 80px;
+    background-color: #666;
+    transition: 320ms;
+}
+
+.section.download .shaderball:hover .card
+{
+    background-color: #f60;
+}
+
+.section.download .shaderball img
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section.download .license-notice,
+.section.download .license-notice a
+{
+    color: #555;
+}
+
+.section.download .license-notice a:hover
+{
+    color: #f60;
 }
 
 /* ========================================================================
