@@ -1,4 +1,4 @@
-- version: 1.7.0-beta
+- version: 1.7-beta
   date: June 8th, 2017
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.7.0-beta"
   builds:
@@ -7,7 +7,7 @@
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.7.0-beta/appleseed-1.7.0-beta-0-g57b8da9-win64-vs140.zip"
     - platform: osx
       label: macOS 10.10<br>and Later
-      url: "https://github.com/appleseedhq/appleseed/releases/download/1.7.0-beta/appleseed-1.7.0-beta-0-g57b8da9-mac64-clang.zip"
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.7.1-beta/appleseed-1.7.1-beta-0-gae7f346-mac64-clang.zip"
     - platform: linux
       label: Linux
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.7.0-beta/appleseed-1.7.0-beta-0-g57b8da9-linux64-gcc48-py27.zip"
