@@ -16,6 +16,9 @@
 - url: "/img/screenshots/appleseed.studio-unit-tests.png"
   legend: "Running appleseed's built-in unit tests in appleseed.studio"
 
+- url: "/img/screenshots/appleseed-maya.png"
+  legend: "appleseed-maya, our native Maya plugin"
+
 - url: "/img/screenshots/appleseed-max.png"
   legend: "appleseed-max, our native 3ds Max plugin"
 
