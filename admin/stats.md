@@ -56,7 +56,9 @@ section: stats
         var repos = [
             "appleseedhq/appleseed",
             "appleseedhq/appleseed-scenes",
-            "appleseedhq/appleseed-max"
+            "appleseedhq/appleseed-max",
+            "appleseedhq/appleseed-maya",
+            "appleseedhq/blenderseed"
         ];
 
         var fetchReleases = function (repoIndex, processFunc) {
