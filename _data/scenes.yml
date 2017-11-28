@@ -33,3 +33,7 @@
 - name: Jar Jar Bean
   image: "/img/scenes/jar_jar_bean.jpg"
   url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/jar_jar_bean_1.1.zip"
+
+- name: Bunny Volume
+  image: "/img/scenes/bunny_volume.jpg"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.8.0-beta/bunny_volume_1.0.zip"

@@ -49,19 +49,20 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 ### Autodesk® 3ds Max®
 {: .max-logo}
 
-**appleseed-max** is a native plugin for [Autodesk® 3ds Max®](http://www.autodesk.com/products/3ds-max/overview) 2015, 2016 and 2017.
+**appleseed-max** is a native plugin for Autodesk® 3ds Max® 2015, 2016 and 2017.
 
 - [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)
-- [GitHub repository](https://github.com/appleseedhq/appleseed-max)
 - [Progress updates and development builds](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)
+- [GitHub repository](https://github.com/appleseedhq/appleseed-max)
 
 ### Autodesk® Maya®
 {: .maya-logo}
 
-**appleseed-maya** is a native plugin for [Autodesk® Maya®](http://www.autodesk.com/products/maya/overview) 2017+ currently in development.
+**appleseed-maya** is a native plugin for Autodesk® Maya® 2017 and later.
 
+- [**Downloads**](https://github.com/appleseedhq/appleseed-maya/releases)
+- [Documentation](http://appleseed-maya.readthedocs.io/en/latest/)
 - [GitHub repository](https://github.com/appleseedhq/appleseed-maya)
-- [Progress updates](https://forum.appleseedhq.net/t/maya-plugin-development/129)
 
 ## Demo Scenes
 
