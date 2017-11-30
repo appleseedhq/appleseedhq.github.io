@@ -98,22 +98,23 @@ h2
 {
     margin-top: -45px;
     padding-bottom: 35px;
-    text-transform: uppercase;
     font-size: 25px;
+    font-weight: bold;
 }
 
 h3
 {
     margin-top: -50px;
     padding-bottom: 30px;
-    text-transform: uppercase;
     font-size: 18px;
+    font-weight: bold;
 }
 
 h4
 {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-weight: bold;
 }
 
 h2 + h3
@@ -662,27 +663,6 @@ th, tfoot td
     border-color: #f60;
 }
 
-.section.download .gaffer-logo
-{
-    background: no-repeat url("/img/imageengine-gaffer-logo.png");
-    line-height: 80px;
-}
-
-.section.download .max-logo
-{
-    background: no-repeat url("/img/autodesk-3dsmax-logo.png");
-    line-height: 64px;
-    padding-left: 75px;
-}
-
-.section.download .maya-logo
-{
-    background: no-repeat url("/img/autodesk-maya-logo.png");
-    line-height: 64px;
-    padding-left: 85px;
-    padding-top: 5px;
-}
-
 .section.download .shaderball-render
 {
     display: block;
@@ -736,6 +716,7 @@ th, tfoot td
 .section.download .license-notice,
 .section.download .license-notice a
 {
+    text-align: center;
     color: #555;
 }
 
