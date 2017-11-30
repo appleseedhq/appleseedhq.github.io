@@ -1,6 +1,9 @@
 - url: "/img/screenshots/appleseed.studio-glasses.png"
   legend: "appleseed.studio, rendering our Design Glasses demo scene"
 
+- url: "/img/screenshots/appleseed.studio-volume.png"
+  legend: "appleseed.studio, rendering a participating media test scene"
+
 - url: "/img/screenshots/appleseed.studio-fetch.png"
   legend: "appleseed.studio, editing a scene from [Fetch](http://www.fetchaveryshortfilm.com/)"
 
@@ -17,10 +20,13 @@
   legend: "Running appleseed's built-in unit tests in appleseed.studio"
 
 - url: "/img/screenshots/appleseed-maya.png"
-  legend: "appleseed-maya, our native Maya plugin"
+  legend: "appleseed-maya, our native Autodesk Maya plugin"
 
 - url: "/img/screenshots/appleseed-max.png"
-  legend: "appleseed-max, our native 3ds Max plugin"
+  legend: "appleseed-max, our native Autodesk 3ds Max plugin"
+
+- url: "/img/screenshots/blenderseed.png"
+  legend: "appleseed-max, our Blender plugin"
 
 - url: "/img/screenshots/gafferseed.jpg"
   legend: "appleseed inside Image Engine's [Gaffer](http://imageengine.github.io/gaffer/) lookdev application, here running on Linux"
