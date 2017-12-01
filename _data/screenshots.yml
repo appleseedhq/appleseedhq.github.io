@@ -22,7 +22,10 @@
 - url: "/img/screenshots/appleseed-maya.png"
   legend: "appleseed-maya, our native Autodesk Maya plugin"
 
-- url: "/img/screenshots/appleseed-max.png"
+- url: "/img/screenshots/appleseed-max-designglasses.png"
+  legend: "appleseed-max, our native Autodesk 3ds Max plugin"
+
+- url: "/img/screenshots/appleseed-max-cameras.png"
   legend: "appleseed-max, our native Autodesk 3ds Max plugin"
 
 - url: "/img/screenshots/blenderseed.png"
