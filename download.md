@@ -85,6 +85,13 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 
 ## Demo Scenes
 
+Here are a few basic scenes demonstrating various features of appleseed. Some of the scenes are accompanied
+by the source data in the form of a 3ds Max or Blender file.
+
+{% for release in site.data.releases limit:1 %}
+These scenes were tested with the latest official release of appleseed ({{ release.version }}). They may or may not work with older versions.
+{% endfor %}
+
 <div class="scenes">
     {% for scene in site.data.scenes %}
         <a class="scene" href="{{ scene.url }}">
@@ -94,6 +101,13 @@ It provides basic tools for procedural scene generation, shader authoring, rende
 </div>
 
 ## Shaderball
+
+The shaderball is a scene designed to build, test and show materials. It is available as an appleseed project
+as well as in various formats suitable for importing in DCC applications such as Maya, 3ds Max or Blender.
+
+{% for release in site.data.releases limit:1 %}
+The appleseed shaderball scene was tested with the latest official release of appleseed ({{ release.version }}). It may or may not work with older versions.
+{% endfor %}
 
 <img src="/img/appleseed-shaderball.png" alt="appleseed shaderball" class="shaderball-render" />
 
