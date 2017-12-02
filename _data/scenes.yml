@@ -8,7 +8,7 @@
 
 - name: Rose
   image: "/img/scenes/rose.jpg"
-  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.6.0-beta/rose_1.2.zip"
+  url: "https://github.com/appleseedhq/appleseed-scenes/releases/download/1.8.0-beta/rose_1.3.zip"
 
 - name: Fluffy Cornell Box
   image: "/img/scenes/fluffy_cornell_box.jpg"
