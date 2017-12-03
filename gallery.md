@@ -41,7 +41,7 @@ section: gallery
     $(window).load(function () {
         $(".collection").packery({
             itemSelector: "a",
-            gutter: 10
+            gutter: 20
         });
 
         $(".collection").photobox("a");
