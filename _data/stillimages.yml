@@ -43,6 +43,9 @@
 - url: "/img/renders/bedroom.png"
   legend: "Bedroom scene from 3dRender.com Lighting Challenge #21"
 
+- url: "/img/renders/bedroom-2.jpg"
+  legend: "Bedroom scene by Blend Swap user SlykDrako"
+
 - url: "/img/renders/sss-indirect-mosaic.png"
   legend: "Indirect lighting through translucent medium"
 
