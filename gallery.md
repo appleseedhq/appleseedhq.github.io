@@ -20,7 +20,7 @@ section: gallery
 <div class="collection">
     {% for item in site.data.stillimages %}
         <a href="{{ item.url }}">
-            <img src="{{ item.url }}" alt="{{ item.legend | markdownify | strip_html }}">
+            <img src="{{ item.url | append: '.preview.jpg' }}" alt="{{ item.legend | markdownify | strip_html }}">
         </a>
     {% endfor %}
 </div>
@@ -30,7 +30,7 @@ section: gallery
 <div class="collection">
     {% for item in site.data.screenshots %}
         <a href="{{ item.url }}">
-            <img src="{{ item.url }}" alt="{{ item.legend | markdownify | strip_html }}">
+            <img src="{{ item.url | append: '.preview.jpg' }}" alt="{{ item.legend | markdownify | strip_html }}">
         </a>
     {% endfor %}
 </div>
