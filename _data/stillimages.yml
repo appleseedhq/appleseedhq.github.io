@@ -1,56 +1,56 @@
 - url: "/img/renders/cornellbox-water.png"
-  legend: "Cornell Box filled with water - Rendered with Stochastic Progressive Photon Mapping"
+  legend: "Cornell Box filled with water - Rendered with Stochastic Progressive Photon Mapping (SPPM)"
 
 - url: "/img/renders/fetch-basket.jpg"
-  legend: "A scene from our short film Fetch"
+  legend: "Scene from our short film Fetch"
 
 - url: "/img/renders/fetch-forest.png"
-  legend: "A scene from our short film Fetch"
+  legend: "Scene from our short film Fetch"
 
 - url: "/img/renders/fetch-oh.png"
-  legend: "A scene from our short film Fetch"
+  legend: "Scene from our short film Fetch"
 
 - url: "/img/renders/fetch-wolf1.png"
-  legend: "A scene from our short film Fetch"
+  legend: "Scene from our short film Fetch"
 
 - url: "/img/renders/fetch-wolf2.png"
-  legend: "A scene from our short film Fetch"
+  legend: "Scene from our short film Fetch"
 
 - url: "/img/renders/fluffycornellbox.png"
   legend: "Fluffy Cornell Box"
 
 - url: "/img/renders/jarmaizsolt-patio.jpg"
-  legend: "A scene from forum user @jarmaizsolt"
+  legend: "Scene from forum user @jarmaizsolt"
 
 - url: "/img/renders/materialtester-glass.png"
-  legend: "Our old material tester scene, here made of glass"
+  legend: "Old material tester scene, here made of glass"
 
 - url: "/img/renders/max-vl1.png"
-  legend: "A scene from forum user @Max"
+  legend: "Scene from forum user @Max"
 
 - url: "/img/renders/max-vl2.png"
-  legend: "A scene from forum user @Max"
+  legend: "Scene from forum user @Max"
 
 - url: "/img/renders/microfacet-btdf.png"
-  legend: "Microfacet Refraction Test"
+  legend: "Microfacet refraction test"
 
 - url: "/img/renders/thomas-heightfield.png"
-  legend: "A scene from forum user @Thomas"
+  legend: "Scene from forum user @Thomas"
 
 - url: "/img/renders/galoot.png"
-  legend: "A scene from forum user @ohsnapitsjoel"
+  legend: "Scene from forum user @ohsnapitsjoel"
 
 - url: "/img/renders/bedroom.png"
-  legend: "The Bedroom scene from 3dRender.com Lighting Challenge #21"
+  legend: "Bedroom scene from 3dRender.com Lighting Challenge #21"
 
 - url: "/img/renders/sss-indirect-mosaic.png"
-  legend: "Indirect lighting through a translucent medium"
+  legend: "Indirect lighting through translucent medium"
 
 - url: "/img/renders/emily1.png"
-  legend: "Digital Emily 2 from the Wikihuman Project"
+  legend: "Digital Emily 2 from Wikihuman Project"
 
 - url: "/img/renders/emily2.png"
-  legend: "Digital Emily 2 from the Wikihuman Project"
+  legend: "Digital Emily 2 from Wikihuman Project"
 
 - url: "/img/renders/legocharacter1.png"
   legend: "LEGO&reg; Character"
@@ -59,10 +59,10 @@
   legend: "LEGO&reg; Character"
 
 - url: "/img/renders/rose.png"
-  legend: "A carnivorous flower made of raw chicken meat"
+  legend: "Carnivorous flower made of raw chicken meat"
 
 - url: "/img/renders/design_glasses.png"
-  legend: "A set of design glasses inspired by Fferrone's Revolution glassware collection"
+  legend: "Set of design glasses inspired by Fferrone's Revolution glassware collection"
 
 - url: "/img/renders/jar_jar_bean.png"
-  legend: "A cleverly named jar of candies"
+  legend: "Cleverly named jar of candies"
