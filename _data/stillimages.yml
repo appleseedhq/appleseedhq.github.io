@@ -75,3 +75,6 @@
 
 - url: "/img/renders/jc-whiskey-glasses.jpg"
   legend: "Whiskey Glasses by Juan Carlos Gutiérrez"
+
+- url: "/img/renders/appleseed-standard-surface-mosaic.png"
+  legend: "Mosaic of materials achieved with appleseed Standard Surface material"
