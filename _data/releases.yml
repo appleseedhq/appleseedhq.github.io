@@ -12,7 +12,7 @@
       label: macOS 10.10<br>and Later
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.8.1-beta/appleseed-1.8.1-beta-0-gb3b5172-mac64-clang.zip"
 
-- version: 1.8-beta
+- version: 1.8.0-beta
   date: November 28th, 2017
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.8.0-beta"
   builds:
@@ -26,7 +26,7 @@
       label: macOS 10.10<br>and Later
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.8.0-beta/appleseed-1.8.0-beta-0-g153757a-mac64-clang.zip"
 
-- version: 1.7-beta
+- version: 1.7.0-beta
   date: June 8th, 2017
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.7.0-beta"
   builds:
