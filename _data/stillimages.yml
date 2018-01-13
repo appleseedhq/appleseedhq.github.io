@@ -1,3 +1,6 @@
+- url: "/img/renders/jc-interior.png"
+  legend: "Interior Scene by Juan Carlos Gutiérrez"
+
 - url: "/img/renders/cornellbox-water.png"
   legend: "Cornell Box filled with water - Rendered with Stochastic Progressive Photon Mapping (SPPM)"
 
@@ -69,3 +72,6 @@
 
 - url: "/img/renders/jar_jar_bean.png"
   legend: "Cleverly named jar of candies"
+
+- url: "/img/renders/jc-whiskey-glasses.jpg"
+  legend: "Whiskey Glasses by Juan Carlos Gutiérrez"

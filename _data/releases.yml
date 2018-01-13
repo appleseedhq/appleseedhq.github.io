@@ -1,3 +1,17 @@
+- version: 1.8.1-beta
+  date: January 13th, 2018
+  github: "https://github.com/appleseedhq/appleseed/releases/tag/1.8.1-beta"
+  builds:
+    - platform: windows
+      label: Windows Vista<br>and Later
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.8.1-beta/appleseed-1.8.1-beta-0-gb3b5172-win64-vs140.zip"
+    - platform: linux
+      label: Linux
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.8.1-beta/appleseed-1.8.1-beta-0-gb3b5172-linux64-gcc48-py27.zip"
+    - platform: osx
+      label: macOS 10.10<br>and Later
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.8.1-beta/appleseed-1.8.1-beta-0-gb3b5172-mac64-clang.zip"
+
 - version: 1.8-beta
   date: November 28th, 2017
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.8.0-beta"
