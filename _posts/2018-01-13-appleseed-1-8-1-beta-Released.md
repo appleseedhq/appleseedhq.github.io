@@ -13,7 +13,7 @@ Downloads and release notes:
 - [appleseed-max 0.4.7-beta](https://github.com/appleseedhq/appleseed-max/releases/tag/0.4.7-beta)  
 - [blenderseed 0.7.0](https://github.com/appleseedhq/blenderseed/releases/tag/v0.7.0)  
 
-**This release introduces a _massively_ improved Blender plugin** thanks for the downright obsessive work of Jon Dent and Luke Kliber:
+**This release introduces a _massively_ improved Blender plugin** thanks to the downright obsessive work of Jon Dent and Luke Kliber:
 
 - Entirely redesigned the plugin's user interface
 - Removed the need to set a project folder
