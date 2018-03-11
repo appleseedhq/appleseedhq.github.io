@@ -1,6 +1,9 @@
 - url: "/img/renders/jc-interior.png"
   legend: "Interior Scene by Juan Carlos Gutiérrez"
 
+- url: "/img/renders/white_kitchen.jpg"
+  legend: "White Kitchen by Juan Carlos Gutiérrez"
+
 - url: "/img/renders/cornellbox-water.png"
   legend: "Cornell Box filled with water - Rendered with Stochastic Progressive Photon Mapping (SPPM)"
 
