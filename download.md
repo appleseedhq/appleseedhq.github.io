@@ -70,7 +70,7 @@ Make sure to follow our detailed [build instructions](https://github.com/applese
 
 ### appleseed for Blender
 
-**blenderseed** is a native plugin for Blender 2.75 and later.
+**blenderseed** is a plugin for Blender 2.75 and later.
 
 [**Downloads**](https://github.com/appleseedhq/blenderseed/releases)  
 [GitHub repository](https://github.com/appleseedhq/blenderseed)  
