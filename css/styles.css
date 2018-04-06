@@ -934,11 +934,11 @@ th, tfoot td
     left: 50%;
     z-index: 10;
     width: 500px;
-    height: 150px;
+    height: 200px;
     margin-top: -75px;
     margin-left: -250px;
     background-color: #2f2f2f;
-    padding: 10px;
+    padding: 20px;
 }
 
 .section.footer #emailPopup #window a
