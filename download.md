@@ -57,7 +57,7 @@ Make sure to follow our detailed [build instructions](https://github.com/applese
 **appleseed-maya** is a native plugin for Autodesk® Maya® 2017 and later.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-maya/releases)  
-[Documentation](http://appleseed-maya.readthedocs.io/en/latest/)  
+[Documentation](https://appleseed-maya.readthedocs.io/)  
 [GitHub repository](https://github.com/appleseedhq/appleseed-maya)  
 
 ### appleseed for 3ds Max
@@ -65,7 +65,6 @@ Make sure to follow our detailed [build instructions](https://github.com/applese
 **appleseed-max** is a native plugin for Autodesk® 3ds Max® 2015, 2016 and 2017.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)  
-[Progress updates](https://forum.appleseedhq.net/t/3ds-max-plugin-development/109)  
 [GitHub repository](https://github.com/appleseedhq/appleseed-max)  
 
 ### appleseed for Blender
@@ -73,6 +72,7 @@ Make sure to follow our detailed [build instructions](https://github.com/applese
 **blenderseed** is a plugin for Blender 2.75 and later.
 
 [**Downloads**](https://github.com/appleseedhq/blenderseed/releases)  
+[Documentation](https://appleseed-blenderseed.readthedocs.io/)  
 [GitHub repository](https://github.com/appleseedhq/blenderseed)  
 
 ### appleseed for Gaffer
