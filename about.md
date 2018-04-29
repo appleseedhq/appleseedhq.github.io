@@ -30,10 +30,11 @@ appleseed supports fully programmable shading via [Sony Pictures Imageworks' Ope
 
 ## Ecosystem
 
-Along with the core renderer, the team is actively developing high quality integrations:
+Along with the core renderer, the team is actively developing high quality integrations for common Digital Content Creation applications:
 
-- appleseed for Autodesk® Maya® &rarr; [appleseed-maya](https://github.com/appleseedhq/appleseed-maya)
-- appleseed for Autodesk® 3ds Max® &rarr; [appleseed-max](https://github.com/appleseedhq/appleseed-max)
+- [appleseed for Maya](https://github.com/appleseedhq/appleseed-maya)
+- [appleseed for 3ds Max](https://github.com/appleseedhq/appleseed-max)
+- [appleseed for Blender](https://github.com/appleseedhq/blenderseed)
 
 appleseed is also the default rendering engine of [Image Engine's Gaffer](http://www.gafferhq.org/).
 
