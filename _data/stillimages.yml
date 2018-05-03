@@ -1,8 +1,23 @@
+- url: "/img/renders/toythingbig.png"
+  legend: "Render by Twitter user BigRetching, model by Artec 3D"
+
 - url: "/img/renders/jc-interior.png"
   legend: "Interior Scene by Juan Carlos Gutiérrez"
 
 - url: "/img/renders/white_kitchen.jpg"
   legend: "White Kitchen by Juan Carlos Gutiérrez"
+
+- url: "/img/renders/galoot.png"
+  legend: "Scene from forum user @ohsnapitsjoel"
+
+- url: "/img/renders/design_glasses.png"
+  legend: "Set of design glasses inspired by Fferrone's Revolution glassware collection"
+
+- url: "/img/renders/jar_jar_bean.png"
+  legend: "Cleverly named jar of candies"
+
+- url: "/img/renders/jc-whiskey-glasses.jpg"
+  legend: "Whiskey Glasses by Juan Carlos Gutiérrez"
 
 - url: "/img/renders/cornellbox-water.png"
   legend: "Cornell Box filled with water - Rendered with Stochastic Progressive Photon Mapping (SPPM)"
@@ -43,9 +58,6 @@
 - url: "/img/renders/thomas-heightfield.png"
   legend: "Scene from forum user @Thomas"
 
-- url: "/img/renders/galoot.png"
-  legend: "Scene from forum user @ohsnapitsjoel"
-
 - url: "/img/renders/bedroom.png"
   legend: "Bedroom scene from 3dRender.com Lighting Challenge #21"
 
@@ -70,14 +82,6 @@
 - url: "/img/renders/rose.png"
   legend: "Carnivorous flower made of raw chicken meat"
 
-- url: "/img/renders/design_glasses.png"
-  legend: "Set of design glasses inspired by Fferrone's Revolution glassware collection"
-
-- url: "/img/renders/jar_jar_bean.png"
-  legend: "Cleverly named jar of candies"
-
-- url: "/img/renders/jc-whiskey-glasses.jpg"
-  legend: "Whiskey Glasses by Juan Carlos Gutiérrez"
-
 - url: "/img/renders/appleseed-standard-surface-mosaic.png"
   legend: "Mosaic of materials achieved with appleseed Standard Surface material"
+
