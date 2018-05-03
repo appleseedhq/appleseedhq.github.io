@@ -1,6 +1,9 @@
 - url: "/img/renders/toythingbig.png"
   legend: "Render by Twitter user BigRetching, model by Artec 3D"
 
+- url: "/img/renders/redpaperboat.jpg"
+  legend: "Red Paper Boat by [Giuseppe Lucido](https://zaldor.artstation.com/)"
+
 - url: "/img/renders/jc-interior.png"
   legend: "Interior Scene by Juan Carlos Gutiérrez"
 
@@ -21,9 +24,6 @@
 
 - url: "/img/renders/cornellbox-water.png"
   legend: "Cornell Box filled with water - Rendered with Stochastic Progressive Photon Mapping (SPPM)"
-
-- url: "/img/renders/fetch-basket.jpg"
-  legend: "Scene from our short film Fetch"
 
 - url: "/img/renders/fetch-forest.png"
   legend: "Scene from our short film Fetch"
@@ -51,9 +51,6 @@
 
 - url: "/img/renders/max-vl2.png"
   legend: "Scene from forum user @Max"
-
-- url: "/img/renders/microfacet-btdf.png"
-  legend: "Microfacet refraction test"
 
 - url: "/img/renders/thomas-heightfield.png"
   legend: "Scene from forum user @Thomas"
