@@ -7,7 +7,7 @@
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.9.0-beta/appleseed-1.9.0-beta-0-g5693918-win64-vs140.zip"
     - platform: linux
       label: Linux
-      url: "https://github.com/appleseedhq/appleseed/releases/download/1.9.0-beta/appleseed-1.9.0-beta-0-g5693918ee-linux64-gcc48.zip"
+      url: "https://github.com/appleseedhq/appleseed/releases/download/1.9.0-beta/appleseed-1.9.0-beta-0-g5693918-linux64-gcc48.zip"
     - platform: osx
       label: macOS 10.10<br>and Later
       url: "https://github.com/appleseedhq/appleseed/releases/download/1.9.0-beta/appleseed-1.9.0-beta-0-g5693918-mac64-clang.zip"
