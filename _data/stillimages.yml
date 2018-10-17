@@ -82,3 +82,20 @@
 - url: "/img/renders/appleseed-standard-surface-mosaic.png"
   legend: "Mosaic of materials achieved with appleseed Standard Surface material"
 
+- url: "/img/renders/npr1.png"
+  legend: "Toon shading with model from Blend Swap user ozzlennon (CC BY)"
+
+- url: "/img/renders/npr2.png"
+  legend: "Toon shading with model from Blend Swap user ucupumar (CC0)"
+
+- url: "/img/renders/npr3.png"
+  legend: "Toon shading with model from Blend Swap user ucupumar (CC0)"
+
+- url: "/img/renders/npr4.png"
+  legend: "Toon shading with model from Blend Swap user Enthymeme (CC0)"
+
+- url: "/img/renders/npr5.png"
+  legend: "Toon shading with model from Blend Swap user daren (CC BY)"
+
+- url: "/img/renders/perfume.jpg"
+  legend: "Adaption of a free Corona scene (Flacons & Rose) from VizPeople"
