@@ -18,6 +18,9 @@ LMB = left mouse button
 MMB = middle mouse button  
 RMB = right mouse button
 
+**Warning:** on macOS, replace <kbd>Ctrl</kbd> by <kbd>Cmd</kbd>.
+
+
 #### Files
 
 Keys | Action
@@ -74,7 +77,7 @@ Keys | Action
 ---- | ------
 <kbd>F5</kbd> | Start interactive rendering
 <kbd>F6</kbd> | Start final rendering
-<kbd>Shift-F5</kbd> | Stop interactive/final rendering
+<kbd>Shift+F5</kbd> | Stop interactive/final rendering
 <kbd>F7</kbd> | Rendering settings
 <kbd>Ctrl+Shift+1</kbd> | Color diagnostic mode
 <kbd>Ctrl+Shift+2</kbd> | Coverage diagnostic mode
