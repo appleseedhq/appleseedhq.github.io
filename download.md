@@ -62,14 +62,14 @@ Make sure to follow our detailed [build instructions](https://github.com/applese
 
 ### appleseed for 3ds Max
 
-**appleseed-max** is a native plugin for Autodesk® 3ds Max® 2015, 2016 and 2017.
+**appleseed-max** is a native plugin for Autodesk® 3ds Max® 2016, 2017, 2018 and 2019.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)  
 [GitHub repository](https://github.com/appleseedhq/appleseed-max)  
 
 ### appleseed for Blender
 
-**blenderseed** is a plugin for Blender 2.79 and later.
+**blenderseed** is a plugin for Blender 2.79.
 
 [**Downloads**](https://github.com/appleseedhq/blenderseed/releases)  
 [Documentation](https://appleseed-blenderseed.readthedocs.io/)  
