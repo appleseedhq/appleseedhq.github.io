@@ -138,25 +138,25 @@ The appleseed shaderball scene was tested with the latest official release of ap
         <div class="card">
             <img src="/img/alembic-logo.png" />
         </div>
-        <div>Alembic High-Poly</div>
+        <div>Alembic | High-Poly</div>
     </a>
     <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-alembic-lowpoly.zip" download>
         <div class="card">
             <img src="/img/alembic-logo.png" />
         </div>
-        <div>Alembic Low-Poly</div>
+        <div>Alembic | Low-Poly</div>
     </a>
     <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-obj.zip" download>
         <div class="card">
             <img src="/img/obj-logo.png" />
         </div>
-        <div>OBJ High-Poly</div>
+        <div>OBJ | High-Poly</div>
     </a>
     <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-obj-lowpoly.zip" download>
         <div class="card">
             <img src="/img/obj-logo.png" />
         </div>
-        <div>OBJ Low-Poly</div>
+        <div>OBJ | Low-Poly</div>
     </a>
 </div>
 
