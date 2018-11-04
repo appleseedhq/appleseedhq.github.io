@@ -21,8 +21,8 @@ Downloads and release notes:
 
 Among a multitude of other additions and improvements:
 - Thanks to a major re-architecture around appleseed's Python bindings, the Blender plugin now offers interactive rendering, AOV support and increased stability and performance.
-- The Autodesk® 3ds Max® plugin now features volumetric rendering, denoising, shading overrides, configurable pixel filtering and per ray-type bounce limits.
-- The Autodesk® Maya® plugin now features AOV support, support for color and curve ramps, render stamp support and a redesigned Render Settings user interface.
+- The Autodesk® 3ds Max® plugin now features volumetric rendering, denoising, shading overrides, configurable pixel filtering and per ray-type bounce limits. The 3ds Max plugin is now available for 3ds Max 2016, 2017, 2018 and 2019.
+- The Autodesk® Maya® plugin now features AOV support, support for color and curve ramps, render stamp support and a redesigned Render Settings user interface. In addition, Maya 2018 is now supported.
 
 **The core engine has also received a lot of attention**, with significant work from our three Google Summer of Code 2018 students:
 - **Kevin Masson implemented a new state-of-the-art adaptive tile sampler** that provides much better performance than the former adaptive pixel sampler (which is deprecated in this release). Kevin Masson has contributed several other exciting features before, during and after the program; they will be available in the next release.
