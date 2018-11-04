@@ -52,9 +52,11 @@ Make sure to follow our detailed [build instructions](https://github.com/applese
 
 ## Plugins
 
+Plugins are all self-contained, they don't require to download and install appleseed separately.
+
 ### appleseed for Maya
 
-**appleseed-maya** is a native plugin for Autodesk® Maya® 2017 and later.
+**appleseed-maya** is a native plugin for Autodesk® Maya® 2017 and 2018.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-maya/releases)  
 [Documentation](https://appleseed-maya.readthedocs.io/)  
@@ -112,29 +114,49 @@ The appleseed shaderball scene was tested with the latest official release of ap
 <img src="/img/appleseed-shaderball.png" alt="appleseed shaderball" class="shaderball-render" />
 
 <div class="shaderballs">
-    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4.zip" download>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5.zip" download>
         <div class="card">
             <img src="/img/appleseed-seeds-64-gray.png" />
         </div>
         <div>appleseed</div>
     </a>
-    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4_maya.zip" download>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-3dsmax.zip" download>
+        <div class="card">
+            <img src="/img/autodesk-3dsmax-logo-gray.png" />
+        </div>
+        <div>3ds Max® 2016+</div>
+    </a>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-maya.zip" download>
         <div class="card">
             <img src="/img/autodesk-maya-logo-gray.png" />
         </div>
-        <div>Maya® 2015</div>
+        <div>Maya® 2017+</div>
     </a>
-    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4_alembic.zip" download>
+</div>
+<div class="shaderballs">
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-alembic.zip" download>
         <div class="card">
             <img src="/img/alembic-logo.png" />
         </div>
-        <div>Alembic cache</div>
+        <div>Alembic High-Poly</div>
     </a>
-    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v4/appleseed_shaderball_v4_obj.zip" download>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-alembic-lowpoly.zip" download>
+        <div class="card">
+            <img src="/img/alembic-logo.png" />
+        </div>
+        <div>Alembic Low-Poly</div>
+    </a>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-obj.zip" download>
         <div class="card">
             <img src="/img/obj-logo.png" />
         </div>
-        <div>OBJ file</div>
+        <div>OBJ High-Poly</div>
+    </a>
+    <a class="shaderball" href="https://github.com/appleseedhq/shaderball/releases/download/v5/appleseed-shaderball-v5-obj-lowpoly.zip" download>
+        <div class="card">
+            <img src="/img/obj-logo.png" />
+        </div>
+        <div>OBJ Low-Poly</div>
     </a>
 </div>
 

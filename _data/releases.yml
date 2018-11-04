@@ -1,3 +1,17 @@
+- version: 2.0.0-beta
+  date: November 2nd, 2018
+  github: "https://github.com/appleseedhq/appleseed/releases/tag/2.0.0-beta"
+  builds:
+    - platform: windows
+      label: Windows Vista<br>and Later
+      url: "https://github.com/appleseedhq/appleseed/releases/download/2.0.0-beta/appleseed-2.0.0-beta-0-g5cff7b96b-win64-vs140.zip"
+    - platform: linux
+      label: Linux
+      url: "https://github.com/appleseedhq/appleseed/releases/download/2.0.0-beta/appleseed-2.0.0-beta-0-g5cff7b96b-linux64-gcc48.zip"
+    - platform: osx
+      label: macOS 10.10<br>and Later
+      url: "https://github.com/appleseedhq/appleseed/releases/download/2.0.0-beta/appleseed-2.0.0-beta-0-g5cff7b96b-mac64-clang.zip"
+
 - version: 1.9.0-beta
   date: May 3rd, 2018
   github: "https://github.com/appleseedhq/appleseed/releases/tag/1.9.0-beta"
