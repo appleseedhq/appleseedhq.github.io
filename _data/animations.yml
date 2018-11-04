@@ -17,18 +17,6 @@
   video: "//player.vimeo.com/video/33368351?color=f60&title=0&byline=0&portrait=0"
   legend: "WRECK (Early Animation Test)"
 
-- thumbnail: "//i.vimeocdn.com/video/373275454_640.jpg"
-  video: "//player.vimeo.com/video/41689789?color=f60&title=0&byline=0&portrait=0"
-  legend: "Early Normal Mapping Test"
-
-- thumbnail: "//i.vimeocdn.com/video/494049310_640.jpg"
-  video: "//player.vimeo.com/video/109894596?color=f60&title=0&byline=0&portrait=0"
-  legend: "Experimental 'Frozen Display' mode in appleseed.studio"
-
 - thumbnail: "//i.vimeocdn.com/video/518464756_640.jpg"
   video: "//player.vimeo.com/video/127622613?color=f60&title=0&byline=0&portrait=0"
   legend: "Interactive lookdev inside appleseed.studio"
-
-- thumbnail: "//i.vimeocdn.com/video/516057899_640.jpg"
-  video: "//player.vimeo.com/video/125823120?color=f60&title=0&byline=0&portrait=0"
-  legend: "Interactive lookdev with appleseed inside Image Engine's Gaffer (update #2)"

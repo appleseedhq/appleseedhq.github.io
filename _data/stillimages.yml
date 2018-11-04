@@ -1,5 +1,5 @@
 - url: "/img/renders/toythingbig.png"
-  legend: "Render by Twitter user BigRetching, model by Artec 3D"
+  legend: "Render by Twitter user @BigRetching, model by Artec 3D"
 
 - url: "/img/renders/redpaperboat.jpg"
   legend: "Red Paper Boat by [Giuseppe Lucido](https://zaldor.artstation.com/)"
@@ -9,6 +9,12 @@
 
 - url: "/img/renders/white_kitchen.jpg"
   legend: "White Kitchen by Juan Carlos Gutiérrez"
+
+- url: "/img/renders/perfume.jpg"
+  legend: "[Perfumes scene by VizPeople](https://www.blog.viz-people.com/blog/free-3d-model-perfumes/), render by Herbert Crepaz"
+
+- url: "/img/renders/head-scan.png"
+  legend: "Head Scan - Geometry, textures and environment map by [3D Scan Store](https://www.3dscanstore.com/index.php?route=information/information&information_id=16), scene reconstruction and skin shader by Juan Carlos Gutiérrez"
 
 - url: "/img/renders/galoot.png"
   legend: "Scene from forum user @ohsnapitsjoel"
@@ -46,14 +52,8 @@
 - url: "/img/renders/materialtester-glass.png"
   legend: "Old material tester scene, here made of glass"
 
-- url: "/img/renders/max-vl1.png"
-  legend: "Scene from forum user @Max"
-
 - url: "/img/renders/max-vl2.png"
   legend: "Scene from forum user @Max"
-
-- url: "/img/renders/thomas-heightfield.png"
-  legend: "Scene from forum user @Thomas"
 
 - url: "/img/renders/bedroom.png"
   legend: "Bedroom scene from 3dRender.com Lighting Challenge #21"
@@ -64,23 +64,11 @@
 - url: "/img/renders/sss-indirect-mosaic.png"
   legend: "Indirect lighting through translucent medium"
 
-- url: "/img/renders/emily1.png"
-  legend: "Digital Emily 2 from Wikihuman Project"
-
-- url: "/img/renders/emily2.png"
-  legend: "Digital Emily 2 from Wikihuman Project"
-
-- url: "/img/renders/legocharacter1.png"
-  legend: "LEGO&reg; Character"
-
-- url: "/img/renders/legocharacter2.png"
-  legend: "LEGO&reg; Character"
-
-- url: "/img/renders/rose.png"
-  legend: "Carnivorous flower made of raw chicken meat"
-
 - url: "/img/renders/appleseed-standard-surface-mosaic.png"
   legend: "Mosaic of materials achieved with appleseed Standard Surface material"
+
+- url: "/img/renders/rolling-teapot.jpg"
+  legend: "Rolling Teapot - Model by Brice Laville, concept by Tom Robinson, render by Esteban Tovagliari - [RenderMan 'Rolling Teapot' Art Challenge](https://renderman.pixar.com/news/renderman-rolling-teapot-art-challenge)"
 
 - url: "/img/renders/npr1.png"
   legend: "Toon shading with model from Blend Swap user ozzlennon (CC BY)"
@@ -96,6 +84,3 @@
 
 - url: "/img/renders/npr5.png"
   legend: "Toon shading with model from Blend Swap user daren (CC BY)"
-
-- url: "/img/renders/perfume.jpg"
-  legend: "Adaption of a free Corona scene (Flacons & Rose) from VizPeople"

@@ -10,12 +10,6 @@
 - url: "/img/screenshots/appleseed.studio-wireframe.png"
   legend: "appleseed.studio, rendering a scene from [Fetch](http://www.fetchaveryshortfilm.com/) with the built-in wireframe shader"
 
-- url: "/img/screenshots/appleseed.studio-sss.png"
-  legend: "appleseed.studio, rendering our Rose demo scene"
-
-- url: "/img/screenshots/appleseed.studio-seexpr.png"
-  legend: "appleseed.studio, playing with Disney's SeExpr expression editor"
-
 - url: "/img/screenshots/appleseed.studio-unit-tests.png"
   legend: "Running appleseed's built-in unit tests in appleseed.studio"
 

@@ -17,9 +17,9 @@ Downloads and release notes:
 
 This release is the result of relentless design, development, testing and coordination efforts by the appleseed team, an international group of volunteers dedicated to building state-of-the-art open source rendering technology.
 
-A renderer is of no use without easy-to-use integrations into digital content creation applications, so for the past couple years we've been dedicating a sizable chunk of our resources to develop an ecosystem of high quality plugins for 3ds Max, Maya, Blender and Gaffer. **This release continues the trend and introduces _major_ improvements to the 3ds Max and Blender plugins**. Please check out the release notes of the individual plugins for details.
+A renderer is of no use without easy-to-use integrations into digital content creation applications, so for the past couple years we've been dedicating a sizable chunk of our resources to develop an ecosystem of high-quality plugins for 3ds Max, Maya, Blender and Gaffer. **This release continues the trend and introduces _major_ improvements to the 3ds Max and Blender plugins**. Please check out the release notes of the individual plugins for details.
 
-**One major new feature of the 3ds Max and Blender plugins is full native support for appleseed's high quality OSL shaders.** This means that, starting with this release, all plugins now expose the same set of OSL materials**, creating exciting new opportunities for future releases such as seamless exchange of materials and even complete scenes between plugins.
+**One major new feature of the 3ds Max and Blender plugins is full native support for appleseed's high-quality OSL shaders.** This means that, starting with this release, all plugins now expose the same set of OSL materials, creating exciting new opportunities for future releases such as seamless exchange of materials and even complete scenes between plugins.
 
 **A major new feature introduced in this release is the integration of BCD, a powerful new denoiser** specifically designed to remove noise from final frame renders.
 
