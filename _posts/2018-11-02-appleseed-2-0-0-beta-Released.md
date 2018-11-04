@@ -34,6 +34,6 @@ This release brings many other changes to the core engine:
 - **We took our first steps into the world of non-photorealistic rendering (NPR)** with an OSL shader implementing cartoon shading and another one implementing contour rendering.
 - **We continued our work on visualization tools**, with rectangular selection of light paths, false colors, relative luminance isolines, etc.
 
-This is a mere glance of what's new in this release. The illustrated core engine release notes and the plugins' release notes contain a lot more details.
+This is a mere glance at what's new in this release. The illustrated core engine release notes and the plugins' release notes contain a lot more details.
 
 **Please give appleseed and the plugins a try** and let us know what works, what doesn't and how we can make appleseed better and more useful to _you_. Feel free to reach out on our [forum](https://forum.appleseedhq.net/), on [Discord](https://discordapp.com/invite/Vcu5A7h) or on [Twitter](https://twitter.com/appleseedhq).
