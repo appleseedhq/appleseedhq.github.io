@@ -60,14 +60,14 @@ Plugins are all self-contained, they don't require to download and install apple
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-maya/releases)  
 [Documentation](https://appleseed-maya.readthedocs.io/)  
-[GitHub repository](https://github.com/appleseedhq/appleseed-maya)  
+[GitHub Repository](https://github.com/appleseedhq/appleseed-maya)  
 
 ### appleseed for 3ds Max
 
 **appleseed-max** is a native plugin for Autodesk® 3ds Max® 2016, 2017, 2018 and 2019.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)  
-[GitHub repository](https://github.com/appleseedhq/appleseed-max)  
+[GitHub Repository](https://github.com/appleseedhq/appleseed-max)  
 
 ### appleseed for Blender
 
@@ -75,7 +75,7 @@ Plugins are all self-contained, they don't require to download and install apple
 
 [**Downloads**](https://github.com/appleseedhq/blenderseed/releases)  
 [Documentation](https://appleseed-blenderseed.readthedocs.io/)  
-[GitHub repository](https://github.com/appleseedhq/blenderseed)  
+[GitHub Repository](https://github.com/appleseedhq/blenderseed)  
 
 ### appleseed for Gaffer
 
