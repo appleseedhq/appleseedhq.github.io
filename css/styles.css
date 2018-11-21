@@ -425,6 +425,7 @@ th, tfoot td
 
 .section.intro p:last-child a
 {
+    margin: 0px 15px;
     font-size: 20px;
 }
 
