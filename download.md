@@ -20,11 +20,11 @@ Please check the [release notes]({{ release.github }}) for the list of new featu
         <a class="build" href="{{ build.url }}" download>
             {% case build.platform %}
                 {% when 'windows' %}
-                    <i class="fa fa-windows"></i>
+                    <i class="fab fa-windows"></i>
                 {% when 'linux' %}
-                    <i class="fa fa-linux"></i>
+                    <i class="fab fa-linux"></i>
                 {% when 'osx' %}
-                    <i class="fa fa-apple"></i>
+                    <i class="fab fa-apple"></i>
             {% endcase %}
             <div>{{ build.label }}</div>
         </a>

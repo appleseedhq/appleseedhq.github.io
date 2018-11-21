@@ -26,6 +26,6 @@
   area: about
   url: "/about.html"
 
-- label: <i class="fa fa-github"></i> GitHub
+- label: <i class="fab fa-github"></i> GitHub
   area: github
   url: "https://github.com/appleseedhq"

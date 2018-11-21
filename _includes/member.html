@@ -8,13 +8,13 @@
             {% for link in member.links %}
                 {% case link.type %}
                     {% when 'linkedin' %}
-                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-linkedin"></i></a>
+                        <a class="profile-link" href="{{ link.url }}"><i class="fab fa-linkedin"></i></a>
                     {% when 'twitter' %}
-                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-twitter"></i></a>
+                        <a class="profile-link" href="{{ link.url }}"><i class="fab fa-twitter"></i></a>
                     {% when 'blog' %}
-                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-rss"></i></a>
+                        <a class="profile-link" href="{{ link.url }}"><i class="fas fa-rss"></i></a>
                     {% when 'homepage' %}
-                        <a class="profile-link" href="{{ link.url }}"><i class="fa fa-home"></i></a>
+                        <a class="profile-link" href="{{ link.url }}"><i class="fas fa-home"></i></a>
                 {% endcase %}
             {% endfor %}
         </h3>
