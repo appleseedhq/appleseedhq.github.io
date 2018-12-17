@@ -1,3 +1,9 @@
+- url: "/img/renders/sss-statue.png"
+  legend: "Statue with Random-Walk subsurface scattering and anisotropic Gabor noise, by Luis Barrancos"
+
+- url: "/img/renders/rover.png"
+  legend: "[NASA Curiosity Rover by RenderHub](https://www.renderhub.com/renderhub/nasa-curiosity-rover), render by Juan Carlos Gutiérrez"
+
 - url: "/img/renders/rainy.png"
   legend: "\"Rainy\" by Egert"
 
