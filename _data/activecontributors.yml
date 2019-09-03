@@ -47,3 +47,20 @@
     - { type: blog, url: "http://www.fevrierdorian.com/blog/" }
     - { type: twitter, url: "https://twitter.com/NarannCG" }
     - { type: linkedin, url: "https://www.linkedin.com/in/dorianfevrier" }
+
+
+- name: Juan Carlos Gutiérrez
+  picture: jc_gutierrez.jpg
+  role: Beta Tester
+  bio: >
+    Juan Carlos is a self-taught 3D designer from Puerto Peñasco, Sonora. He discovered appleseed a few years ago.
+    Ever since, Juan creates compelling renders, pushes appleseed to the edge and tests new features using
+    the 3ds Max plugin. He also hunts ugly bugs while at it.
+
+
+    Juan has interests in CG and everything related to VFX and animation. 
+
+
+    JC lives in Mexicali, Baja California.
+  links:
+    - { type: behance, url: "https://www.behance.net/jcgutierrez" }

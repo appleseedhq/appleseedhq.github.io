@@ -15,6 +15,12 @@
                         <a class="profile-link" href="{{ link.url }}"><i class="fas fa-rss"></i></a>
                     {% when 'homepage' %}
                         <a class="profile-link" href="{{ link.url }}"><i class="fas fa-home"></i></a>
+                    {% when 'behance' %}
+                        <a class="profile-link" href="{{ link.url }}"><i class="fab fa-behance"></i></a>
+                    {% when 'artstation' %}
+                        <a class="profile-link" href="{{ link.url }}"><i class="fab fa-artstation"></i></a>
+                    {% when 'instagram' %}
+                        <a class="profile-link" href="{{ link.url }}"><i class="fab fa-instagram"></i></a>
                 {% endcase %}
             {% endfor %}
         </h3>
@@ -26,6 +32,9 @@
                 {% when 'twitter' %}
                 {% when 'blog' %}
                 {% when 'homepage' %}
+                {% when 'behance' %}
+                {% when 'artstation' %}
+                {% when 'instagram' %}
                 {% else %}
                     <p>
                         <a href="{{ link.url }}">{{ link.label }}</a>
