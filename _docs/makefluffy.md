@@ -84,7 +84,7 @@ where the source scene, `fluffy_cornell_box_template.appleseed`, is a modificati
 We also did the following adjustements on the scene before rendering:
 
 - We increased the light's radiance by a factor of 3 (by setting the Radiance Multiplier parameter to 3 on `light_material_edf`).
-- We limited the number of bounces to 3 (by default appleseed with simulate an infinite number of bounces).
+- We limited the number of bounces to 3 (by default appleseed will compute up to 100 bounces).
 - We used a Max Ray Intensity of 0.4 to get rid of the fireflies.
 
 
