@@ -22,6 +22,9 @@
 - url: "/img/renders/jc-interior.png"
   legend: "Interior Scene by Juan Carlos Gutiérrez"
 
+- url: "/img/renders/ajax.png"
+  legend: "Ajax bust by Torolf Sauermann (jotero), render by Juan Carlos Gutiérrez"
+
 - url: "/img/renders/white_kitchen.jpg"
   legend: "White Kitchen by Juan Carlos Gutiérrez"
 
