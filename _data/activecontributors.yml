@@ -1,3 +1,19 @@
+- name: Herbert Crepaz
+  picture: herbert_crepaz.jpg
+  role: Integration Plugins Developer, Support
+  bio: >
+    Herbert is a Research Scientist from Austria. Having spent years taming quantum optics experiments in
+    Innsbruck, Barcelona, Oxford and Singapore he is currently a stay-at-home dad taking care of his daughter.
+    He holds a PhD from ICFO, The Institute of Photonic Sciences, Barcelona, Spain.
+
+
+    Herbert started out with appleseed in 2018 posting artwork on the forum. Since then he got ever more
+    involved, mainly working on the integration plugins and providing help on the forum.
+
+
+    Herbert lives in Sofia, Bulgaria.
+
+
 - name: Jonathan Dent
   picture: jonathan_dent.jpg
   role: appleseed for Blender Core Developer
@@ -12,25 +28,6 @@
 
 
     Jon lives in Thief River Falls, Minnesota.
-
-
-- name: François Gilliot
-  picture: francois_gilliot.jpg
-  role: Artistic Direction
-  bio: >
-    François is a self-taught CG artist with 15 years of experience as a modeler, animator and illustrator.
-    He works in a small french video game company as an art director and team manager.
-
-
-    François is our in-house artist and contributes in many ways, from testing and providing feedback on our
-    Autodesk® 3ds Max® plugin, to modeling test geometry and color grading our renders. Recently, he directed
-    [Fetch, a very short film](http://www.fetchaveryshortfilm.com/) rendered with appleseed.
-
-
-    François lives in Annecy, France.
-  links:
-    - { type: blog, url: "http://loiseaunoir.blogspot.fr/" }
-    - { type: instagram, url: "https://www.instagram.com/pistols_99/" }
 
 
 - name: Dorian Fevrier
@@ -50,6 +47,25 @@
     - { type: blog, url: "http://www.fevrierdorian.com/blog/" }
     - { type: twitter, url: "https://twitter.com/NarannCG" }
     - { type: linkedin, url: "https://www.linkedin.com/in/dorianfevrier" }
+
+
+- name: François Gilliot
+  picture: francois_gilliot.jpg
+  role: Artistic Direction
+  bio: >
+    François is a self-taught CG artist with 15 years of experience as a modeler, animator and illustrator.
+    He works in a small french video game company as an art director and team manager.
+
+
+    François is our in-house artist and contributes in many ways, from testing and providing feedback on our
+    Autodesk® 3ds Max® plugin, to modeling test geometry and color grading our renders. Recently, he directed
+    [Fetch, a very short film](http://www.fetchaveryshortfilm.com/) rendered with appleseed.
+
+
+    François lives in Annecy, France.
+  links:
+    - { type: blog, url: "http://loiseaunoir.blogspot.fr/" }
+    - { type: instagram, url: "https://www.instagram.com/pistols_99/" }
 
 
 - name: Juan Carlos Gutiérrez

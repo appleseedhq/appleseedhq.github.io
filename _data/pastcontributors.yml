@@ -1,15 +1,52 @@
-- name: Jonathan Topf
-  picture: jonathan_topf.jpg
-  role: mayaseed
+- name: Thomas Arthus
+  picture: thomas_arthus.jpg
+  role: Web Designer
   bio: >
-    Jonathan is an animation director from London who also works in visual effects and technical direction.
-    He is also the creator of [mayaseed](http://mayaseed.net/), an early exporter from Autodesk® Maya® to
-    appleseed, which he has been using in production for a few years.
+    Thomas is a web programmer by day and an electronic music composer and DJ by night. He has also been playing
+    cello for 25 years. Thomas implemented the previous version of the appleseedhq web site.
 
 
-    Jon lives in London, UK.
+    He lives in Annecy, France.
   links:
-    - { type: blog, url: "http://jonathantopf.com/" }
+    - { type: twitter, url: "https://twitter.com/phonosheet" }
+
+
+- name: Marius Avram
+  picture: marius_avram.jpg
+  role: Google Summer of Code 2014 Participant
+  bio: >
+    Marius is a student at the Faculty of Automatic Control and Computers in Bucharest, Romania. He is new to
+    the open source community and always willing to learn new stuff.
+
+
+    Marius was a successful participant to Google Summer of Code 2014. During the program, he implemented a new editor
+    in appleseed.studio for layered materials based on Disney's BRDF model.
+
+
+- name: Joel Daniels
+  picture: joel_daniels.jpg
+  role: blenderseed
+  bio: >
+    Joel is a freelance CG artist hailing from Austin, Texas, with a background in music, art, and multimedia.
+    Joel contributed to [blenderseed](https://github.com/appleseedhq/blenderseed-deprecated), an early integration
+    of appleseed into Blender.
+
+
+    Joel lives in Cincinnati, Ohio.
+
+
+- name: Hans Hoogenboom
+  picture: hans_hoogenboom.jpg
+  role: houseed
+  bio: >
+    Hans is an architect with a strong interest in CG and VFX. In 2014 he started working on
+    [houseed](https://github.com/appleseedhq/houseed-deprecated), an early integration of appleseed and Houdini,
+    as well as adding Open Shading Language support to Houdini.
+
+
+    Hans lives in Delft, The Netherlands.
+  links:
+    - { type: linkedin, url: "https://www.linkedin.com/pub/hans-hoogenboom/2/b21/45b" }
 
 
 - name: Haggi Krey
@@ -30,18 +67,6 @@
     - { type: homepage, url: "http://www.haggi.de/" }
 
 
-- name: Joel Daniels
-  picture: joel_daniels.jpg
-  role: blenderseed
-  bio: >
-    Joel is a freelance CG artist hailing from Austin, Texas, with a background in music, art, and multimedia.
-    Joel contributed to [blenderseed](https://github.com/appleseedhq/blenderseed-deprecated), an early integration
-    of appleseed into Blender.
-
-
-    Joel lives in Cincinnati, Ohio.
-
-
 - name: Srinath Ravichandran
   picture: srinath_ravichandran.jpg
   role: Google Summer of Code 2014 Participant
@@ -56,40 +81,15 @@
     - { type: homepage, url: "http://researchweb.iiit.ac.in/~srinath.ravichandran/" }
 
 
-- name: Marius Avram
-  picture: marius_avram.jpg
-  role: Google Summer of Code 2014 Participant
+- name: Jonathan Topf
+  picture: jonathan_topf.jpg
+  role: mayaseed
   bio: >
-    Marius is a student at the Faculty of Automatic Control and Computers in Bucharest, Romania. He is new to
-    the open source community and always willing to learn new stuff.
+    Jonathan is an animation director from London who also works in visual effects and technical direction.
+    He is also the creator of [mayaseed](http://mayaseed.net/), an early exporter from Autodesk® Maya® to
+    appleseed, which he has been using in production for a few years.
 
 
-    Marius was a successful participant to Google Summer of Code 2014. During the program, he implemented a new editor
-    in appleseed.studio for layered materials based on Disney's BRDF model.
-
-
-- name: Hans Hoogenboom
-  picture: hans_hoogenboom.jpg
-  role: houseed
-  bio: >
-    Hans is an architect with a strong interest in CG and VFX. In 2014 he started working on
-    [houseed](https://github.com/appleseedhq/houseed-deprecated), an early integration of appleseed and Houdini,
-    as well as adding Open Shading Language support to Houdini.
-
-
-    Hans lives in Delft, The Netherlands.
+    Jon lives in London, UK.
   links:
-    - { type: linkedin, url: "https://www.linkedin.com/pub/hans-hoogenboom/2/b21/45b" }
-
-
-- name: Thomas Arthus
-  picture: thomas_arthus.jpg
-  role: Web Designer
-  bio: >
-    Thomas is a web programmer by day and an electronic music composer and DJ by night. He has also been playing
-    cello for 25 years. Thomas implemented the previous version of the appleseedhq web site.
-
-
-    He lives in Annecy, France.
-  links:
-    - { type: twitter, url: "https://twitter.com/phonosheet" }
+    - { type: blog, url: "http://jonathantopf.com/" }
