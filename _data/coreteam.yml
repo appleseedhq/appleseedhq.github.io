@@ -14,7 +14,7 @@
     François lives in Annecy, France.
   links:
     - { type: twitter, url: "https://twitter.com/franzbeaune" }
-    - { type: linkedIn, url: "https://www.linkedin.com/in/fbeaune" }
+    - { type: linkedin, url: "https://www.linkedin.com/in/fbeaune" }
 
 
 - name: Esteban Tovagliari
@@ -33,6 +33,7 @@
     Esteban lives in Barcelona, Spain.
   links:
     - { type: twitter, url: "https://twitter.com/EstTovagliari" }
+    - { type: linkedin, url: "https://www.linkedin.com/in/esteban-tovagliari-223494186" }
 
 
 - name: Luis Barrancos

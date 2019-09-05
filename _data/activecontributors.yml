@@ -12,6 +12,8 @@
 
 
     Herbert lives in Sofia, Bulgaria.
+  links:
+    - { type: linkedin, url: "https://www.linkedin.com/in/hcrepaz/" }
 
 
 - name: Jonathan Dent
