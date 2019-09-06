@@ -13,6 +13,9 @@
 - url: "/img/screenshots/appleseed.studio-unit-tests.png"
   legend: "Running appleseed's built-in unit tests in appleseed.studio"
 
+- url: "/img/screenshots/appleseed.studio-macos.png"
+  legend: "appleseed.studio running on macOS Mojave (10.14)"
+
 - url: "/img/screenshots/appleseed-maya.png"
   legend: "appleseed-maya, our native Autodesk Maya plugin"
 
