@@ -5,7 +5,7 @@ layout: default
 section: news illustrated
 ---
 
-## News History
+## All News
 
 {% for post in site.posts %}
 <article>
