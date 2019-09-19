@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.7.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 ![New physically-based plastic BRDF<br>(Coffee Maker by Blend Swap user [cekuhnen](http://www.blendswap.com/user/cekuhnen))](/img/renders/coffeemaker.jpg)

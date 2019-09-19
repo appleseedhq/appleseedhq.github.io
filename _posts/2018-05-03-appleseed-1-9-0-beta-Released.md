@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.9.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 ![Red Paper Boat by [Giuseppe Lucido](https://zaldor.artstation.com/)](https://user-images.githubusercontent.com/321290/39409337-af8fa122-4be5-11e8-8697-1c8188681502.jpg)

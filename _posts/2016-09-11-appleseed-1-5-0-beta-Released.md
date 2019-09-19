@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.5.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 We are pleased to announce the release of appleseed 1.5.0-beta, the fifth release of our beta program and the 28th release overall. Check out the [release notes](https://github.com/appleseedhq/appleseed/releases/tag/1.5.0-beta) for the full list of changes.

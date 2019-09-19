@@ -1,0 +1,14 @@
+{% include header.html %}
+{% include illustrations.html %}
+
+    <div class="section light {{ page.section }}">
+        <div class="content">
+            <article>
+                <h3 style="margin-top: 40px; border-top: inherit"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                <div class="date">{{ page.date | date: "%B %-d, %Y" }}</div>
+                {{ content }}
+            </article>
+        </div>
+    </div>
+
+{% include footer.html %}

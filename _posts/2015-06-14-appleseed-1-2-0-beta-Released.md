@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.2.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 We are proud to announce the release of appleseed 1.2.0-beta, the second release of our beta program. Check out the [release notes](https://github.com/appleseedhq/appleseed/releases/tag/1.2.0-beta) for the full list of changes.

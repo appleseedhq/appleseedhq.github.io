@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.3.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 We are proud to announce the immediate availability of appleseed 1.3.0-beta, the third release of our beta program (and the 26th release overall). Check out the [release notes](https://github.com/appleseedhq/appleseed/releases/tag/1.3.0-beta) for the full list of changes.

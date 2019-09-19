@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.6.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 **TL;DR: We just released [appleseed 1.6.0-beta](https://github.com/appleseedhq/appleseed/releases/tag/1.6.0-beta) and [appleseed-max 0.2.0](https://github.com/appleseedhq/appleseed-max/releases/tag/0.2.0-beta), Gafferseed got a big update in [Gaffer 0.29.0.0](https://github.com/GafferHQ/gaffer/releases/tag/0.29.0.0), and we are developing a new [Maya plugin](https://github.com/appleseedhq/appleseed-maya).**

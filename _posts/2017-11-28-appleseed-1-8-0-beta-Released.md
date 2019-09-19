@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.8.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 ![Modern interpretation of Eric Haines’ Sphereflake, here with subsurface scattering](https://user-images.githubusercontent.com/321290/33209494-5b4c64dc-d116-11e7-86ae-5ab78a7f49f4.png)

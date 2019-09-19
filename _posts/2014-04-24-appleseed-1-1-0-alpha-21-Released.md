@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.1.0 alpha-21 Released
+layout: post
+section: news illustrated
 ---
 
 We just released appleseed 1.1.0 alpha-21.

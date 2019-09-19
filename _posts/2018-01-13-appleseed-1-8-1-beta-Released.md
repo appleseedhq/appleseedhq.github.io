@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.8.1-beta Released
+layout: post
+section: news illustrated
 ---
 
 ![[Interior Scene](https://forum.appleseedhq.net/t/interior-scene-from-scratch/362) by Juan Carlos Gutiérrez](/img/renders/jc-interior.png)

@@ -1,5 +1,7 @@
 ---
 title: appleseed 2.0.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 ![Geometry, textures and environment map by [3D Scan Store](https://www.3dscanstore.com/index.php?route=information/information&information_id=16)<br>Scene reconstruction and skin shader by Juan Carlos Gutiérrez.](https://user-images.githubusercontent.com/321290/47671428-c7a46680-dbaf-11e8-97b2-79afeb54992d.png)

@@ -1,5 +1,7 @@
 ---
 title: appleseed 1.1.0-beta Released
+layout: post
+section: news illustrated
 ---
 
 After more than five years of development and 23 alpha releases, we are proud to announce the immediate availability of appleseed 1.1.0-beta. Check out the [release notes](https://github.com/appleseedhq/appleseed/releases/tag/1.1.0-beta) for the full list of changes.
