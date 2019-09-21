@@ -6,7 +6,7 @@ section: news illustrated
 
 ![Ajax bust by Torolf Sauermann (jotero), render by Juan Carlos Gutiérrez](/img/posts/ajax-bust.png)
 
-**We are proud to announce the release of appleseed 2.1.0-beta**, the twelveth release of our beta program and the 35th public release since the first alpha in July 2010.
+**We are proud to announce the release of appleseed 2.1.0-beta**, the twelveth (or twelfth?) release of our beta program and the 35th public release since the first alpha in July 2010.
 
 This release is the fruit of relentless design, development, testing and coordination efforts by [the appleseed team](/about.html#team), an international group of volunteers dedicated to building state-of-the-art open source rendering technology.
 
