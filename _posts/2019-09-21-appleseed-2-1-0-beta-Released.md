@@ -55,7 +55,7 @@ The team added many other features and fixed many bugs in all pieces of the appl
 
 - Gray improved our innovative **light path recording and visualization** technology. Thanks to Gray's work, the next version of appleseed will allow to overlay light paths over the final render. It will also display light paths using a modern OpenGL profile, with proper antialiasing and transparency. Finally, it will let users filter light paths using [Light Path Expressions](https://github.com/imageworks/OpenShadingLanguage/wiki/OSL-Light-Path-Expressions), an industry standard for expressing paths of interest. Check out [Gray's final report](https://www.grayolson.me/blog/posts/gsoc-2019/) for details and pictures.
 
-Also in the pipe are a number of major features and improvements, among which support for heterogenous volumes and for [OpenVDB](https://www.openvdb.org/) files, and a state-of-the-art hair shading model and corresponding OSL shader.
+**Also in the pipe are a number of major features and improvements**, among which support for heterogenous volumes and for [OpenVDB](https://www.openvdb.org/) files, and a state-of-the-art hair shading model and corresponding OSL shader.
 
 All these features and improvements are already implemented and working. They will be merged into appleseed over the coming weeks and will be available to end users in the next version of appleseed. Stay tuned!
 
