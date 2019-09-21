@@ -19,10 +19,12 @@
                         <div class="block">
                             <h3>Rendering Modes</h3>
                             <ul>
+                                <li>Single-pass rendering</li>
                                 <li>Multi-pass rendering</li>
                                 <li>Progressive rendering</li>
+                                <li>Time-limited progressive rendering</li>
                                 <li>Interactive rendering</li>
-                                <li>Scene editing during rendering</li>
+                                <li>Scene editing during interactive rendering</li>
                                 <li>Spectral rendering (31 bands in 400-700 nm)</li>
                                 <li>RGB rendering</li>
                             </ul>
@@ -46,7 +48,7 @@
                                 <li>Better Dipole</li>
                                 <li>Directional Dipole</li>
                                 <li>Normalized Diffusion</li>
-                                <li>Random Walk</li>
+                                <li>Random Walk (path traced)</li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +73,6 @@
                                 <li>Physically-based glass BSDF</li>
                                 <li>Sheen BRDF</li>
                                 <li>Arbitrary mixtures of BRDFs</li>
-                                <li>Highlight falloff control for several models</li>
                                 <li>Energy compensation in microfacet models</li>
                             </ul>
                         </div>
@@ -104,7 +105,9 @@
                             <h3>Camera Models</h3>
                             <ul>
                                 <li>Pinhole camera</li>
+                                <li>Orthographic camera</li>
                                 <li>Spherical camera</li>
+                                <li>Fisheye lens camera with multiple projections</li>
                                 <li>Thin lens camera (depth of field)</li>
                                 <li>Polygonal diaphragm shapes</li>
                                 <li>Image-based diaphragm shapes</li>
@@ -157,19 +160,24 @@
                         <div class="block">
                             <h3>Production Features</h3>
                             <ul>
-                                <li>Open Shading Language support (OSL)</li>
+                                <li>Open Shading Language (OSL) support</li>
                                 <li>OSL shader library</li>
                                 <li>OSL implementation of Maya shading nodes</li>
+                                <li>On-the-fly compilation of OSL shaders</li>
                                 <li>OpenColorIO support</li>
-                                <li>Built-in denoiser</li>
+                                <li>Built-in BCD denoiser</li>
                                 <li>Command line tool for offline denoising</li>
                                 <li>Disney's SeExpr expressions</li>
                                 <li>AOVs</li>
+                                <li>Cryptomatte support</lI>
                                 <li>Adaptive sampling</li>
+                                <li>Paintable mask-based sampling</li>
                                 <li>Hierarchical instancing</li>
                                 <li>Per-instance visibility flags</li>
                                 <li>Alpha mapping</li>
+                                <li>Matte support</li>
                                 <li>Automatic color space conversions</li>
+                                <li>Fixed or varying sampling patterns per frame</li>
                                 <li>Ray differentials</li>
                                 <li>Ray Bias</li>
                                 <li>Light Near Start</li>
@@ -177,10 +185,11 @@
                                 <li>Max Ray Intensity</li>
                                 <li>Roughness Clamping</li>
                                 <li>Bounce limits per scattering types</li>
-                                <li>Nested dielectrics</li>
                                 <li>Automatic tracking of indices of refraction</li>
+                                <li>Nested dielectrics</li>
                                 <li>Packed, single-file scenes for easy transport</li>
                                 <li>Render stamps</li>
+                                <li>Render checkpointing (resumable renders)</li>
                                 <li>Search paths for external assets</li>
                                 <li>Dozens of diagnostic modes</li>
                             </ul>
@@ -202,9 +211,9 @@
                                 <li>Open Shading Language support</li>
                                 <li>OpenColorIO support</li>
                                 <li>Native Image Engine's Gaffer integration</li>
-                                <li>Native Autodesk® 3ds Max® 2016+ plugin</li>
-                                <li>Native Autodesk® Maya® 2017+ plugin</li>
-                                <li>Blender 2.79 plugin</li>
+                                <li>Native Autodesk® 3ds Max® 2017+ plugin</li>
+                                <li>Native Autodesk® Maya® 2018+ plugin</li>
+                                <li>Blender 2.79 and Blender 2.80+ plugins</li>
                                 <li>Substance Painter-compatible OSL shader</li>
                             </ul>
                         </div>
@@ -214,8 +223,8 @@
                                 <li>100% open source, MIT license</li>
                                 <li>Exceptionally clean, fully reviewed code</li>
                                 <li>Full featured C++ API</li>
-                                <li>Full extensibility via external C++ plugins</li>
                                 <li>Full featured Python 2.x/3.x API</li>
+                                <li>Full extensibility via external C++ plugins</li>
                                 <li>Embedded Python scripting</li>
                                 <li>More than 1500 built-in unit tests</li>
                                 <li>Hundreds of built-in performance tests</li>
@@ -230,6 +239,7 @@
                                 <li>Multithreaded, scalable</li>
                                 <li>SSE / SSE2 / SSE 4.2 vectorization</li>
                                 <li>Memory-bounded texture cache</li>
+                                <li>Filter Importance Sampling</li>
                                 <li>Multiple Importance Sampling</li>
                                 <li>Efficient handling of alpha maps</li>
                                 <li>Advanced many-light sampling</li>
@@ -239,7 +249,7 @@
                         <div class="block">
                             <h3>Tools</h3>
                             <ul>
-                                <li>Full featured graphical tool for scene edition</li>
+                                <li>Advanced graphical tool for scene inspection and rendering</li>
                                 <li>Command line renderer</li>
                                 <li>Command line denoiser</li>
                                 <li>Dropbox-based render farm tools</li>
@@ -250,12 +260,12 @@
                             <h3>Infrastructure</h3>
                             <ul>
                                 <li>Git for source control</li>
-                                <li>GitHub for repository hosting, issues, wikis</li>
+                                <li>GitHub for repositories hosting, issue tracking, wikis</li>
                                 <li>CMake build system</li>
-                                <li>Continuous Integration (Travis CI, AppVeyor)</li>
+                                <li>Continuous integration (Travis CI, AppVeyor)</li>
                                 <li>Discord server</li>
                                 <li>Discourse forum</li>
-                                <li>appleseedhq.net mail addresses</li>
+                                <li>appleseedhq.net email addresses</li>
                             </ul>
                         </div>
                     </div>
