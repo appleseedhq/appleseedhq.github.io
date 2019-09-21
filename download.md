@@ -31,8 +31,6 @@ Please check the [release notes]({{ release.github }}) for the list of new featu
     {% endfor %}
 </div>
 
-Intermediate, preview releases are also regularly made available from the [Releases](https://github.com/appleseedhq/appleseed/releases) page on GitHub.
-
 Follow us on [Twitter](https://twitter.com/appleseedhq) to get notified of new releases.
 
 {% endfor %}
