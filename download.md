@@ -69,7 +69,7 @@ Plugins are all self-contained, they don't require to download and install apple
 
 ### appleseed for Blender
 
-**blenderseed** is a plugin for Blender 2.79.
+**blenderseed** is a plugin for Blender 2.79 and Blender 2.80.
 
 [**Downloads**](https://github.com/appleseedhq/blenderseed/releases)  
 [Documentation](https://appleseed-blenderseed.readthedocs.io/)  
