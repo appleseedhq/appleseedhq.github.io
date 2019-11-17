@@ -21,12 +21,19 @@ section: docs
 
 We are actively working on additional tutorials. Thanks for your patience.
 
-## Documentation
+## Reference Documentation
 
-### appleseed Apps & Tools
+### appleseed Apps, Plugins and Tools
 
+- [appleseed for Blender](https://appleseed-blenderseed.readthedocs.io/en/latest/)
+- [appleseed for Maya](https://appleseed-maya.readthedocs.io/en/latest/)
 - [appleseed.studio](/docs/appleseed.studio.html)
 - [makefluffy](/docs/makefluffy.html)
+
+### appleseed OSL Nodes
+
+- [appleseed OSL Nodes](https://appleseed-maya.readthedocs.io/en/latest/shaders/shaders.html)
+- [Supported Maya HyperShade Nodes](https://appleseed-maya.readthedocs.io/en/latest/features/supported_nodes.html)
 
 ### Disney BRDF & Material
 
