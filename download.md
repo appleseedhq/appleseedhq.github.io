@@ -62,7 +62,7 @@ Plugins are all self-contained, they don't require to download and install apple
 
 ### appleseed for 3ds Max
 
-**appleseed-max** is a native plugin for Autodesk® 3ds Max® 2016, 2017, 2018 and 2019.
+**appleseed-max** is a native plugin for Autodesk® 3ds Max® 2017, 2018, 2019 and 2020.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)  
 [GitHub Repository](https://github.com/appleseedhq/appleseed-max)  
