@@ -25,8 +25,8 @@ We are actively working on additional tutorials. Thanks for your patience.
 
 ### appleseed Apps, Plugins and Tools
 
-- [appleseed for Blender](https://appleseed-blenderseed.readthedocs.io)
-- [appleseed for Maya](https://appleseed-maya.readthedocs.io/en/latest/)
+- [appleseed for Blender](https://appleseed-blenderseed.readthedocs.io/)
+- [appleseed for Maya](https://appleseed-maya.readthedocs.io/)
 - [appleseed.studio](/docs/appleseed.studio.html)
 - [makefluffy](/docs/makefluffy.html)
 
