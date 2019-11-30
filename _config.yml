@@ -3,7 +3,6 @@ markdown: kramdown
 baseurl: 
 
 domain: appleseedhq.net
-google-analytics-id: UA-11430889-2
 
 collections:
     docs:
