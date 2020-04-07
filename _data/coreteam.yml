@@ -8,7 +8,7 @@
     an early open source global illumination renderer released in 2003.
 
 
-    By day, François is Lead Software Engineer at [Allegorithmic](https://www.allegorithmic.com/).
+    François is Senior Software Engineer at [Adobe](https://www.adobe.com/) on the Labs team.
 
 
     François lives in Annecy, France.
@@ -27,7 +27,7 @@
     Language shaders.
 
 
-    Esteban is Senior Software engineer at [Allegorithmic](https://www.allegorithmic.com/) on the Substance Designer team.
+    Esteban is Senior Software engineer at [Adobe](https://www.adobe.com/) on the Substance Designer team.
 
 
     Esteban lives in Barcelona, Spain.
@@ -49,12 +49,13 @@
   links:
     - { type: linkedin, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }
 
+
 - name: Kevin Masson
   picture: kevin_masson.jpg
   role: Core Developer
   bio: >
     Kevin contributed to appleseed for the first time as a Google Summer of Code student in 2018. He is 
-    a young developer with strong interests in CG.
+    a young developer with a strong interest in computer graphics.
 
 
     He is currently living in Strasbourg, France.
