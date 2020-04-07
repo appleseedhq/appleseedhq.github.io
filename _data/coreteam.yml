@@ -48,3 +48,16 @@
     He is currently living in Kuala Lumpur, Malaysia.
   links:
     - { type: linkedin, url: "https://hk.linkedin.com/pub/luis-barrancos/37/668/85" }
+
+- name: Kevin Masson
+  picture: kevin_masson.jpg
+  role: Core Developer
+  bio: >
+    Kevin contributed to appleseed for the first time as a Google Summer of Code student in 2018. He is 
+    a young developer with strong interests in CG.
+
+    He is currently living in Strasbourg, France.
+  links:
+    - { type: linkedin, url: "https://www.linkedin.com/in/oktomus/" }
+    - { type: twitter, url: "https://twitter.com/oktomus" }
+    - { type: blog, url: "https://oktomus.com/" }
