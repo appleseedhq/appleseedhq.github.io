@@ -54,7 +54,7 @@ Plugins are all self-contained, they don't require to download and install apple
 
 ### appleseed for Maya
 
-**appleseed-maya** is a native plugin for Autodesk® Maya® 2017 and 2018.
+**appleseed-maya** is a native plugin for Autodesk® Maya® 2018 (Windows only), 2019 and 2020.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-maya/releases)  
 [Documentation](https://appleseed-maya.readthedocs.io/)  
@@ -62,14 +62,14 @@ Plugins are all self-contained, they don't require to download and install apple
 
 ### appleseed for 3ds Max
 
-**appleseed-max** is a native plugin for Autodesk® 3ds Max® 2017, 2018, 2019 and 2020.
+**appleseed-max** is a native plugin for Autodesk® 3ds Max® 2018, 2019, 2020 and 2021.
 
 [**Downloads**](https://github.com/appleseedhq/appleseed-max/releases)  
 [GitHub Repository](https://github.com/appleseedhq/appleseed-max)  
 
 ### appleseed for Blender
 
-**blenderseed** is a plugin for Blender 2.79 and Blender 2.80.
+**blenderseed** is a plugin for Blender 2.8x.
 
 [**Downloads**](https://github.com/appleseedhq/blenderseed/releases)  
 [Documentation](https://appleseed-blenderseed.readthedocs.io/)  
