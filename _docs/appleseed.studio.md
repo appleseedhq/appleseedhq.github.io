@@ -54,6 +54,8 @@ Keys | Action
 <kbd>Shift+LMB+drag</kbd> | Move render in viewport
 <kbd>Shift+LMB</kbd> | Focus on viewport
 <kbd>LMB</kbd> | Select entity (based on entity picking mode)
+<kbd>Shift+RMB</kbd> | Open render widget context menu
+<kbd>RMB</kbd> | Open entity context menu
 <kbd>Del</kbd> | Delete selected entity
 
   
